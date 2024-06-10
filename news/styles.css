@@ -1,0 +1,173 @@
+body{
+    margin: 0;
+    padding: 0;
+   
+}
+html{
+   
+    overflow-x: hidden;
+}
+.post-box{
+    
+}
+.img-banner{
+    width: 100%;
+}
+.breadcrumb{
+float: left;
+list-style: none;
+margin-bottom: 20px;
+width: 100%;
+display: flex;
+  margin-top:0;
+
+}
+.icons{
+    width: 20px;
+    height: 20px;
+    margin-top: 10px;
+    margin-bottom: 0;
+}
+.site-banner__subtitle{
+    margin-top: 20px;
+}
+.breadcrumb li{
+    display:inline-block;
+    margin-bottom: 30px;
+    padding: 5px;
+    content:kQAfGB;
+    font-size:18px;
+    left: 50px;
+    color: #091f29;
+     font-weight: 700;
+
+}
+.breadcrumb li a{
+    border-radius: 6px;
+    padding: 6px 12px;
+    border-color: #000;
+    text-decoration: underline;
+   
+
+}
+.breadcrumb li a:hover{
+    text-decoration: none;
+    font-size: 19px;
+}
+
+@media (max-width:750px){
+  .breadcrumb{
+    margin-top: 0;
+  }
+    .breadcrumb li{
+        padding: 2px;
+        
+
+    }
+    .breadcrumb li a{
+
+        font-size: 14px;
+
+    }
+  .icons{
+    width: 16px;
+    height: 16px;
+  }
+
+
+}
+.Team{
+ align-content: center;
+ justify-content: center;
+
+}
+.steering{
+    width: 60px;
+    height: 60px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.author{
+    font-size: 10px;
+    font-family: Industry TG, Helvetica, Arial, sans-serif;
+    margin-top: 5px;
+  margin-bottom: 10px;
+}
+.name{
+    color: lightslategray;
+    font-family: "ff-good-web-pro", "Arial", sans-serif;
+    margin-top: 5px;
+  margin-bottom: 10px;
+}
+.profile_icon{
+    width: 13px;
+    height: 13px;
+}
+.icon{
+    font-size: 60px;
+}
+.intro{
+   justify-content: center;
+    display: flex;
+    float: left;
+    width: 100%;
+    height: auto;
+    gap: 2rem;
+    flex-wrap: wrap;
+    position: relative;
+    display: flex;
+    padding: 20px 10px 20px;
+    align-items: center;
+    justify-content:center;
+    flex: 1 1 17rem;
+    margin-bottom: 20px;
+    margin-top: 20px;
+    
+
+}
+.intro ul{
+    position: relative;
+
+}
+.intro li{
+    list-style: none;
+   margin-bottom: 20px;
+   margin-top: 10px;
+    display: inline-block;
+    margin: 60px;
+}
+.Scroller{
+    width: 100px;
+    height: auto;
+}
+
+ .After-scroler{
+font-size: 20px;
+font-family: Industry TG, Helvetica, Arial, sans-serif;
+text-align: center;
+margin-top: 20px;
+margin-bottom: 20px;
+width: 100%;
+
+ }
+ @media (max-width:750px){
+    .Scroller{
+      position: relative;
+      width: 80px;
+      height: auto;
+     
+
+}
+.intro{
+    width: 100%;
+
+}
+.intro li{
+    margin: 5px;
+}
+.Scroller{
+    width: 50px;
+}
+
+}
