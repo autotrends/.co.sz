@@ -416,7 +416,12 @@ height: auto;
     color: #000;
 }
 .more{
-    width: 100%;
+ 
+    font-size: 1.125rem;
+    line-height: 1.375rem;
+    font-family: Industry TG, Helvetica, Arial, sans-serif;
+    font-weight: bold;
+    font-family: Industry TG, Helvetica, Arial, sans-serif;
 
     }
     .sideby{
@@ -506,22 +511,7 @@ height: auto;
     font-size: 20px;
     color: #000;
 }
-.more{
-    width: 100%;
-    padding: 15px;
-    margin-bottom: 30px;
-    margin-top: 30px;
-    height: auto;
-    justify-content: space-around;
-    align-items: center;
-    align-content: center;
-    display: flex;
-    flex-wrap: wrap;
-    /*flex-direction: column;*/
-    gap:1rem;
 
-
-}
 .trending{
     font-size: 30px;
     text-align: center;
@@ -529,18 +519,26 @@ height: auto;
     margin-top: 30px;
  
 }
-/*
-.more ul{
- justify-content: center;
- align-items: center;
+.more{
+  display: grid;
+    grid-column-gap: 1rem;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto 1fr;
+        display: grid;
 
 }
-*/
+
 .small{
-    font-size: 10px;
-    justify-content: flex-start;
-    margin-left: 20%;
-    margin-bottom: 0;
+    
+    font-family: Industry TG, Helvetica, Arial, sans-serif;
+    font-weight: 400;
+    color: #000;
+    text-transform: uppercase;
+    font-size: 0.75rem;
+    line-height: 1rem;
+
+    
+}
 
 }
 .sideby{
@@ -552,17 +550,20 @@ height: auto;
     gap: 2rem;
 }
 .sideby:hover{
-    transform: scale(1.1);
-    cursor: pointer;
-    transition: .3s ease;
+    color: #f2f2;
 }
 
 .more span{
-    color: #000;
-    margin-bottom: 10px;
-    margin-top: 0;
-    font-size: 25px;
-    font-weight: 800;
+    display: block;
+    font-size: 1.17em;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    font-weight: bold;
+    unicode-bidi: isolate;
+
+
 }
 
 .numbers{
@@ -645,6 +646,19 @@ width: 100%;
      font-weight: 600;
      margin-left: 55px;
    }
+
+   .more span{
+    color: #000;
+   display: block;
+    font-size: 1.17em;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    font-weight: bold;
+    unicode-bidi: isolate;
+
+}
 
 }
 
