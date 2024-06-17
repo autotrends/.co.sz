@@ -33,6 +33,7 @@ display: flex;
     content:kQAfGB;
     font-size:18px;
   font-weight: 600;
+  font-family: Interstate, Interstate-upcase-roboto, Interstate-upcase-local, Helvetica, Arial, Sans-serif;
     
 
 }
@@ -56,6 +57,8 @@ display: flex;
     .breadcrumb li a{
 
         font-size: 14px;
+        font-family: Interstate, Interstate-upcase-roboto, Interstate-upcase-local, Helvetica, Arial, Sans-serif;
+
 
     }
   .icons{
@@ -82,14 +85,23 @@ display: flex;
 .specs_title{
     font-size: 20px;
     font-weight: 700;
-    font-family:monospace;
+    font-family: Gliko, Gliko-fallback, Gliko-roboto, Gliko-local, Georgia, Times, Serif;
+    font-style: normal;
+    letter-spacing: 0.105rem;
     margin-bottom: 30px;
     text-align: center;
+    font-weight: 400;
 }
 .author{
     font-size: 10px;
-    font-family: "ff-good-web-pro", "Arial", sans-serif;
-    margin-top: 5px;
+    font-family: Interstate, Interstate-upcase-roboto, Interstate-upcase-local, Helvetica, Arial, Sans-serif;
+    margin-top: -18px;
+    display: inline-block;
+    text-transform: uppercase;
+    margin-left: 0.625rem;
+    font-size: 0.70028rem;
+    line-height: 1;
+}
 }
 .name{
     color: lightslategray;
@@ -187,8 +199,20 @@ flex: 1 1 17rem;
 }
 
 .add{
-    margin-top: 50px;
+   margin-top: 10px;
     margin-bottom: 30px;
+    font-size: 13px;
+    display: block;
+    margin-block-start: 1rem;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    unicode-bidi: isolate;
+    color: #525252;
+    font-weight: 600;
+    font-family: interstate, interstate-fallback, interstate-roboto, interstate-local, halvetica, arial, sans-serif;
+    text-transform: uppercase;
+    text-align: left;
+    margin-left: 10px;
 
 }
 .all{
