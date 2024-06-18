@@ -32,7 +32,7 @@ display: flex;
     padding: 5px;
     content:kQAfGB;
     font-size:18px;
-    font-weight: 600;
+    
 
 }
 
@@ -41,6 +41,7 @@ display: flex;
     padding: 6px 12px;
     border-color: #000;
     text-decoration: underline;
+    font-weight: 600;
 }
 .breadcrumb li a:hover{
     text-decoration: none;
@@ -57,12 +58,7 @@ display: flex;
         font-size: 14px;
 
     }
-.icons{
-    width: 15px;
-    height: 15px;
-    margin-top: 10px;
-    margin-bottom: 0;
-}
+
 
 }
 
@@ -189,6 +185,12 @@ flex: 1 1 17rem;
 .add{
     margin-top: 50px;
     margin-bottom: 30px;
+    color: #525252;
+    font-weight: 600;
+    font-family: interstate, interstate-fallback, interstate-roboto, interstate-local, halvetica, arial, sans-serif;
+    text-align: left;
+    margin-left: 10px;
+        margin-top: 5px;
 
 }
 .help{
@@ -246,4 +248,36 @@ li{
     text-align: center;
 }
 
+   .share-button {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index:49;
+}
 
+svg.share-button {
+  width:1.3em;
+  height:1.3em;
+  fill: currentcolor;
+  transform: translateY(-0.2ex);
+}
+  
+  .share-button button{
+    background-color: #2c333F;
+    color:white;
+    border:none;
+    border-radius:50%;
+    padding:16px;
+    font-size: 20px;
+    cursor:pointer;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+    display:flex;
+    align-items: center;
+    justify-content:center;
+  }
+  
+  .share-button button:hover{
+  background-color: #3e8e41;
+  }
+
+ 

@@ -31,8 +31,8 @@ display: flex;
     margin-bottom: 30px;
     padding: 5px;
     content:kQAfGB;
-    font-size:20px;
-    font-weight: 600;
+    font-size:18px;
+    
 
 }
 
@@ -41,6 +41,7 @@ display: flex;
     padding: 6px 12px;
     border-color: #000;
     text-decoration: underline;
+    font-weight: 600;
 }
 .breadcrumb li a:hover{
     text-decoration: none;
@@ -184,6 +185,12 @@ flex: 1 1 17rem;
 .add{
     margin-top: 50px;
     margin-bottom: 30px;
+    color: #525252;
+    font-weight: 600;
+    font-family: interstate, interstate-fallback, interstate-roboto, interstate-local, halvetica, arial, sans-serif;
+    text-align: left;
+    margin-left: 10px;
+        margin-top: 5px;
 
 }
 .help{

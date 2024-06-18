@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,600;0,700;1,400&display=swap');
 *{
-    font-family: 'Poppins', sans-serif;
+    
     margin: 0;
     padding: 0;
     scroll-behavior: smooth;
@@ -42,8 +42,13 @@ section{
 .latest{
     font-size: 20px;
     text-align: center;
-    font-family: "ff-good-web-pro", "Arial", sans-serif;
-
+    font-family: Gliko, Gliko-upcase-roboto, Gliko-upcase-local, Georgia, Times, Serif;
+            line-height: 1;
+            mal;
+    letter-spacing: 0.075rem;
+    margin: 0rem;
+    position: relative;
+    text-transform: uppercase;
 }
 
 .container{
@@ -105,6 +110,8 @@ a{
     font-weight: 600;
     font-family: interstate, interstate-fallback, interstate-roboto, interstate-local, halvetica, arial, sans-serif;
     text-transform: uppercase;
+        text-align: left;
+    margin-left: 10px;
     
     
 }

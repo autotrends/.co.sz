@@ -19,6 +19,9 @@ margin-top: 5px;
 margin-bottom: 20px;
 width: 100%;
 display: flex;
+
+   
+
 }
 .icons{
     width: 20px;
@@ -33,9 +36,11 @@ display: flex;
     content:kQAfGB;
     font-size:18px;
   font-weight: 600;
-  font-family: Interstate, Interstate-upcase-roboto, Interstate-upcase-local, Helvetica, Arial, Sans-serif;
+   color: #ffffff;
+    font-family: Interstate, Interstate-fallback, Interstate-roboto, Interstate-local, Helvetica, Arial, Sans-serif;
+    line-height: 1;
+    list-style: none;
     
-
 }
 
 .breadcrumb li a{
@@ -43,6 +48,7 @@ display: flex;
     padding: 6px 12px;
     border-color: #000;
     text-decoration: underline;
+
 }
 .breadcrumb li a:hover{
     text-decoration: none;

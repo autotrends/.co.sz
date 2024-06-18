@@ -16,7 +16,7 @@ font-family: 'Raleway', sans-serif;
 }
 
 body{
-    font-family: ReithSans, Helvetica, Arial, sans-serif;
+    
     background: #fff;
 }
 
@@ -72,7 +72,7 @@ hr{
     height: auto;
 }
 
-/********************/
+/********************
 
 .nav-bar ul li{
     text-align: center;
@@ -286,12 +286,18 @@ main a:hover{
 .main-container-left h3{
     padding: 10px 0;
     font-size: 18px;
-    font-family: var(--heading);
+    /* font-family: var(--heading); */
+    font-family: Gliko, Gliko-fallback, Gliko-roboto, Gliko-local, Georgia, Times, Serif;
+    font-style: normal;
+    font-weight: 400;
+
 }
 
 .main-container-left p{
     font-size: 15px;
     font-weight: 300;
+    font-weight: 600;
+    font-family: interstate, interstate-fallback, interstate-roboto, interstate-local, halvetica, arial, sans-serif;
 }
 
 .main-container-left article{
@@ -315,6 +321,8 @@ main a:hover{
 
 .main-container-right > h2{
     padding: 15px 0 15px 30px;
+        
+
 }
 
 .main-container-right article{
@@ -351,12 +359,16 @@ main a:hover{
 .main-container-right article h2{
     font-size: 18px;
     padding: 10px 0;
-    font-family: var(--heading);
+   /* font-family: var(--heading); */
+    font-family: Gliko, Gliko-fallback, Gliko-roboto, Gliko-local, Georgia, Times, Serif;
+    font-style: normal;
+    font-weight: 400;
 }
 
 .main-container-right article p{
     font-size: 15px;
-    font-weight: 300;
+    font-weight: 600;
+    font-family: interstate, interstate-fallback, interstate-roboto, interstate-local, halvetica, arial, sans-serif;
 }
 
 .main-container-right article div{
