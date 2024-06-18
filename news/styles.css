@@ -14,70 +14,74 @@ html{
     width: 100%;
 }
 .breadcrumb{
-float: left;
+  float: left;
 list-style: none;
+margin-top: 5px;
 margin-bottom: 20px;
 width: 100%;
 display: flex;
-  margin-top:0;
-  margin-bottom: 1px;
-        height: 10px;
-    font-family: Gliko, Gliko-upcase-roboto, Gliko-upcase-local, Georgia, Times, Serif;
+
+   
 
 }
-.icons{
-    width: 20px;
-    height: 20px;
-    margin-top: 10px;
-    margin-bottom: 0;
+.breadcrumb-list{
+    display: inline-block;
 }
-.site-banner__subtitle{
-    margin-top: 20px;
+.breadcrumb-list:not(:last-of-type)::after{
+    content: '/';
+    margin: 0 5px;
+    color: #000;
 }
+
+/*
 .breadcrumb li{
     display:inline-block;
     margin-bottom: 30px;
     padding: 5px;
     content:kQAfGB;
     font-size:18px;
-    left: 50px;
-    color: #091f29;
+  font-weight: 600;
+   color: #ffffff;
+    font-family: Interstate, Interstate-fallback, Interstate-roboto, Interstate-local, Helvetica, Arial, Sans-serif;
+    line-height: 1;
+    list-style: none;
     
+}*/
 
-}
-.breadcrumb li a{
-    border-radius: 6px;
-    padding: 6px 12px;
-    border-color: #000;
-    text-decoration: underline;
-    font-weight: 600;
-}
-.breadcrumb li a:hover{
+.breadcrumb-list a{
+   font-weight: 600;
+   font-family: Gliko, Gliko-fallback, Gliko-roboto, Gliko-local, Georgia, Times, Serif;
+    font-style: normal;
+    padding: 4px;
     text-decoration: none;
-    font-size: 19px;
-}
+    color: #999;
 
+}
+.breadcrumb-list .active{
+    color: #000;
+}
+.breadcrumb-list a:hover{
+    text-decoration: underline;
+    
+}
 @media (max-width:750px){
-  .breadcrumb{
-    margin-top: 0;
-  }
-    .breadcrumb li{
-        padding: 2px;
+    .breadcrumb-list{
+        padding: 1px;
         
 
     }
-    .breadcrumb li a{
+    .breadcrumb-list a{
 
         font-size: 14px;
+        font-family: Gliko, Gliko-fallback, Gliko-roboto, Gliko-local, Georgia, Times, Serif;
+    font-style: normal;
+
 
     }
-  .icons{
-    width: 16px;
-    height: 16px;
-  }
-
+  
 
 }
+
 .Team{
  align-content: center;
  justify-content: center;
