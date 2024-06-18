@@ -49,7 +49,8 @@ display: flex;
 }*/
 
 .breadcrumb-list a{
-   font-weight: 600;
+   margin-left:3px;
+     font-weight: 500;
    font-family: Gliko, Gliko-fallback, Gliko-roboto, Gliko-local, Georgia, Times, Serif;
     font-style: normal;
     padding: 4px;
