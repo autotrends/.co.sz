@@ -31,7 +31,7 @@ display: flex;
 .breadcrumb-list:not(:last-of-type)::after{
     content: '/';
     margin: 0 5px;
-    color: #000;
+    color: #fff;
 }
 
 /*
@@ -55,14 +55,14 @@ display: flex;
     font-style: normal;
     padding: 4px;
     text-decoration: none;
-    color: #999;
+    color: #fff;
      margin-left:3px;
      font-weight: 500;
 
 
 }
 .breadcrumb-list .active{
-    color: #000;
+    color: #fff;
 }
 .breadcrumb-list a:hover{
     text-decoration: underline;
@@ -121,9 +121,10 @@ margin-top: 10px;
     margin-left: 0.225rem;
     font-size: 0.70028rem;
     line-height: 1;
+    color: #fff;
 }
 .name{
-    color: lightslategray;
+    color: #fff;
     font-size: 10px;
     font-family: Interstate, Interstate-upcase-roboto, Interstate-upcase-local, Helvetica, Arial, Sans-serif;
     margin-top: -18px;
@@ -230,6 +231,19 @@ flex: 1 1 17rem;
     text-align: left;
     margin-left: 4px;
         margin-top: 5px;
+        color: #fff;
+
+}
+.add1{
+    margin-top: 50px;
+    margin-bottom: 30px;
+    color: #525252;
+    font-weight: 600;
+    font-family: interstate, interstate-fallback, interstate-roboto, interstate-local, halvetica, arial, sans-serif;
+    text-align: left;
+    margin-left: 4px;
+       
+        color: #000;
 
 }
 .help{

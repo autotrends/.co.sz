@@ -29,7 +29,7 @@ display: flex;
 .breadcrumb-list:not(:last-of-type)::after{
     content: '/';
     margin: 0 5px;
-    color: #000;
+    color: #fff;
 }
 
 /*
@@ -54,11 +54,11 @@ display: flex;
     font-style: normal;
     padding: 4px;
     text-decoration: none;
-    color: #999;
+    color: #fff;
 
 }
 .breadcrumb-list .active{
-    color: #000;
+    color: #fff;
 }
 .breadcrumb-list a:hover{
     text-decoration: underline;
@@ -119,9 +119,10 @@ margin-top: 10px;
     margin-left: 0.225rem;
     font-size: 0.70028rem;
     line-height: 1;
+    color: #fff;
 }
 .name{
-    color: lightslategray;
+    color: #fff;
     font-size: 10px;
     font-family: Interstate, Interstate-upcase-roboto, Interstate-upcase-local, Helvetica, Arial, Sans-serif;
     margin-top: -18px;
@@ -228,7 +229,7 @@ flex: 1 1 17rem;
     margin-inline-start: 0px;
     margin-inline-end: 0px;
     unicode-bidi: isolate;
-    color: #525252;
+    color: #fff;
     font-weight: 600;
     font-family: interstate, interstate-fallback, interstate-roboto, interstate-local, halvetica, arial, sans-serif;
     text-transform: uppercase;
