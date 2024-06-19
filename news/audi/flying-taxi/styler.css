@@ -26,10 +26,11 @@ display: flex;
 }
 .breadcrumb-list{
     display: inline-block;
+    
 
 }
 .breadcrumb-list:not(:last-of-type)::after{
-    content: '/';
+    content: '|';
     margin: 0 5px;
     color: #fff;
 }
