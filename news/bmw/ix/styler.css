@@ -20,11 +20,13 @@ margin-bottom: 20px;
 width: 100%;
 display: flex;
 
+
    
 
 }
 .breadcrumb-list{
     display: inline-block;
+
 }
 .breadcrumb-list:not(:last-of-type)::after{
     content: '/';
@@ -48,14 +50,15 @@ display: flex;
 }*/
 
 .breadcrumb-list a{
-   margin-left:3px;
-     font-weight: 500;
+   
    font-family: Gliko, Gliko-fallback, Gliko-roboto, Gliko-local, Georgia, Times, Serif;
     font-style: normal;
     padding: 4px;
     text-decoration: none;
     color: #999;
-    
+     margin-left:3px;
+     font-weight: 500;
+
 
 }
 .breadcrumb-list .active{
@@ -76,6 +79,7 @@ display: flex;
         font-size: 14px;
         font-family: Gliko, Gliko-fallback, Gliko-roboto, Gliko-local, Georgia, Times, Serif;
     font-style: normal;
+    padding: 0px;
 
 
     }
@@ -104,17 +108,31 @@ display: flex;
     text-align: center;
 }
 .author{
+    
+margin-left: 3px;
+margin-top: 10px;
+}
+.author li{
+    display: inline-block;
     font-size: 10px;
-    font-family: "ff-good-web-pro", "Arial", sans-serif;
-    margin-top: 5px;
+    font-family: Interstate, Interstate-upcase-roboto, Interstate-upcase-local, Helvetica, Arial, Sans-serif;
+    margin-top: -18px;
+    text-transform: uppercase;
+    margin-left: 0.225rem;
+    font-size: 0.70028rem;
+    line-height: 1;
 }
 .name{
     color: lightslategray;
-    font-family: "ff-good-web-pro", "Arial", sans-serif;
     font-size: 10px;
+    font-family: Interstate, Interstate-upcase-roboto, Interstate-upcase-local, Helvetica, Arial, Sans-serif;
+    margin-top: -18px;
+    text-transform: uppercase;
+    margin-left: 0.225rem;
+    font-size: 0.70028rem;
 }
-.icon{
-    font-size: 50px;
+.icons{
+    font-size: 10px;
 }
 .profile{
     width: 15px;
@@ -210,7 +228,7 @@ flex: 1 1 17rem;
     font-weight: 600;
     font-family: interstate, interstate-fallback, interstate-roboto, interstate-local, halvetica, arial, sans-serif;
     text-align: left;
-    margin-left: 10px;
+    margin-left: 4px;
         margin-top: 5px;
 
 }
