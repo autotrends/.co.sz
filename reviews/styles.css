@@ -20,6 +20,8 @@ margin-top: 5px;
 margin-bottom: 20px;
 width: 100%;
 display: flex;
+line-height: 1;
+
 
    
 
@@ -31,6 +33,10 @@ display: flex;
     content: '/';
     margin: 0 5px;
     color: #000;
+}
+.breadcrumb li{
+            list-style: none;
+            
 }
 
 /*
@@ -56,6 +62,7 @@ display: flex;
     padding: 4px;
     text-decoration: none;
     color: #999;
+    font-size:0.70028rem;
 
 }
 .breadcrumb-list .active{
@@ -73,7 +80,7 @@ display: flex;
     }
     .breadcrumb-list a{
 
-        font-size: 14px;
+        font-size: 12px;
         font-family: Gliko, Gliko-fallback, Gliko-roboto, Gliko-local, Georgia, Times, Serif;
     font-style: normal;
 
