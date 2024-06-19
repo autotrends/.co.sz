@@ -285,7 +285,7 @@ main a:hover{
 
 .main-container-left h3{
     padding: 10px 0;
-    font-size: 18px;
+    font-size: 20px;
     /* font-family: var(--heading); */
     font-family: Gliko, Gliko-fallback, Gliko-roboto, Gliko-local, Georgia, Times, Serif;
     font-style: normal;
@@ -297,7 +297,7 @@ main a:hover{
     font-size: 15px;
     font-weight: 300;
     font-weight: 600;
-    font-family: interstate, interstate-fallback, interstate-roboto, interstate-local, halvetica, arial, sans-serif;
+    font-family: Gliko, Gliko-fallback, Gliko-roboto, Gliko-local, Georgia, Times, Serif;
 }
 
 .main-container-left article{
@@ -353,11 +353,11 @@ main a:hover{
     align-self: center;
 }
 .cat{
-    font-size: 1.825rem;
+   font-size: 0.825rem;
 }
 
 .main-container-right article h2{
-    font-size: 18px;
+    font-size: 20px;
     padding: 10px 0;
    /* font-family: var(--heading); */
     font-family: Gliko, Gliko-fallback, Gliko-roboto, Gliko-local, Georgia, Times, Serif;
@@ -368,7 +368,7 @@ main a:hover{
 .main-container-right article p{
     font-size: 15px;
     font-weight: 600;
-    font-family: interstate, interstate-fallback, interstate-roboto, interstate-local, halvetica, arial, sans-serif;
+   font-family: Gliko, Gliko-fallback, Gliko-roboto, Gliko-local, Georgia, Times, Serif;
 }
 
 .main-container-right article div{
@@ -404,7 +404,7 @@ main a:hover{
         grid-row: 1/2;
         grid-column: 1/2;
         align-self: flex-start;
-        font-size: 16px;
+        font-size: 11px;
     }
 
     .main-container-right article img{
@@ -433,7 +433,7 @@ main a:hover{
    font-size: 18px;
 }
 .cat{
-    font-size: 0.625rem;
+    font-size: 0.925rem;
 }
 
     
