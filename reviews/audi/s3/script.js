@@ -19,3 +19,33 @@ let calcScrollValue = () => {
 
 window.onscroll = calcScrollValue;
 window.onload = calcScrollValue;
+
+function share(platform, url, text) {
+  switch(platform) {
+      case 'facebook':
+          window.open('https://www.facebook.com/sharer.php?u=' + url, '_blank');
+          break;
+      case 'instagram':
+          window.open('https://www.instagram.com/?url=' + url, '_blank');
+          break;
+      case 'x':
+          window.open('https://twitter.com/intent/tweet?url=' + url + '&text=' + text, '_blank');
+          break;
+      case 'tiktok':
+          window.open('https://www.tiktok.com/share?url=' + url, '_blank');
+          break;
+      case 'youtube':
+          window.open('https://www.youtube.com/share?url=' + url, '_blank');
+          break;
+      case 'copy':
+          navigator.clipboard.writeText(url).then(function() {
+              alert('Link copied to clipboard');
+          }, function() {
+              alert('Failed to copy link');
+          });
+          break;
+  }
+}
+
+
+
