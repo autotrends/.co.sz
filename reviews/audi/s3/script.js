@@ -20,42 +20,39 @@ let calcScrollValue = () => {
 window.onscroll = calcScrollValue;
 window.onload = calcScrollValue;
 
-function share(platform, url, text) {
-  // Check if URL is defined and not empty
-  if (!url) {
-      // If url is undefined or empty, handle it accordingly
-      alert('URL is undefined or empty');
-      return;
-  }
+const link = encodeURI(window.location.href);
+const msg = encodeURIComponent('Hey, I found this article');
+const title = encodeURIComponent('Article or Post Title Here');
 
-  switch(platform) {
-      case 'facebook':
-          window.open('https://www.facebook.com/sharer.php?u=' + encodeURIComponent(url), '_blank');
-          break;
-      case 'instagram':
-          window.open('https://www.instagram.com/?url=' + encodeURIComponent(url), '_blank');
-          break;
-      case 'twitter':
-          window.open('https://twitter.com/intent/tweet?url=' + encodeURIComponent(url) + '&text=' + encodeURIComponent(text), '_blank');
-          break;
-      case 'tiktok':
-          window.open('https://www.tiktok.com/share?url=' + encodeURIComponent(url), '_blank');
-          break;
-      case 'youtube':
-          window.open('https://www.youtube.com/share?url=' + encodeURIComponent(url), '_blank');
-          break;
-      case 'copy':
-          navigator.clipboard.writeText(url).then(function() {
-              alert('Link copied to clipboard');
-          }, function() {
-              alert('Failed to copy link');
-          });
-          break;
-      default:
-          alert('Unsupported platform');
-          break;
-  }
-}
+// Update existing social media sharing links
+const fb = document.querySelector('.facebook');
+fb.href = `https://www.facebook.com/share.php?u=${link}`;
+
+const twitter = document.querySelector('.twitter');
+twitter.href = `http://twitter.com/share?&url=${link}&text=${msg}&hashtags=javascript,programming`;
+
+// Add Instagram, TikTok, and YouTube sharing links
+const instagram = document.querySelector('.instagram');
+instagram.href = `https://www.instagram.com/share?url=${link}`;
+
+const tiktok = document.querySelector('.tiktok');
+tiktok.href = `https://www.tiktok.com/@username?u=${link}`;
+
+const youtube = document.querySelector('.youtube');
+youtube.href = `https://www.youtube.com/share?url=${link}`;
+
+// Add copy link functionality
+const copyLink = document.querySelector('.copy-link');
+
+copyLink.addEventListener('click', () => {
+    navigator.clipboard.writeText(window.location.href)
+        .then(() => {
+            alert('URL copied to clipboard');
+        })
+        .catch(err => {
+            console.error('Failed to copy URL: ', err);
+        });
+});
 
 
 
