@@ -21,21 +21,28 @@ window.onscroll = calcScrollValue;
 window.onload = calcScrollValue;
 
 function share(platform, url, text) {
+  // Check if URL is defined and not empty
+  if (!url) {
+      // If url is undefined or empty, handle it accordingly
+      alert('URL is undefined or empty');
+      return;
+  }
+
   switch(platform) {
       case 'facebook':
-          window.open('https://www.facebook.com/sharer.php?u=' + url, '_blank');
+          window.open('https://www.facebook.com/sharer.php?u=' + encodeURIComponent(url), '_blank');
           break;
       case 'instagram':
-          window.open('https://www.instagram.com/?url=' + url, '_blank');
+          window.open('https://www.instagram.com/?url=' + encodeURIComponent(url), '_blank');
           break;
-      case 'x':
-          window.open('https://twitter.com/intent/tweet?url=' + url + '&text=' + text, '_blank');
+      case 'twitter':
+          window.open('https://twitter.com/intent/tweet?url=' + encodeURIComponent(url) + '&text=' + encodeURIComponent(text), '_blank');
           break;
       case 'tiktok':
-          window.open('https://www.tiktok.com/share?url=' + url, '_blank');
+          window.open('https://www.tiktok.com/share?url=' + encodeURIComponent(url), '_blank');
           break;
       case 'youtube':
-          window.open('https://www.youtube.com/share?url=' + url, '_blank');
+          window.open('https://www.youtube.com/share?url=' + encodeURIComponent(url), '_blank');
           break;
       case 'copy':
           navigator.clipboard.writeText(url).then(function() {
@@ -44,8 +51,13 @@ function share(platform, url, text) {
               alert('Failed to copy link');
           });
           break;
+      default:
+          alert('Unsupported platform');
+          break;
   }
 }
+
+
 
 
 
