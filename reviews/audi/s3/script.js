@@ -26,20 +26,20 @@ const title = encodeURIComponent('Article or Post Title Here');
 
 // Update existing social media sharing links
 const fb = document.querySelector('.facebook');
-fb.href = `https://www.facebook.com/share.php?u=${link}`;
+fb.href = `https://www.facebook.com/share.php?url=${https://www.autotrendsz.com/reviews/audi/s3/}`;
 
 const twitter = document.querySelector('.twitter');
-twitter.href = `http://twitter.com/share?&url=${link}&text=${msg}&hashtags=javascript,programming`;
+twitter.href = `http://twitter.com/share?&url=${https://www.autotrendsz.com/reviews/audi/s3/}&text=${msg}&hashtags=javascript,programming`;
 
 // Add Instagram, TikTok, and YouTube sharing links
 const instagram = document.querySelector('.instagram');
-instagram.href = `https://www.instagram.com/share?url=${link}`;
+instagram.href = `https://www.instagram.com/share?url=${https://www.autotrendsz.com/reviews/audi/s3/}`;
 
 const tiktok = document.querySelector('.tiktok');
-tiktok.href = `https://www.tiktok.com/@username?u=${link}`;
+tiktok.href = `https://www.tiktok.com/@username?u=${https://www.autotrendsz.com/reviews/audi/s3/}`;
 
 const youtube = document.querySelector('.youtube');
-youtube.href = `https://www.youtube.com/share?url=${link}`;
+youtube.href = `https://www.youtube.com/share?url=${https://www.autotrendsz.com/reviews/audi/s3/}`;
 
 // Add copy link functionality
 const copyLink = document.querySelector('.copy-link');
