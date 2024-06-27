@@ -20,26 +20,26 @@ let calcScrollValue = () => {
 window.onscroll = calcScrollValue;
 window.onload = calcScrollValue;
 
-const link = encodeURI(window.location.href);
+const link = 'https://www.autotrendsz.com/reviews/audi/s3/';//encodeURI(window.location.href);
 const msg = encodeURIComponent('Hey, I found this article');
 const title = encodeURIComponent('Article or Post Title Here');
 
 // Update existing social media sharing links
 const fb = document.querySelector('.facebook');
-fb.href = `https://www.facebook.com/share.php?url=${https://www.autotrendsz.com/reviews/audi/s3/}`;
+fb.href = `https://www.facebook.com/share.php?u=${link}`;
 
 const twitter = document.querySelector('.twitter');
-twitter.href = `http://twitter.com/share?&url=${https://www.autotrendsz.com/reviews/audi/s3/}&text=${msg}&hashtags=javascript,programming`;
+twitter.href = `http://twitter.com/share?&url=${link}&text=${msg}&hashtags=javascript,programming`;
 
 // Add Instagram, TikTok, and YouTube sharing links
 const instagram = document.querySelector('.instagram');
-instagram.href = `https://www.instagram.com/share?url=${https://www.autotrendsz.com/reviews/audi/s3/}`;
+instagram.href = `https://www.instagram.com/share?url=${link}`;
 
 const tiktok = document.querySelector('.tiktok');
-tiktok.href = `https://www.tiktok.com/@username?u=${https://www.autotrendsz.com/reviews/audi/s3/}`;
+tiktok.href = `https://www.tiktok.com/@username?u=${link}`;
 
 const youtube = document.querySelector('.youtube');
-youtube.href = `https://www.youtube.com/share?url=${https://www.autotrendsz.com/reviews/audi/s3/}`;
+youtube.href = `https://www.youtube.com/share?url=${link}`;
 
 // Add copy link functionality
 const copyLink = document.querySelector('.copy-link');
@@ -53,7 +53,6 @@ copyLink.addEventListener('click', () => {
             console.error('Failed to copy URL: ', err);
         });
 });
-
 
 
 
