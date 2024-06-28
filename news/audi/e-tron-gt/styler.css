@@ -20,46 +20,30 @@ margin-bottom: 20px;
 width: 100%;
 display: flex;
 
-
    
 
 }
 .breadcrumb-list{
     display: inline-block;
-    
-
 }
 .breadcrumb-list:not(:last-of-type)::after{
     content: '/';
     margin: 0 5px;
     color: #fff;
+    font-size: 18px;
 }
-
-/*
-.breadcrumb li{
-    display:inline-block;
-    margin-bottom: 30px;
-    padding: 5px;
-    content:kQAfGB;
-    font-size:18px;
-  font-weight: 600;
-   color: #ffffff;
-    font-family: Interstate, Interstate-fallback, Interstate-roboto, Interstate-local, Helvetica, Arial, Sans-serif;
-    line-height: 1;
-    list-style: none;
-    
-}*/
-
 .breadcrumb-list a{
-   
-   font-family: Gliko, Gliko-fallback, Gliko-roboto, Gliko-local, Georgia, Times, Serif;
+   margin-left:3px;
+     font-weight: 300;
+     /*
+   font-family: Gliko, Gliko-fallback, Gliko-roboto, Gliko-local, Georgia, Times, Serif;*/
+   font-family: "ff-good-web-pro", "Arial", sans-serif;
+   text-transform: uppercase;
     font-style: normal;
     padding: 4px;
     text-decoration: none;
     color: #fff;
-     margin-left:3px;
-     font-weight: 500;
-
+    font-size: 1.1rem;
 
 }
 .breadcrumb-list .active{
@@ -75,12 +59,15 @@ display: flex;
         
 
     }
+    .breadcrumb-list:not(:last-of-type)::after{
+    font-size: 10px;
+}
     .breadcrumb-list a{
 
-        font-size: 14px;
-        font-family: Gliko, Gliko-fallback, Gliko-roboto, Gliko-local, Georgia, Times, Serif;
+        font-size: 10px;
+        /*font-family: Gliko, Gliko-fallback, Gliko-roboto, Gliko-local, Georgia, Times, Serif;*/
+        font-family: "ff-good-web-pro", "Arial", sans-serif;
     font-style: normal;
-    padding: 0px;
 
 
     }
