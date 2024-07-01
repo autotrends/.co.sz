@@ -1,93 +1,134 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,600;0,700;1,400&display=swap');
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+.sharing{
+  
+    font-family: "ff-good-web-pro", "Arial", sans-serif;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: .25em;
+    text-transform: uppercase;
+    margin-left: 0.225rem;
+    font-size: 0.80028rem;
+    line-height: 1;
+    color: #000;
 }
-:root {
-  --white: #fff;
-  --bg: #f2ecec;
-  --primary: #7d6be8;
-}
-html {
-  font-size: 62.5%;
-}
-body {
-  background: var(--bg);
-}
-.container {
-  max-width: 74rem;
-  margin: 0 auto;
-  padding: 1.7rem 1rem;
-}
-.product-img {
-  width: 100%;
-  height: 40rem;
-  position: relative;
-  margin-bottom: 2rem;
-  border-radius: 0.5rem;
-  background: var(--white);
-  overflow: hidden;
-}
-.product-img img {
-  width: 55rem;
-  height: 37rem;
-  object-fit: contain;
-  position: absolute;
-  left: 50%;
-  transform: translateX(-50%) rotate(10deg);
-}
-@media (max-width: 630px) {
-  .product-img {
-    height: 30rem;
-  }
-  .product-img img {
-    width: 90%;
-    height: 100%;
-    padding: 1rem;
-  }
-}
-@media (max-width: 375px) {
-  .product-img {
-    height: 25rem;
-  }
+.social-buttons {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+    gap: 1rem;
 }
 
-.product-img img[data-index='2'],
-.product-img img[data-index='4'] {
-  transform: translateX(-50%) rotate(-10deg);
-}
-.product-thumbnail-container {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  justify-content: center;
-  gap: 0.7rem;
+.social-buttons a {
+    display: block;
+    width: 50px;
+    height: 50px;
+    margin: 0 10px;
+    border-radius: 8px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
-.product-thumbnail {
-  background: var(--white);
-  border: 0.3rem solid var(--white);
-  padding: 0.5rem;
-  border-radius: 0.5rem;
-  cursor: pointer;
-  transition: all 0.5s ease-in-out;
+.social-buttons a img {
+    width: 30px;
+    height: 30px;
 }
-.product-thumbnail.active {
-  border: 0.3rem solid var(--primary);
+
+.facebook {
+    background-color: transparent;
 }
-.product-thumbnail img {
-  width: 100%;
-  height: 100%;
-  object-fit: contain;
+
+.twitter {
+    background-color: transparent;
 }
-.product-down-animation {
-  animation: down 0.5s ease;
+
+.instagram {
+    background-color: transparent;
 }
-@keyframes down {
-  0% {
-    top: -100%;
-  }
-  100% {
-    top: 0%;
-  }
+
+.whatsapp {
+    background-color: transparent;
+}
+
+.tiktok {
+    background-color: transparent;
+}
+.youtube {
+    background-color: transparent;
+}
+
+.copy-link {
+    background-color: transparent;
+}
+
+@media (max-width: 600px) {
+    .social-buttons {
+      display: flex;
+       gap: 0.3em;
+        align-items: center;
+    }
+
+    .social-buttons a {
+        margin: 10px 0;
+    }
+}
+.social-buttons {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+    gap: 1rem;
+}
+
+.social-buttons a {
+    display: block;
+    width: 50px;
+    height: 50px;
+    margin: 0 10px;
+    border-radius: 8px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.social-buttons a img {
+    width: 30px;
+    height: 30px;
+}
+
+.facebook {
+    background-color: transparent;
+}
+
+.twitter {
+    background-color: transparent;
+}
+
+.instagram {
+    background-color: transparent;
+}
+
+.whatsapp {
+    background-color: transparent;
+}
+
+.tiktok {
+    background-color: transparent;
+}
+.youtube {
+    background-color: transparent;
+}
+
+.copy-link {
+    background-color: transparent;
+}
+
+@media (max-width: 600px) {
+    .social-buttons {
+      display: flex;
+       gap: 0.3em;
+        align-items: center;
+    }
+
+    .social-buttons a {
+        margin: 10px 0;
+    }
 }

@@ -8,6 +8,18 @@
   --bg: #f2ecec;
   --primary: #7d6be8;
 }
+.sharing{
+  
+    font-family: "ff-good-web-pro", "Arial", sans-serif;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: .25em;
+    text-transform: uppercase;
+    margin-left: 0.225rem;
+    font-size: 0.80028rem;
+    line-height: 1;
+    color: #000;
+}
 .scroll {
   white-space: nowrap; /* [1] */
   overflow-x: auto; /* [2] */
@@ -151,6 +163,10 @@ background: #000;
 }
 
 .instagram {
+    background-color: transparent;
+}
+
+.whatsapp {
     background-color: transparent;
 }
 

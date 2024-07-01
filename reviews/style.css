@@ -104,16 +104,56 @@ display: flex;
 }
 
 .add{
-    margin-top: 50px;
+   margin-top: 10px;
     margin-bottom: 30px;
-    color: #525252;
+    font-size: 30px;
+    display: block;
+    margin-block-start: 1rem;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    unicode-bidi: isolate;
+    color: #fff;
     font-weight: 500;
     font-family: Gliko, Gliko-fallback, Gliko-roboto, Gliko-local, Georgia, Times, Serif;
     font-style: normal;
+    text-transform: uppercase;
     text-align: left;
-        margin-top: 5px;
-        color: #fff;
+    margin-left: 4px;
 
+}
+@media screen and (max-width: 1024px) and (min-width: 671px){
+    .add{
+   
+    font-size: 16px;
+}
+}
+@media screen and (max-width: 670px) and (min-width: 351px){
+    .add{
+   
+    font-size: 16px;
+}
+}
+@media screen and (max-width: 350px){
+    .add{
+   
+    font-size: 14px;
+
+    
+
+}
+}
+@media (max-width: 768px){
+    .author li{
+font-size: 0.50028rem;
+}
+
+.add{
+   
+    font-size: 16px;
+
+    
+
+}
 }
 
 .container{
@@ -127,66 +167,27 @@ display: flex;
 a{
     color: #fff;
 }
-.about{
-    position: relative;
-    width: 100%;
-    display: flex !important;
-    justify-content: center;
-    align-items: center;
-     top: 0;
-}
-
-.about .contentBx{
-    max-width: 50%;
-    width: 50%;
-    text-align: left;
-    padding-right: 40px;
-}
-
-.titleText{
-    font-weight: 600;
-    color: #fff;
-    font-size: 1.6rem;
-    margin-bottom: 10px;
-    font-weight: 400;
-    line-height: 100%;
-    text-transform: uppercase;
-    font-family: Gliko, Gliko-fallback, Gliko-roboto, Gliko-local, Georgia, Times, Serif;
-    font-style: normal;
-    letter-spacing: 0.075rem;
-    line-height: 1.2;
-    /* text-align: left; */
-    padding-right: 0.3125rem;
-    margin-top: 1px;
-    margin-left: 4px;
-
-}
-
-.title-text{
-    color: #fff;
-    font-size: 0.8em;
-     margin-top: 30px;
-    margin-bottom: 30px;
-    display: block;
-    margin-block-start: 1rem;
-    margin-inline-start: 0px;
-    margin-inline-end: 0px;
-    unicode-bidi: isolate;
-    font-weight: 600;
-    font-family: Gliko, Gliko-fallback, Gliko-roboto, Gliko-local, Georgia, Times, Serif;
-    font-style: normal;
-    text-transform: uppercase;
-        text-align: left;
-    margin-left: 4px;
+.author{
     
-    
+margin-left: 3px;
+margin-top: 10px;
 }
-
-.about .imgBx{
-    position: relative;
-    min-width: 50%;
-    width: 50%;
-    min-height: 500px;
+.author li{
+    display: inline-block;
+        font-family: "ff-good-web-pro", "Arial", sans-serif;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: .25em;
+    text-transform: uppercase;
+    margin-left: 0.225rem;
+    font-size: 0.80028rem;
+    line-height: 1;
+    color: #fff;
+}
+@media (max-width: 768px){
+    .author li{
+font-size: 0.50028rem;
+}
 }
 
 .btn2{
@@ -206,29 +207,13 @@ a{
     border: none;
     color: #fff;
 }
-.author{
-    
-margin-left: 3px;
-margin-top: 10px;
-}
-.author li{
-    display: inline-block;
-    font-size: 10px;
-    font-family: Gliko, Gliko-fallback, Gliko-roboto, Gliko-local, Georgia, Times, Serif;
-    font-style: normal;
-    margin-top: -18px;
-    text-transform: uppercase;
-    margin-left: 0.225rem;
-    font-size: 0.70028rem;
-    line-height: 1;
-    color: #fff;
-}
+
+
 .name{
     color: #fff;
     font-size: 10px;
    font-family: Gliko, Gliko-fallback, Gliko-roboto, Gliko-local, Georgia, Times, Serif;
     font-style: normal;
-    margin-top: -18px;
     text-transform: uppercase;
     margin-left: 0.225rem;
     font-size: 0.70028rem;
@@ -284,6 +269,7 @@ margin-top: 10px;
     padding: 16px 21px;
 }
 @media (max-width: 768px){
+    
 .post-filter{
      white-space: nowrap; /* [1] */
   overflow-x: auto; /* [2] */
@@ -427,29 +413,7 @@ transform: translate(0px, -8px);
 }
 
 @media (max-width: 768px){
-    .about{
-        flex-direction: column;
-      margin-top: 0;
-    }
     
-    .about .contentBx{
-        min-width: 100%;
-        width: 100%;
-        text-align: center;
-        padding-right: 0px;
-    }
-
-    .about .contentBx,
-    .about .imgBx{
-        min-width: 100%;
-        width: 100%;
-        padding-right: 0px;
-        text-align: center;
-    }
-
-    .about .imgBx{
-        min-height: 250px;
-    }
 
     .btn2{
         margin-bottom: 0px;

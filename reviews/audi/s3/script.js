@@ -35,11 +35,14 @@ twitter.href = `http://twitter.com/share?&url=${link}&text=${msg}&hashtags=javas
 const instagram = document.querySelector('.instagram');
 instagram.href = `https://www.instagram.com/share?url=${link}`;
 
-const tiktok = document.querySelector('.tiktok');
-tiktok.href = `https://www.tiktok.com/@username?u=${link}`;
+const whatsapp = document.querySelector('.whatsapp');
+whatsapp.href = ` https://wa.me/?text=' + text + '%20' + url=${link}`;
 
-const youtube = document.querySelector('.youtube');
-youtube.href = `https://www.youtube.com/share?url=${link}`;
+//const tiktok = document.querySelector('.tiktok');
+//tiktok.href = `https://www.tiktok.com/@username?u=${link}`;
+
+//const youtube = document.querySelector('.youtube');
+//youtube.href = `https://www.youtube.com/share?url=${link}`;
 
 // Add copy link functionality
 const copyLink = document.querySelector('.copy-link');

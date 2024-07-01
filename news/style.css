@@ -112,23 +112,7 @@ section{
     color: #fff;
     margin-bottom: 40px;
 }
-.author{
-    
-margin-left: 3px;
-margin-top: 10px;
-}
-.author li{
-    display: inline-block;
-    font-size: 10px;
-    font-family: Gliko, Gliko-fallback, Gliko-roboto, Gliko-local, Georgia, Times, Serif;
-    font-style: normal;
-    margin-top: -18px;
-    text-transform: uppercase;
-    margin-left: 0.225rem;
-    font-size: 0.70028rem;
-    line-height: 1;
-    color: #fff;
-}
+
 .name{
     color: #fff;
     font-size: 10px;

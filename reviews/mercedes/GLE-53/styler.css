@@ -140,6 +140,24 @@ display: flex;
     text-align: center;
     font-weight: 400;
 }
+.add{
+   margin-top: 10px;
+    margin-bottom: 30px;
+    font-size: 30px;
+    display: block;
+    margin-block-start: 1rem;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    unicode-bidi: isolate;
+    color: #fff;
+    font-weight: 500;
+    font-family: Gliko, Gliko-fallback, Gliko-roboto, Gliko-local, Georgia, Times, Serif;
+    font-style: normal;
+    text-transform: uppercase;
+    text-align: left;
+    margin-left: 4px;
+
+}
 .author{
     
 margin-left: 3px;
@@ -147,15 +165,49 @@ margin-top: 10px;
 }
 .author li{
     display: inline-block;
-    font-size: 10px;
-    font-family: Gliko, Gliko-fallback, Gliko-roboto, Gliko-local, Georgia, Times, Serif;
-    font-style: normal;
-    margin-top: -18px;
+        font-family: "ff-good-web-pro", "Arial", sans-serif;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: .25em;
     text-transform: uppercase;
     margin-left: 0.225rem;
-    font-size: 0.70028rem;
+    font-size: 0.80028rem;
     line-height: 1;
     color: #fff;
+}
+@media screen and (max-width: 1024px) and (min-width: 671px){
+    .add{
+   
+    font-size: 16px;
+}
+}
+@media screen and (max-width: 670px) and (min-width: 351px){
+    .add{
+   
+    font-size: 16px;
+}
+}
+@media screen and (max-width: 350px){
+    .add{
+   
+    font-size: 14px;
+
+    
+
+}
+}
+@media (max-width: 768px){
+    .author li{
+font-size: 0.50028rem;
+}
+
+.add{
+   
+    font-size: 16px;
+
+    
+
+}
 }
 .name{
     color: #fff;
@@ -257,24 +309,7 @@ flex: 1 1 17rem;
     height: auto;
 }
 
-.add{
-   margin-top: 10px;
-    margin-bottom: 30px;
-    font-size: 13px;
-    display: block;
-    margin-block-start: 1rem;
-    margin-inline-start: 0px;
-    margin-inline-end: 0px;
-    unicode-bidi: isolate;
-    color: #fff;
-    font-weight: 500;
-    font-family: Gliko, Gliko-fallback, Gliko-roboto, Gliko-local, Georgia, Times, Serif;
-    font-style: normal;
-    text-transform: uppercase;
-    text-align: left;
-    margin-left: 4px;
 
-}
 .all{
       justify-content: space-around;
     align-items: center;

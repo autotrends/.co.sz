@@ -8,6 +8,18 @@
   --bg: #f2ecec;
   --primary: #7d6be8;
 }
+.sharing{
+  
+    font-family: "ff-good-web-pro", "Arial", sans-serif;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: .25em;
+    text-transform: uppercase;
+    margin-left: 0.225rem;
+    font-size: 0.80028rem;
+    line-height: 1;
+    color: #000;
+}
 .scroll {
   white-space: nowrap; /* [1] */
   overflow-x: auto; /* [2] */
@@ -119,44 +131,66 @@ background: #000;
 }
 }
 
-#share-container span {
-  display: block;
-  margin: 3rem auto;
-  font-size: 50px;
-  padding: 1rem;
-  margin: 1rem;
+.social-buttons {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+    gap: 1rem;
 }
-#share-buttons i {
-  font-size: 50px;
-  margin: 20px;
+
+.social-buttons a {
+    display: block;
+    width: 50px;
+    height: 50px;
+    margin: 0 10px;
+    border-radius: 8px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
+
+.social-buttons a img {
+    width: 30px;
+    height: 30px;
+}
+
 .facebook {
-      color: #3b5998;
+    background-color: transparent;
 }
+
 .twitter {
-    color: #55acee;
+    background-color: transparent;
 }
-.linkedin {
-    color: #0077b5;
+
+.instagram {
+    background-color: transparent;
 }
-.reddit {
-    color: #cb2027;
-}
+
 .whatsapp {
-    color: #25D366;
+    background-color: transparent;
 }
-.telegram {
-    color: #229ED9;
+
+.tiktok {
+    background-color: transparent;
 }
-.facebook, .twitter, .linkedin, .reddit, .whatsapp, .telegram {
-  opacity: 0.6;
+.youtube {
+    background-color: transparent;
 }
-.facebook:hover, .twitter:hover, .linkedin:hover, .reddit:hover, .whatsapp:hover, .telegram:hover {
-  opacity: 0.9;
+
+.copy-link {
+    background-color: transparent;
 }
-@media (max-width: 768px){
-    #share-buttons i {
-  font-size: 50px;
-  margin: 10px;
+
+@media (max-width: 600px) {
+    .social-buttons {
+      display: flex;
+       gap: 0.3em;
+        align-items: center;
+    }
+
+    .social-buttons a {
+        margin: 10px 0;
+    }
 }
-}
+
+

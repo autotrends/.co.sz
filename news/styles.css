@@ -94,23 +94,22 @@ display: flex;
     margin-top: 20px;
     margin-bottom: 20px;
 }
-
-.author{
-    font-size: 10px;
-    font-family: Industry TG, Helvetica, Arial, sans-serif;
-    margin-top: 5px;
-  margin-bottom: 10px;
-  margin-left: 4px;
+.author li{
+    display: inline-block;
+        font-family: "ff-good-web-pro", "Arial", sans-serif;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: .25em;
+    text-transform: uppercase;
+    margin-left: 0.225rem;
+    font-size: 0.80028rem;
+    line-height: 1;
+    color: #fff;
 }
-.name{
-    color: lightslategray;
-    font-family: "ff-good-web-pro", "Arial", sans-serif;
-    margin-top: 5px;
-  margin-bottom: 10px;
+@media (max-width: 768px){
+    .author li{
+font-size: 0.50028rem;
 }
-.profile_icon{
-    width: 13px;
-    height: 13px;
 }
 .icon{
     font-size: 60px;
