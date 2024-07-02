@@ -26,7 +26,7 @@ const title = encodeURIComponent('Article or Post Title Here');
 
 // Update existing social media sharing links
 const fb = document.querySelector('.facebook');
-fb.href = `https://www.facebook.com/share.php?u=${link}`;
+fb.href = `https://www.facebook.com/sharer.php?u=${link}`;
 
 const twitter = document.querySelector('.twitter');
 twitter.href = `http://twitter.com/share?&url=${link}&text=${msg}&hashtags=javascript,programming`;
