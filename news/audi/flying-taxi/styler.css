@@ -410,5 +410,84 @@ font-size: 0.50028rem;
 
 }
 }
+.com{
+     background: var(--bg-color);
+    box-shadow: 0 14px 28px rgba(0, 0, 0, 0.025), 0 10px 10px rgba(0, 0, 0, 0.22);
+    padding: 15px;
+     transition: .4s;
+    background: #f2f2f2;
+    margin-bottom: 40px;
+    width: 80%;
+    height: auto;
+  
+   margin-left: 30px;
+}
+.com:hover{
+    background-color:#000 ;
+    color: #fff;
+}
+
+.com li{
+  display: inline-block;
+  justify-content: center; 
+   align-items: center;    
+}
+.profile{
+    width: 40px;
+    height: auto;
+    margin-top: 5px;
+}
+.comment{
+    font-size: 30px;
+     font-family: "ff-good-web-pro", "Arial", sans-serif;
+     text-align: center;
+     line-height: 1;
+     font-weight: 600;
+     
+}
+@media screen and (max-width: 1024px) and (min-width: 671px) {
+    .profile{
+    width: 26px;
+    height: auto;
+    margin-top: 5px;
+}
+.comment{
+    font-size: 19px;
+     font-family: "ff-good-web-pro", "Arial", sans-serif;
+     text-align: center;
+     line-height: 1;
+     font-weight: 600;
+}
+}
+@media screen and (max-width: 670px){
+     .profile{
+    width: 22px;
+    height: auto;
+    margin-top: 5px;
+}
+.comment{
+    font-size: 16px;
+     font-family: "ff-good-web-pro", "Arial", sans-serif;
+     text-align: center;
+     line-height: 1;
+     font-weight: 600;
+}
+}
+@media (max-width: 768px){
+ .profile{
+    width: 25px;
+    height: auto;
+    margin-top: 5px;
+}
+.comment{
+    font-size: 20px;
+     font-family: "ff-good-web-pro", "Arial", sans-serif;
+     text-align: center;
+     line-height: 1;
+     font-weight: 600;
+}
+}
+ 
+
 
  
