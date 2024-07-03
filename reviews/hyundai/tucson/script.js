@@ -20,7 +20,7 @@ let calcScrollValue = () => {
 window.onscroll = calcScrollValue;
 window.onload = calcScrollValue;
 
-const link = 'https://www.autotrendsz.com/reviews/audi/s3/';//encodeURI(window.location.href);
+const link = 'https://www.autotrendsz.com/reviews/hyundai/tucson/';//encodeURI(window.location.href);
 const msg = encodeURIComponent('Hey, I found this article');
 const title = encodeURIComponent('Article or Post Title Here');
 
