@@ -49,6 +49,207 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <script>
      (adsbygoogle = window.adsbygoogle || []).push({});
 </script>
+
+
+<!--pop-up-->
+
+<script >
+	
+	(function() {
+    const widgetHtml = `
+    <div class="popup-overlay" id="popupOverlay">
+        <div class="popup" id="popup">
+            <div class="popup-content">
+                <button class="close-btn" id="closeBtn">&times;</button>
+                <img src="data:image/jpeg;base64,${'logo_image_base64'}" alt="AutoTrends Logo" class="logo">
+                <h2>Ready to ride shotgun with us?</h2>
+                <p>Sign up for the smartest car news out there.</p>
+                <form action="https://api.web3forms.com/submit" method="POST">
+                    <input type="hidden" name="access_key" value="b5b2b646-a83c-4184-be7a-1b6210fdc995">
+                    <input type="email" name="email" placeholder="Enter your email here" required>
+                    <button type="submit" class="submit-btn">Let's Go.</button>
+                </form>
+                <p class="terms">
+                    By signing up, I agree to the <a href="https://www.termsfeed.com/live/06617360-5317-44be-a6be-7662bacec70c">Terms of Use</a> (including the <a href="https://www.termsfeed.com/live/06617360-5317-44be-a6be-7662bacec70c">dispute resolution procedures</a>) and have reviewed the <a href="https://www.termsfeed.com/live/06617360-5317-44be-a6be-7662bacec70c">Privacy Notice</a>.
+                </p>
+                <button class="no-thanks-btn" id="noThanksBtn">No thanks.</button>
+            </div>
+        </div>
+    </div>
+    `;
+
+    const widgetCss = `
+    body {
+        background: transparent;
+    }
+
+    .popup-overlay {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.7);
+        display: none;
+        justify-content: center;
+        align-items: center;
+        z-index: 1000;
+    }
+
+    .popup {
+        background: white;
+        padding: 20px;
+        text-align: center;
+        max-width: 500px;
+        width: 90%;
+        animation: popupAnimation 0.5s ease-in-out;
+    }
+
+    @keyframes popupAnimation {
+        from {
+            transform: scale(0.7);
+            opacity: 0;
+        }
+        to {
+            transform: scale(1);
+            opacity: 1;
+        }
+    }
+
+    .close-btn {
+        position: absolute;
+        top: 10px;
+        right: 10px;
+        background: none;
+        border: none;
+        font-size: 1.5rem;
+        cursor: pointer;
+    }
+
+    .popup-content img.logo {
+        max-width: 200px;
+        margin-bottom: 20px;
+    }
+
+    .popup-content h2 {
+        font-size: 1.5rem;
+        margin-bottom: 10px;
+        font-family: Gliko, Gliko-fallback, Gliko-roboto, Gliko-local, Georgia, Times, Serif;
+    }
+
+    .popup-content p {
+        margin-bottom: 20px;
+        font-family: "ff-good-web-pro", "Arial", sans-serif;
+    }
+
+    .popup-content form {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .popup-content input[type="email"] {
+        padding: 10px;
+        border: 1px solid #ccc;
+        font-size: 1rem;
+    }
+
+    .submit-btn {
+        background-color: #b70000;
+        color: white;
+        padding: 10px;
+        border: none;
+        cursor: pointer;
+        font-size: 1rem;
+        font-weight: 800;
+        font-family: Gliko, Gliko-fallback, Gliko-roboto, Gliko-local, Georgia, Times, Serif;
+    }
+
+    .terms {
+        font-size: 0.8rem;
+        color: #555;
+    }
+
+    .terms a {
+        color: #005db7;
+        text-decoration: underline;
+    }
+
+    .no-thanks-btn {
+        background: none;
+        border: none;
+        color: #555;
+        cursor: pointer;
+        margin-top: 20px;
+        font-size: 1rem;
+    }
+
+    @keyframes fadeOut {
+        from {
+            opacity: 1;
+        }
+        to {
+            opacity: 0;
+        }
+    }
+    `;
+
+    const styleElement = document.createElement('style');
+    styleElement.textContent = widgetCss;
+    document.head.appendChild(styleElement);
+
+    const div = document.createElement('div');
+    div.innerHTML = widgetHtml;
+    document.body.appendChild(div);
+
+    document.addEventListener('DOMContentLoaded', function() {
+        const popupOverlay = document.getElementById('popupOverlay');
+        const closeBtn = document.getElementById('closeBtn');
+        const noThanksBtn = document.getElementById('noThanksBtn');
+
+        // Show the popup after 2 seconds
+        setTimeout(() => {
+            popupOverlay.style.display = 'flex';
+        }, 2000);
+
+        closeBtn.addEventListener('click', function() {
+            closePopup();
+        });
+
+        noThanksBtn.addEventListener('click', function() {
+            closePopup();
+        });
+        
+            // Check if the form has already been filled out
+        const formFilledOut = localStorage.getItem("formFilledOut");
+
+        if (!formFilledOut) {
+            // Show the popup
+            popupContainer.style.display = "block";
+        }
+
+        // Close the popup when the close button is clicked
+        closePopup.addEventListener("click", function () {
+            popupContainer.style.display = "none";
+        });
+        
+            // Mark the form as filled out in local storage
+            localStorage.setItem("formFilledOut", "true");
+
+        function closePopup() {
+            popupOverlay.style.animation = 'fadeOut 0.5s';
+            setTimeout(() => {
+                popupOverlay.style.display = 'none';
+            }, 500);
+        }
+    });
+
+})();
+
+</script>
+
+
+<!--pop-up--->
   
 
 <link rel='dns-prefetch' href='http://use.typekit.net/' />
