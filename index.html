@@ -202,7 +202,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     }
     `;
 
-    const styleElement = document.createElement('style');
+const styleElement = document.createElement('style');
 styleElement.textContent = widgetCss;
 document.head.appendChild(styleElement);
 
@@ -215,7 +215,17 @@ document.addEventListener('DOMContentLoaded', function() {
     const closeBtn = document.getElementById('closeBtn');
     const noThanksBtn = document.getElementById('noThanksBtn');
 
-    // Function to close the popup
+    // Check if the form has already been filled out
+    const formFilledOut = localStorage.getItem("formFilledOut");
+    const userSignedIn = localStorage.getItem("userSignedIn"); // Assuming this is set when the user signs in
+
+    if (!formFilledOut && !userSignedIn) {
+        // Show the popup after 9 seconds
+        setTimeout(() => {
+            popupOverlay.style.display = 'flex';
+        }, 9000);
+    }
+
     function closePopup() {
         popupOverlay.style.animation = 'fadeOut 0.5s';
         setTimeout(() => {
@@ -223,38 +233,16 @@ document.addEventListener('DOMContentLoaded', function() {
         }, 500);
     }
 
-    // Check if the user is signed in
-    const userSignedIn = localStorage.getItem("userSignedIn");
-    // Check if the form has already been filled out
-    const formFilledOut = localStorage.getItem("formFilledOut");
-
-    if (!formFilledOut && !userSignedIn) {
-        // Show the popup after 9 seconds
-        setTimeout(() => {
-            popupOverlay.style.display = 'flex';
-        }, 9000);
-    } else {
-        // Hide the popup if the form is filled out or the user is signed in
-        popupOverlay.style.display = 'none';
-    }
-
     closeBtn.addEventListener('click', function() {
         closePopup();
-        // Mark the form as filled out in local storage
         localStorage.setItem("formFilledOut", "true");
     });
 
     noThanksBtn.addEventListener('click', function() {
         closePopup();
     });
-    
-    // Handle form submission
-    const form = document.getElementById('form');
-    form.addEventListener('submit', function() {
-        // Mark the form as filled out in local storage
-        localStorage.setItem("formFilledOut", "true");
-    });
 });
+
 
 </script>
 
