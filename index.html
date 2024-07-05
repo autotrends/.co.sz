@@ -60,8 +60,8 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     <div class="popup-overlay" id="popupOverlay">
         <div class="popup" id="popup">
             <div class="popup-content">
-                <button class="close-btn" id="closeBtn">&times;</button>
-                <img src="logo.jpg" alt="AutoTrends Logo" class="logo">
+            <img src="close.png" alt="cross" class="close-btn" id="closeBtn" >
+            <img src="logo.jpg" alt="AutoTrends Logo" class="logo">
                 <h2>Ready to ride shotgun with us?</h2>
                 <p>Get all the latest news, reviews and exclusives, direct to your inbox.</p>
                 <form action="https://api.web3forms.com/submit" method="POST">
@@ -116,14 +116,21 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         }
     }
 
-    .close-btn {
-        position: absolute;
-        top: 10px;
-        right: 10px;
-        background: none;
-        border: none;
-        font-size: 1.5rem;
-        cursor: pointer;
+    
+    .popup-content img.close-btn{
+        max-width: 40px;
+        margin-bottom: 20px;
+         cursor: pointer;
+          margin-top: 10px;
+        margin-left: 500px;
+         position: relative;
+       
+    }
+    @media (max-width:750px){
+        .popup-content img.close-btn{
+             margin-left: 285px;
+              margin-top: 20px;
+        }
     }
 
     .popup-content img.logo {
