@@ -215,7 +215,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         const closeBtn = document.getElementById('closeBtn');
         const noThanksBtn = document.getElementById('noThanksBtn');
 
-        // Show the popup after 2 seconds
+        // Show the popup after 9 seconds
         setTimeout(() => {
             popupOverlay.style.display = 'flex';
         }, 9000);
@@ -234,12 +234,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         if (!formFilledOut) {
             // Show the popup
             popupOverlay.style.display = "block";
-        }
-
-        // Close the popup when the close button is clicked
-        closeBtn.addEventListener("click", function () {
-            popupOverlay.style.display = "none";
-        });
+        };
         
             // Mark the form as filled out in local storage
             localStorage.setItem("formFilledOut", "true");
