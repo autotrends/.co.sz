@@ -52,17 +52,28 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 
 
 <!--pop-up-->
+<<<<<<< HEAD
 
 <script>
     (function() {
         const widgetHtml = `
         <div class="overlay">
+=======
+        
+<script>
+    (function() {
+        const widgetHtml = `
+>>>>>>> f15336c691fe190f7234bbfa1ddd26787bc30b6e
         <div class="popup-overlay" id="popupOverlay">
             <div class="popup" id="popup">
                 <div class="popup-content">
                     <img src="close.png" alt="cross" class="close-btn" id="closeBtn">
                     <img src="logo.jpg" alt="AutoTrends Logo" class="logo">
+<<<<<<< HEAD
                     <h2>CAN'T GET ENOUGH?</h2>
+=======
+                    <h2>Ready to ride shotgun with us?</h2>
+>>>>>>> f15336c691fe190f7234bbfa1ddd26787bc30b6e
                     <p>Get all the latest news, reviews and exclusives, direct to your inbox.</p>
                     <form action="https://api.web3forms.com/submit" method="POST" id="contactForm">
                         <input type="hidden" name="access_key" value="b5b2b646-a83c-4184-be7a-1b6210fdc995">
@@ -77,6 +88,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                 </div>
             </div>
         </div>
+<<<<<<< HEAD
         </div>
         `;
 
@@ -85,6 +97,17 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
             background: rgba(0, 0, 0, 0.7);
             height: 100%;
         }
+=======
+        `;
+
+        const widgetCss = `
+        body {
+            background: transparent;
+	            color:#000;
+	  
+        }
+
+>>>>>>> f15336c691fe190f7234bbfa1ddd26787bc30b6e
         .popup-overlay {
             position: fixed;
             top: 0;
@@ -96,8 +119,13 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
             justify-content: center;
             align-items: center;
             z-index: 1000;
+<<<<<<< HEAD
             cursor: pointer;
         }
+=======
+        }
+
+>>>>>>> f15336c691fe190f7234bbfa1ddd26787bc30b6e
         .popup {
             background: white;
             padding: 20px;
@@ -105,8 +133,14 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
             max-width: 650px;
             width: 100%;
             animation: popupAnimation 0.5s ease-in-out;
+<<<<<<< HEAD
             height: auto;
         }
+=======
+	            hieght:auto;
+        }
+
+>>>>>>> f15336c691fe190f7234bbfa1ddd26787bc30b6e
         @keyframes popupAnimation {
             from {
                 transform: scale(0.7);
@@ -117,6 +151,10 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                 opacity: 1;
             }
         }
+<<<<<<< HEAD
+=======
+
+>>>>>>> f15336c691fe190f7234bbfa1ddd26787bc30b6e
         .popup-content img.close-btn {
             max-width: 40px;
             margin-bottom: 10px;
@@ -125,6 +163,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
             margin-left: 500px;
             position: relative;
         }
+<<<<<<< HEAD
         @media (max-width: 750px) {
             .popup-content img.close-btn {
                 margin-left: 285px;
@@ -232,6 +271,132 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
             document.getElementById('contactForm').addEventListener('submit', function(event) {
                 event.preventDefault();
 
+=======
+
+        @media (max-width: 750px) {
+            .popup-content img.close-btn {
+                margin-left: 285px;
+                margin-top: 30px;
+            }
+        }
+
+        .popup-content img.logo {
+            max-width: 200px;
+            margin-bottom: 5px;
+        }
+
+        .popup-content h2 {
+            font-size: 1.7rem;
+            margin-bottom: 10px;
+            font-family: Gliko, Gliko-fallback, Gliko-roboto, Gliko-local, Georgia, Times, Serif;
+            text-align: center;
+        }
+
+        .popup-content p {
+            margin-bottom: 10px;
+            font-family: Gliko, Gliko-fallback, Gliko-roboto, Gliko-local, Georgia, Times, Serif;
+            text-align: center;
+	            font-size:.9rem;
+	            text-transform: uppercase;
+        }
+
+        @media screen and (max-width: 1920px) and (min-width: 1025px) {
+          .popup-content h2{
+	  font-size: 1.1rem;
+	  }
+        }
+
+        .popup-content form {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        .popup-content input[type="email"] {
+            padding: 10px;
+            border: 1px solid #ccc;
+            font-size: 1rem;
+        }
+
+        .submit-btn {
+            background-color: #b70000;
+            color: white;
+            padding: 10px;
+            border: none;
+            cursor: pointer;
+            font-size: 1rem;
+            font-weight: 800;
+            font-family: Gliko, Gliko-fallback, Gliko-roboto, Gliko-local, Georgia, Times, Serif;
+        }
+
+        .terms {
+            font-size: 0.7rem;
+            color: #555;
+	            margin-top:1px;
+        }
+
+        .terms a {
+            color: #005db7;
+            text-decoration: underline;
+        }
+
+        .no-thanks-btn {
+            background: none;
+            border: none;
+            color: #555;
+            cursor: pointer;
+            margin-top: 5px;
+            font-size: 0.7rem;
+            padding: 6px 12px;
+        }
+
+        .no-thanks-btn:hover {
+            color: #fff;
+        }
+
+        .form-response {
+            margin-top: 5px;
+            font-size: .9500rem;
+            font-weight: 600;
+	           font-family: "ff-good-web-pro", "Arial", sans-serif;
+        
+        }
+
+        .success {
+            color: green;
+        }
+
+        .error {
+            color: red;
+        }
+
+        @keyframes fadeOut {
+            from {
+                opacity: 1;
+            }
+            to {
+                opacity: 0;
+            }
+        }
+        `;
+
+        const styleElement = document.createElement('style');
+        styleElement.textContent = widgetCss;
+        document.head.appendChild(styleElement);
+
+        const div = document.createElement('div');
+        div.innerHTML = widgetHtml;
+        document.body.appendChild(div);
+
+        document.addEventListener('DOMContentLoaded', function() {
+            const popupOverlay = document.getElementById('popupOverlay');
+            const closeBtn = document.getElementById('closeBtn');
+            const noThanksBtn = document.getElementById('noThanksBtn');
+
+            document.getElementById('contactForm').addEventListener('submit', function(event) {
+                event.preventDefault();
+
+>>>>>>> f15336c691fe190f7234bbfa1ddd26787bc30b6e
                 const form = event.target;
                 const formData = new FormData(form);
 
@@ -245,7 +410,10 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                     if (data.success) {
                         formResponse.innerText = "Successful, Second Gear Engaged";
                         formResponse.className = "form-response success";
+<<<<<<< HEAD
                         document.cookie = "formSubmitted=true; path=/; max-age=" + (60 * 60 * 24 * 365); // Set cookie for successful submission
+=======
+>>>>>>> f15336c691fe190f7234bbfa1ddd26787bc30b6e
                     } else {
                         formResponse.innerText = "Submission failed. Please Crank it again.";
                         formResponse.className = "form-response error";
@@ -261,6 +429,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                 });
             });
 
+<<<<<<< HEAD
             const hasVisited = document.cookie.split('; ').find(row => row.startsWith('hasVisited'));
             const formSubmitted = document.cookie.split('; ').find(row => row.startsWith('formSubmitted'));
 
@@ -270,6 +439,11 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                 }, 9000);
                 document.cookie = "hasVisited=true; path=/; max-age=" + (60 * 60 * 24 * 365);
             }
+=======
+            setTimeout(() => {
+                popupOverlay.style.display = 'flex';
+            }, 9000);
+>>>>>>> f15336c691fe190f7234bbfa1ddd26787bc30b6e
 
             closeBtn.addEventListener('click', function() {
                 closePopup();
@@ -279,6 +453,17 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                 closePopup();
             });
 
+<<<<<<< HEAD
+=======
+            const formFilledOut = localStorage.getItem("formFilledOut");
+
+            if (!formFilledOut) {
+                popupOverlay.style.display = "block";
+            }
+
+            localStorage.setItem("formFilledOut", "true");
+
+>>>>>>> f15336c691fe190f7234bbfa1ddd26787bc30b6e
             function closePopup() {
                 popupOverlay.style.animation = 'fadeOut 0.5s';
                 setTimeout(() => {
@@ -287,11 +472,32 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
             }
         });
     })();
+<<<<<<< HEAD
 </script>
 
 
 
 
+=======
+	  
+	  
+	  document.addEventListener("DOMContentLoaded", function() {
+            // Check if the user has visited before using cookies
+            if (!document.cookie.split('; ').find(row => row.startsWith('hasVisited'))) {
+                // Show the pop-up if this is the first visit
+                document.getElementById('contactForm').classList.add('show');
+                // Set the hasVisited flag in cookies
+                document.cookie = "hasVisited=true; path=/; max-age=" + (60 * 60 * 24 * 365);
+            }
+        });
+
+        function closePopup() {
+            document.getElementById('contactForm').classList.remove('show');
+        }
+	  
+</script>
+
+>>>>>>> f15336c691fe190f7234bbfa1ddd26787bc30b6e
 <!--pop-up--->
   
 
