@@ -15,7 +15,7 @@ if (navigator.share) {
 }
 
 
-const link = 'https://www.autotrendsz.com/news/audi/e-tron-gt/';//encodeURI(window.location.href);
+const link = 'https://www.autotrendsz.com/news/chery/tiggo-8-pro/';//encodeURI(window.location.href);
 const msg = encodeURIComponent('Hey, I found this article');
 const title = encodeURIComponent('Article or Post Title Here');
 
