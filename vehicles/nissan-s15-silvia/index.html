@@ -469,12 +469,46 @@ body{--wp--preset--color--black: #000000;--wp--preset--color--cyan-bluish-gray: 
 </div>                        </div>
 
                         <div class="site-footer__signup site-footer__col-large">
-                            <form class="signup" action="https://api.web3forms.com/submit" method="POST">
+                            <form class="signup" action="https://api.web3forms.com/submit" method="POST" id="contactForm">
                     <input type="hidden" name="access_key" value="b5b2b646-a83c-4184-be7a-1b6210fdc995">
-    <input class="signup__field" type="email" name="email" placeholder="Enter your email for updates">
+    <input class="signup__field" type="email" name="email" placeholder="Enter your email for updates" required>
     <button class="signup__submit">
         Submit    </button>
 </form>
+<div id="formResponse" style="display:none; margin-top: 20px;"></div>
+<script>
+    document.getElementById('contactForm').addEventListener('submit', function(event) {
+        event.preventDefault();
+        
+        const form = event.target;
+        const formData = new FormData(form);
+
+        fetch('https://api.web3forms.com/submit', {
+            method: 'POST',
+            body: formData
+        })
+        .then(response => response.json())
+        .then(data => {
+            const formResponse = document.getElementById('formResponse');
+            if(data.success) {
+                formResponse.innerText = "Successful, Second Gear Engaged";
+                formResponse.style.color = "green";
+                formResponse.style.display = "block";
+                form.reset();
+            } else {
+                formResponse.innerText = "Submission failed. Please Crank it again.";
+                formResponse.style.color = "red";
+                formResponse.style.display = "block";
+            }
+        })
+        .catch(error => {
+            const formResponse = document.getElementById('formResponse');
+            formResponse.innerText = "An error occurred. Please Crank it again.";
+            formResponse.style.color = "red";
+            formResponse.style.display = "block";
+        });
+    });
+</script>
                         </div>
                     </div>
 
