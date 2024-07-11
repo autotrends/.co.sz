@@ -148,9 +148,7 @@ body{--wp--preset--color--black: #000000;--wp--preset--color--cyan-bluish-gray: 
             margin-top: 0px;
             margin-left: 500px;
             position: relative;
-
         }
-
         @media (max-width: 750px) {
             .popup-content img.close-btn {
                 margin-left: 285px;
@@ -168,9 +166,7 @@ body{--wp--preset--color--black: #000000;--wp--preset--color--cyan-bluish-gray: 
             font-family: Gliko, Gliko-fallback, Gliko-roboto, Gliko-local, Georgia, Times, Serif;
             text-align: center;
             margin:0;
-
         }
-
         .popup-content p {
             margin-bottom: 10px;
             font-family: Gliko, Gliko-fallback, Gliko-roboto, Gliko-local, Georgia, Times, Serif;
@@ -213,10 +209,9 @@ body{--wp--preset--color--black: #000000;--wp--preset--color--cyan-bluish-gray: 
             text-decoration: underline;
         }
         @media (max-width: 750px) {
-        .terms{
-            font-size: 0.6rem;
-        } 
-
+            .terms {
+                font-size: 0.6rem;
+            }
         }
         .no-thanks-btn {
             background: none;
@@ -300,11 +295,19 @@ body{--wp--preset--color--black: #000000;--wp--preset--color--cyan-bluish-gray: 
             const hasVisited = document.cookie.split('; ').find(row => row.startsWith('hasVisited'));
             const formSubmitted = document.cookie.split('; ').find(row => row.startsWith('formSubmitted'));
 
-            if (!hasVisited && !formSubmitted) {
-                setTimeout(() => {
+            function checkScroll() {
+                const scrollPosition = window.scrollY + window.innerHeight;
+                const threshold = document.documentElement.scrollHeight * 0.50; // Adjust this value to change when the popup appears (e.g., 0.5 for 50% down the page)
+
+                if (scrollPosition >= threshold && !hasVisited && !formSubmitted) {
                     popupOverlay.style.display = 'flex';
-                }, 9000);
-                document.cookie = "hasVisited=true; path=/; max-age=" + (60 * 60 * 24 * 365);
+                    document.cookie = "hasVisited=true; path=/; max-age=" + (60 * 60 * 24 * 365);
+                    window.removeEventListener('scroll', checkScroll);
+                }
+            }
+
+            if (!hasVisited && !formSubmitted) {
+                window.addEventListener('scroll', checkScroll);
             }
 
             closeBtn.addEventListener('click', function() {
@@ -324,6 +327,7 @@ body{--wp--preset--color--black: #000000;--wp--preset--color--cyan-bluish-gray: 
         });
     })();
 </script>
+
 
 
 
