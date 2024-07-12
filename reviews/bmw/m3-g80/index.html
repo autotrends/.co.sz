@@ -413,20 +413,52 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       <span id="progress-value"><img src="icons/arrow (2).png"></span>
     </div>
 
-<center><p class="sharing"><br>Share This</p></center>
+    <center><p class="sharing"><br>Share This</p></center>
 
-<div class="social-buttons">
-        <a href="#" class="facebook" onclick="share('facebook')" target="_blank"><img src="icons/facebook.png" alt="Facebook"></a>
-        <a href="#" class="twitter" onclick="share('x')" target="_blank"><img src="icons/twitter.png" alt="Twitter"></a>
-        <a href="#" class="whatsapp" onclick="share('whatsapp')" target="_blank"><img src="icons/whatsapp.png" alt="Whatsapp"></a>
-        <!--
-        	 <a href="#" class="instagram" onclick="share('instagram')" target="_blank"><img src="icons/instagram.png" alt="instagram"></a>
-        <a href="#" class="tiktok" onclick="share('tiktok')"><img src="icons/tiktok.png" alt="Tiktok"></a>
-        <a href="#" class="youtube" onclick="share('youtube')"><img src="icons/youtube.png" alt="youtube"></a>
-   -->
-  
-        <a href="#" class="copy-link" onclick="share('copy-link')"><img src="icons/link.png" alt="copyLink"></a>
+    <div class="social-buttons">
+        <a href="#" class="facebook" target="_blank"><img src="icons/facebook.png" alt="Facebook"></a>
+        <a href="#" class="twitter" target="_blank"><img src="icons/twitter.png" alt="Twitter"></a>
+        <a href="#" class="whatsapp" target="_blank"><img src="icons/whatsapp.png" alt="Whatsapp"></a>
+        <a href="#" class="copy-link"><img src="icons/link.png" alt="copyLink"></a>
     </div>
+
+    <script>
+        function share(platform) {
+            const link = encodeURIComponent(window.location.href);
+            const msg = encodeURIComponent('Hey, I found this article');
+            const title = encodeURIComponent(document.title);
+
+            let url = '';
+            switch (platform) {
+                case 'facebook':
+                    url = `https://www.facebook.com/sharer.php?u=${link}`;
+                    break;
+                case 'twitter':
+                    url = `http://twitter.com/share?&url=${link}&text=${msg}&hashtags=javascript,programming`;
+                    break;
+                case 'whatsapp':
+                    url = `https://wa.me/?text=${msg}%20${link}`;
+                    break;
+                case 'copy-link':
+                    navigator.clipboard.writeText(window.location.href)
+                        .then(() => {
+                            alert('URL copied to clipboard');
+                        })
+                        .catch(err => {
+                            console.error('Failed to copy URL: ', err);
+                        });
+                    return;
+                default:
+                    return;
+            }
+            window.open(url, '_blank');
+        }
+
+        document.querySelector('.facebook').onclick = () => share('facebook');
+        document.querySelector('.twitter').onclick = () => share('twitter');
+        document.querySelector('.whatsapp').onclick = () => share('whatsapp');
+        document.querySelector('.copy-link').onclick = () => share('copy-link');
+    </script>
 
     
     
