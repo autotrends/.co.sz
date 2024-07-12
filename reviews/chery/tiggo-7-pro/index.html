@@ -45,6 +45,50 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <script type="application/ld+json" class="yoast-schema-graph">{"@context":"https://schema.org","@graph":[{"@type":"WebPage","@id":"https://autotrendsz.com/","url":"https://autotrendsz.com/","name":"Chery Tiggo 7 Pro 2024: A Feature-Rich SUV with Room for Improvement - AutoTrends - Reviews","isPartOf":{"@id":"https://autotrendsz.com/#website"},"about":{"@id":"https://autotrendsz.com/#organization"},"datePublished":"2024-07-19T08:46:53+00:00","dateModified":"2024-07-26T14:32:37+00:00","description":"2024 Tiggo 7 Pro GTS is a compelling choice for budget-minded SUV shoppers seeking a feature-rich ride. It boasts a spacious interior, a long list of standard equipment, and a competitive price tag. However, the driving experience falls short due to a jittery transmission and overly intrusive driver assistance systems.","breadcrumb":{"@id":"https://autotrendsz.com/#breadcrumb"},"inLanguage":"en-GB","potentialAction":[{"@type":"ReadAction","target":["https://autotrendsz.com/"]}]},{"@type":"BreadcrumbList","@id":"https://autotrendsz.com/#breadcrumb","itemListElement":[{"@type":"ListItem","position":1,"name":"Home"}]},{"@type":"WebSite","@id":"https://autotrendsz.com/#website","url":"https://autotrendsz.com/","name":"AutoTrends","description":"","publisher":{"@id":"https://autotrendsz.com/#organization"},"potentialAction":[{"@type":"SearchAction","target":{"@type":"EntryPoint","urlTemplate":"https://autotrendsz.com/?s={search_term_string}"},"query-input":"required name=search_term_string"}],"inLanguage":"en-GB"},{"@type":"Organization","@id":"https://autotrendsz.com/#organization","name":"AutoTrends","url":"https://autotrendsz.com/","logo":{"@type":"ImageObject","inLanguage":"en-GB","@id":"https://autotrendsz.com/#/schema/logo/image/","url":"https://metalandgas.com/wp-content/uploads/2019/10/metal-and-gas-favicon.png","contentUrl":"https://metalandgas.com/wp-content/uploads/2019/10/metal-and-gas-favicon.png","width":512,"height":512,"caption":"AutoTrends"},"image":{"@id":"https://autotrendsz.com/#/schema/logo/image/"}}]}</script>
 
 	<!-- / Yoast SEO plugin. -->
+    <style>
+        .site-banner {
+            padding: 20px;
+            background-size: cover;
+        }
+        .author {
+            display: flex;
+            align-items: center;
+        }
+        .author img {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            margin-right: 10px;
+        }
+        .author ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+        }
+        .author ul li{
+            margin-bottom: 2px;
+        }
+        .author ul li .job{
+            font-size: 0.70028rem;
+        }
+        .comments {
+            margin-left: 20px;
+            display: flex;
+            align-items: center;
+            color: #fff;
+        }
+        .comments img {
+            width: 20px;
+            height: 20px;
+            margin-right: 5px;
+        }
+        .comments span {
+    color: #fff;
+    
+        }
+    </style>
+    
+    
 
   <!--Cookie-->
   <script>
@@ -384,15 +428,83 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
 </p>
 
-            <a href="../../../biographies/samkeliso_maseko/index.html">
+            
 
-            <div class="author">
-            	<ul>
-            	<li>by: Samkeliso Maseko </li>
-            	<li >July 1 2024</li>
-            </ul>
-            </div>
-       </a>
+<div class="author">
+    <a href="../../../biographies/samkeliso_maseko/index.html">
+        <!----
+    <img src="samkeliso_maseko.jpg" alt="samkeliso_maseko">-->
+    <ul>
+        <li>by: samkeliso maseko</li>
+        <!----
+        <li class="job">Reviews Journalist</li>-->
+        <li><span id="time-ago">Loading...</span> ago</li>
+        <li id="publish-date"></li>
+    </ul>
+</a>
+    <ul>
+    <a href="#disqus_thread" class="comments">
+        <!---
+        <img src="icons/comments-16.png" alt="Comment Icon">-->  
+    <span>Comments<br>Join the Convo</span>
+    </a>
+   
+</ul>
+</div>
+
+
+
+
+<script>
+// Set the publish date and time here
+const publishDate = new Date('2024-07-12T09:03:00');
+
+// Function to update the time ago
+function updateTimeAgo() {
+const now = new Date();
+const seconds = Math.floor((now - publishDate) / 1000);
+let interval = Math.floor(seconds / 31536000);
+
+if (interval >= 1) {
+document.getElementById('time-ago').innerText = interval + ' years';
+return;
+}
+interval = Math.floor(seconds / 2592000);
+if (interval >= 1) {
+document.getElementById('time-ago').innerText = interval + ' months';
+return;
+}
+interval = Math.floor(seconds / 86400);
+if (interval >= 1) {
+document.getElementById('time-ago').innerText = interval + ' days';
+return;
+}
+interval = Math.floor(seconds / 3600);
+if (interval >= 1) {
+document.getElementById('time-ago').innerText = interval + ' hours';
+return;
+}
+interval = Math.floor(seconds / 60);
+if (interval >= 1) {
+document.getElementById('time-ago').innerText = interval + ' minutes';
+return;
+}
+document.getElementById('time-ago').innerText = Math.floor(seconds) + ' seconds';
+}
+
+// Function to format the publish date
+function formatPublishDate(date) {
+const options = { year: 'numeric', month: 'long', day: 'numeric', hour: 'numeric', minute: 'numeric' };
+return date.toLocaleDateString(undefined, options);
+}
+
+// Set the initial publish date and time
+document.getElementById('publish-date').innerText = formatPublishDate(publishDate);
+
+// Update the time ago every second
+setInterval(updateTimeAgo, 1000);
+</script>
+     </div>
           </div>
           <div class="box">
     	<span></span>
