@@ -279,7 +279,6 @@ flex: 1 1 17rem;
 }
 .add1{
     margin-top: 50px;
-    margin-bottom: 30px;
     color: #525252;
     font-weight: 600;
     font-family: Gliko, Gliko-fallback, Gliko-roboto, Gliko-local, Georgia, Times, Serif;
@@ -379,13 +378,13 @@ svg.share-button {
   @media screen and (max-width: 1024px) and (min-width: 671px){
     .add{
    
-    font-size: 16px;
+    font-size: .7rem;
 }
 }
 @media screen and (max-width: 670px) and (min-width: 351px){
     .add{
    
-    font-size: 16px;
+    font-size: .7rem;
 }
 }
 @media screen and (max-width: 350px){
@@ -404,7 +403,7 @@ font-size: 0.50028rem;
 
 .add{
    
-    font-size: 16px;
+    font-size: .7rem;
 
     
 
