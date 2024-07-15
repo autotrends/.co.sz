@@ -124,13 +124,13 @@ display: flex;
 @media screen and (max-width: 1024px) and (min-width: 671px){
     .add{
    
-    font-size: 16px;
+    font-size: .7rem;
 }
 }
 @media screen and (max-width: 670px) and (min-width: 351px){
     .add{
    
-    font-size: 16px;
+    font-size: .7rem;
 }
 }
 @media screen and (max-width: 350px){
@@ -149,7 +149,7 @@ font-size: 0.50028rem;
 
 .add{
    
-    font-size: 16px;
+    font-size: .7rem;
 
     
 
