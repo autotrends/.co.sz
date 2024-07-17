@@ -49,7 +49,6 @@ display: flex;
 }*/
 
 .breadcrumb-list a{
-   margin-left:3px;
      font-weight: 500;
    font-family: Gliko, Gliko-fallback, Gliko-roboto, Gliko-local, Georgia, Times, Serif;
     font-style: normal;
@@ -201,13 +200,13 @@ width: 100%;
 @media screen and (max-width: 1024px) and (min-width: 671px){
     .add{
    
-    font-size: .7rem;
+    font-size: .9rem;
 }
 }
 @media screen and (max-width: 670px) and (min-width: 351px){
     .add{
    
-    font-size: .7rem;
+    font-size: .9rem;
     margin-top: 5px;
 }
 }
@@ -227,7 +226,7 @@ font-size: 0.50028rem;
 
 .add{
    
-    font-size: .7rem;
+    font-size: .9rem;
 
     
 
