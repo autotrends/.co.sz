@@ -232,4 +232,7 @@ footer {
   .social-icons a {
     margin: 0.5rem;
   }
+  .copyright p a {
+    font-size: .9rem;
+  }
 }
