@@ -19,17 +19,7 @@ body {
     background: linear-gradient(135deg, var(--secondary-color), var(--primary-color));
     scroll-behavior: smooth;
 }
-/* General section spacing */
-.section {
-    margin: 4rem 0;
-    padding: 3rem 0;
-}
-@media (max-width: 768px) {
-    .section {
-        margin: 2rem 0;
-        padding: 2rem 0;
-    }
-  }
+
 
 footer {
     background-color: var(--primary-color);
