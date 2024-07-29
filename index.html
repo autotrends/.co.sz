@@ -47,10 +47,10 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 
 
 	<!-- / Yoast SEO plugin. -->
-    <script id="CookieDeclaration" src="https://consent.cookiebot.com/187562c9-c2f9-4db0-bcb5-d501a4741b03/cd.js" type="text/javascript" async></script>
+    <script id="CookieDeclaration" src="https://consent.cookiebot.com/ef808797-73e1-4948-9ac9-646ff147e8b0/cd.js" type="text/javascript" async></script>
 
-    <script id="Cookiebot" src="https://consent.cookiebot.com/uc.js" data-cbid="187562c9-c2f9-4db0-bcb5-d501a4741b03" data-blockingmode="auto" type="text/javascript"></script>
-    
+<script id="Cookiebot" src="https://consent.cookiebot.com/uc.js" data-cbid="ef808797-73e1-4948-9ac9-646ff147e8b0"  type="text/javascript"></script>
+
 	
     <link rel="stylesheet" id="jnews-frontend-css" href="wp-content/themes/jnews/assets/dist/frontend.min8a54.css?ver=1.0.0" type="text/css" media="all" />
 
@@ -94,252 +94,6 @@ body{--wp--preset--color--black: #000000;--wp--preset--color--cyan-bluish-gray: 
            crossorigin="anonymous" referrerpolicy="no-referrer" />
            <link rel="stylesheet" href="styles/style.css">
 
-<!--popup 
-
-<script>
-    (function() {
-        const widgetHtml = `
-        <div class="popup-overlay" id="popupOverlay">
-            <div class="popup" id="popup">
-                <div class="popup-content">
-                    <img src="close.png" alt="cross" class="close-btn" id="closeBtn">
-                    <img src="logo.jpg" alt="AutoTrends Logo" class="logo">
-                    <h2>CAN'T GET ENOUGH?</h2>
-                    <p>Get all the latest news, reviews and exclusives, direct to your inbox.</p>
-                    <form action="https://api.web3forms.com/submit" method="POST" id="contactForm">
-                        <input type="hidden" name="access_key" value="b5b2b646-a83c-4184-be7a-1b6210fdc995">
-                        <input type="email" name="email" placeholder="Enter your email here" required>
-                        <button type="submit" class="submit-btn">Let's Go.</button>
-                        <div id="formResponse" class="form-response" style="display: none;"></div>
-                    </form>
-                    <h6 class="terms">
-                        By signing up, I agree to the <a href="privacy-policy.html">Terms of Use</a> (including the <a href="privacy-policy.html">dispute resolution procedures</a>) and have reviewed the <a href="privacy-policy.html">Privacy Notice</a>.
-                    </h6>
-                    <button class="no-thanks-btn" id="noThanksBtn">No thanks.</button>
-                </div>
-            </div>
-        </div>
-        `;
-
-        const widgetCss = `
-        .popup-overlay {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: rgba(0, 0, 0, 0.7);
-            display: none;
-            justify-content: center;
-            align-items: center;
-            z-index: 1000;
-        }
-        .popup {
-            background: white;
-            padding: 20px;
-            text-align: center;
-            max-width: 650px;
-            width: 93%;
-            animation: popupAnimation 0.5s ease-in-out;
-        }
-        @keyframes popupAnimation {
-            from {
-                transform: scale(0.7);
-                opacity: 0;
-            }
-            to {
-                transform: scale(1);
-                opacity: 1;
-            }
-        }
-        .popup-content img.close-btn {
-            max-width: 40px;
-            margin-bottom: 3px;
-            cursor: pointer;
-            margin-top: 0px;
-            margin-left: 500px;
-            position: relative;
-        }
-        @media (max-width: 750px) {
-            .popup-content img.close-btn {
-                margin-left: 285px;
-                margin-top: 30px;
-                margin:2px 0px 3px 270px;
-            }
-        }
-        .popup-content img.logo {
-            max-width: 200px;
-            margin-bottom: 5px;
-        }
-        .popup-content h2 {
-            font-size: 1.7rem;
-            margin-bottom: 10px;
-            font-family: Gliko, Gliko-fallback, Gliko-roboto, Gliko-local, Georgia, Times, Serif;
-            text-align: center;
-            margin:0;
-        }
-        .popup-content p {
-            margin-bottom: 10px;
-            font-family: Gliko, Gliko-fallback, Gliko-roboto, Gliko-local, Georgia, Times, Serif;
-            text-align: center;
-            font-size: .9rem;
-            text-transform: uppercase;
-        }
-        @media screen and (max-width: 1920px) and (min-width: 1025px) {
-            .popup-content h2 {
-                font-size: 1.5rem;
-            }
-        }
-        .popup-content form {
-            display: flex;
-            flex-direction: column;
-            gap: 10px;
-        }
-        .popup-content input[type="email"] {
-            padding: 10px;
-            border: 1px solid #ccc;
-            font-size: 1rem;
-        }
-        .submit-btn {
-            background-color: #b70000;
-            color: white;
-            padding: 10px;
-            border: none;
-            cursor: pointer;
-            font-size: 1rem;
-            font-weight: 800;
-            font-family: Gliko, Gliko-fallback, Gliko-roboto, Gliko-local, Georgia, Times, Serif;
-        }
-        .terms {
-            font-size: 0.7rem;
-            color: #555;
-            margin-top: 1px;
-        }
-        .terms a {
-            color: #005db7;
-            text-decoration: underline;
-        }
-        @media (max-width: 750px) {
-            .terms {
-                font-size: 0.6rem;
-            }
-        }
-        .no-thanks-btn {
-            background: none;
-            border: none;
-            color: #555;
-            cursor: pointer;
-            margin-top: 5px;
-            font-size: 0.7rem;
-            padding: 6px 12px;
-        }
-        .no-thanks-btn:hover {
-            color: #fff;
-        }
-        .form-response {
-            margin-top: 5px;
-            font-size: .9500rem;
-            font-weight: 600;
-            font-family: "ff-good-web-pro", "Arial", sans-serif;
-        }
-        .success {
-            color: green;
-        }
-        .error {
-            color: red;
-        }
-        @keyframes fadeOut {
-            from {
-                opacity: 1;
-            }
-            to {
-                opacity: 0;
-            }
-        }
-        `;
-
-        document.addEventListener('DOMContentLoaded', function() {
-            const styleElement = document.createElement('style');
-            styleElement.textContent = widgetCss;
-            document.head.appendChild(styleElement);
-
-            const div = document.createElement('div');
-            div.innerHTML = widgetHtml;
-            document.body.appendChild(div);
-
-            const popupOverlay = document.getElementById('popupOverlay');
-            const closeBtn = document.getElementById('closeBtn');
-            const noThanksBtn = document.getElementById('noThanksBtn');
-
-            document.getElementById('contactForm').addEventListener('submit', function(event) {
-                event.preventDefault();
-
-                const form = event.target;
-                const formData = new FormData(form);
-
-                fetch('https://api.web3forms.com/submit', {
-                    method: 'POST',
-                    body: formData
-                })
-                .then(response => response.json())
-                .then(data => {
-                    const formResponse = document.getElementById('formResponse');
-                    if (data.success) {
-                        formResponse.innerText = "Successful, Second Gear Engaged";
-                        formResponse.className = "form-response success";
-                        document.cookie = "formSubmitted=true; path=/; max-age=" + (60 * 60 * 24 * 365); // Set cookie for successful submission
-                    } else {
-                        formResponse.innerText = "Submission failed. Please Crank it again.";
-                        formResponse.className = "form-response error";
-                    }
-                    formResponse.style.display = "block";
-                    form.reset();
-                })
-                .catch(error => {
-                    const formResponse = document.getElementById('formResponse');
-                    formResponse.innerText = "An error occurred. Please Crank it again.";
-                    formResponse.className = "form-response error";
-                    formResponse.style.display = "block";
-                });
-            });
-
-            const hasVisited = document.cookie.split('; ').find(row => row.startsWith('hasVisited'));
-            const formSubmitted = document.cookie.split('; ').find(row => row.startsWith('formSubmitted'));
-
-            function checkScroll() {
-                const scrollPosition = window.scrollY + window.innerHeight;
-                const threshold = document.documentElement.scrollHeight * 0.50; // Adjust this value to change when the popup appears (e.g., 0.5 for 50% down the page)
-
-                if (scrollPosition >= threshold && !hasVisited && !formSubmitted) {
-                    popupOverlay.style.display = 'flex';
-                    document.cookie = "hasVisited=true; path=/; max-age=" + (60 * 60 * 24 * 365);
-                    window.removeEventListener('scroll', checkScroll);
-                }
-            }
-
-            if (!hasVisited && !formSubmitted) {
-                window.addEventListener('scroll', checkScroll);
-            }
-
-            closeBtn.addEventListener('click', function() {
-                closePopup();
-            });
-
-            noThanksBtn.addEventListener('click', function() {
-                closePopup();
-            });
-
-            function closePopup() {
-                popupOverlay.style.animation = 'fadeOut 0.5s';
-                setTimeout(() => {
-                    popupOverlay.style.display = 'none';
-                }, 500);
-            }
-        });
-    })();
-</script>
-
---->
 
 <link rel="stylesheet" href="main.css">
 <link rel="stylesheet" href="styles/style.css">
@@ -474,7 +228,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <h2 class="jeg_post_title">
 <a href="reviews/kia/sportage/index.html">2024 Kia Sportage: A Well-Rounded Contender?</a>
 </h2>
-<div class="jeg_post_meta"><div class="jeg_meta_author"><span class="by">by</span> <a href="biographies/samkeliso_maseko/index.html">Samkeliso Maseko</a></div><div class="jeg_meta_date"><a href="reviews/kia/sportage/index.html"><i class="fa fa-clock-o"></i> 17 July 2024</a></div></div>
+<div class="jeg_post_meta"><div class="jeg_meta_author"><span class="by">by</span> <a href="biographies/samkeliso_maseko/index.html">Samkeliso Maseko</a></div><div class="jeg_meta_date"><a href="reviews/kia/sportage/index.html"><i class="fa fa-clock-o"></i> 30 July 2024</a></div></div>
 </div>
 </div>
 </div>
@@ -494,7 +248,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <h2 class="jeg_post_title">
 <a href="news/kia/ev9/index.html">Kia EV6 Reigns Supreme as AutoTrends Crowns it 2024 Car of the Year</a>
 </h2>
-<div class="jeg_post_meta"><div class="jeg_meta_date"><a href="news/kia/ev9/index.html"><i class="fa fa-clock-o"></i> 17 July 2024</a></div></div>
+<div class="jeg_post_meta"><div class="jeg_meta_date"><a href="news/kia/ev9/index.html"><i class="fa fa-clock-o"></i> 30 July 2024</a></div></div>
 </div>
 </div>
 </div>
@@ -512,7 +266,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <h2 class="jeg_post_title">
 <a href="reviews/vw/t-cross/index.html">VW T-Cross Review: A Compact SUV With Big Appeal?</a>
 </h2>
-<div class="jeg_post_meta"><div class="jeg_meta_date"><a href="reviews/vw/t-cross/index.html"><i class="fa fa-clock-o"></i> 17 July 2024</a></div></div>
+<div class="jeg_post_meta"><div class="jeg_meta_date"><a href="reviews/vw/t-cross/index.html"><i class="fa fa-clock-o"></i> 30 July 2024</a></div></div>
 </div>
 </div>
 </div>
@@ -530,7 +284,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <h2 class="jeg_post_title">
 <a href="news/suzuki/swift/index.html">Suzuki Swift Sport: Igniting a Passion for Driving in Eswatini</a>
 </h2>
-<div class="jeg_post_meta"><div class="jeg_meta_date"><a href="news/suzuki/swift/index.html"><i class="fa fa-clock-o"></i> 17 July 2024</a></div></div>
+<div class="jeg_post_meta"><div class="jeg_meta_date"><a href="news/suzuki/swift/index.html"><i class="fa fa-clock-o"></i> 30 July 2024</a></div></div>
 </div>
 </div>
 </div>
@@ -548,7 +302,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <h2 class="jeg_post_title">
 <a href="reviews/hyundai/tucson/index.html">2024 Hyundai Tucson: A Stylish and Practical Compact SUV</a>
 </h2>
-<div class="jeg_post_meta"><div class="jeg_meta_date"><a href="reviews/hyundai/tucson/index.html"><i class="fa fa-clock-o"></i> 17 July 2024</a></div></div>
+<div class="jeg_post_meta"><div class="jeg_meta_date"><a href="reviews/hyundai/tucson/index.html"><i class="fa fa-clock-o"></i> 30 July 2024</a></div></div>
 </div>
 </div>
 </div>
@@ -608,7 +362,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <h3 class="jeg_post_title">
 <a href="reviews/ford/puma/index.html">2024 Ford Puma GTS: A Nimble Crossover</a>
 </h3>
-<div class="jeg_post_meta"><div class="jeg_meta_author"><span class="by">by</span> <a href="biographies/samkeliso_maseko/index.html">Samkeliso Maseko</a></div><div class="jeg_meta_date"><a href="reviews/ford/puma/index.html"><i class="fa fa-clock-o"></i> 17 July 2024</a></div>
+<div class="jeg_post_meta"><div class="jeg_meta_author"><span class="by">by</span> <a href="biographies/samkeliso_maseko/index.html">Samkeliso Maseko</a></div><div class="jeg_meta_date"><a href="reviews/ford/puma/index.html"><i class="fa fa-clock-o"></i> 30 July 2024</a></div>
 <!--
 
 <div class="jeg_meta_comment"><a href="who-is-top-secret/index.html#comments"><i class="fa fa-comment-o"></i> 1 </a></div>
@@ -632,7 +386,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <h3 class="jeg_post_title">
 <a href="reviews/haval/h6/index.html">Haval H6: A Feature-Packed SUV With Room to Grow?</a>
 </h3>
-<div class="jeg_post_meta"><div class="jeg_meta_author"><span class="by">by</span> <a href="biographies/samkeliso_maseko/index.html">Samkeliso Maseko</a></div><div class="jeg_meta_date"><a href="reviews/haval/h6/index.html"><i class="fa fa-clock-o"></i> 17 July 2024</a></div><!--
+<div class="jeg_post_meta"><div class="jeg_meta_author"><span class="by">by</span> <a href="biographies/samkeliso_maseko/index.html">Samkeliso Maseko</a></div><div class="jeg_meta_date"><a href="reviews/haval/h6/index.html"><i class="fa fa-clock-o"></i> 30 July 2024</a></div><!--
 
 <div class="jeg_meta_comment"><a href="who-is-top-secret/index.html#comments"><i class="fa fa-comment-o"></i> 1 </a></div>
 -->
@@ -654,7 +408,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <h3 class="jeg_post_title">
 <a href="reviews/honda/civic-type-r/index.html">Honda Civic Type R 2024: Still a King of Hot Hatches?</a>
 </h3>
-<div class="jeg_post_meta"><div class="jeg_meta_author"><span class="by">by</span> <a href="biographies/samkeliso_maseko/index.html">Samkeliso Maseko</a></div><div class="jeg_meta_date"><a href="reviews/honda/civic-type-r/index.html"><i class="fa fa-clock-o"></i> 17 July 2024</a></div><!--
+<div class="jeg_post_meta"><div class="jeg_meta_author"><span class="by">by</span> <a href="biographies/samkeliso_maseko/index.html">Samkeliso Maseko</a></div><div class="jeg_meta_date"><a href="reviews/honda/civic-type-r/index.html"><i class="fa fa-clock-o"></i> 30 July 2024</a></div><!--
 
 <div class="jeg_meta_comment"><a href="who-is-top-secret/index.html#comments"><i class="fa fa-comment-o"></i> 1 </a></div>
 --></div>
@@ -701,7 +455,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <h3 class="jeg_post_title">
 <a href="reviews/jaecoo/j7/index.html">2024 Jaecoo J7: A Bold New SUV with Off-Road Flair</a>
 </h3>
-<div class="jeg_post_meta"><div class="jeg_meta_author"><span class="by">by</span> <a href="biographies/samkeliso_maseko/index.html">Samkeliso Maseko</a></div><div class="jeg_meta_date"><a href="reviews/jaecoo/j7/index.html"><i class="fa fa-clock-o"></i>17 July 2024</a></div><!--
+<div class="jeg_post_meta"><div class="jeg_meta_author"><span class="by">by</span> <a href="biographies/samkeliso_maseko/index.html">Samkeliso Maseko</a></div><div class="jeg_meta_date"><a href="reviews/jaecoo/j7/index.html"><i class="fa fa-clock-o"></i>30 July 2024</a></div><!--
 
 <div class="jeg_meta_comment"><a href="who-is-top-secret/index.html#comments"><i class="fa fa-comment-o"></i> 1 </a></div>
 --></div>
@@ -721,7 +475,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <h3 class="jeg_post_title">
 <a href="reviews/nissan/qashqai/index.html">Nissan Qashqai: A Family-Friendly SUV with Style</a>
 </h3>
-<div class="jeg_post_meta"><div class="jeg_meta_author"><span class="by">by</span> <a href="biographies/samkeliso_maseko/index.html">Samkeliso Maseko</a></div><div class="jeg_meta_date"><a href="reviews/nissan/qashqai/index.html"><i class="fa fa-clock-o"></i>17 July 2024</a></div><!--
+<div class="jeg_post_meta"><div class="jeg_meta_author"><span class="by">by</span> <a href="biographies/samkeliso_maseko/index.html">Samkeliso Maseko</a></div><div class="jeg_meta_date"><a href="reviews/nissan/qashqai/index.html"><i class="fa fa-clock-o"></i>30 July 2024</a></div><!--
 
 <div class="jeg_meta_comment"><a href="who-is-top-secret/index.html#comments"><i class="fa fa-comment-o"></i> 1 </a></div>
 --></div>
@@ -741,7 +495,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <h3 class="jeg_post_title">
 <a href="reviews/toyota/cruiser/index.html">2024 Toyota Land Cruiser: A Return to Form?</a>
 </h3>
-<div class="jeg_post_meta"><div class="jeg_meta_author"><span class="by">by</span> <a href="biographies/samkeliso_maseko/index.html">Samkeliso Maseko</a></div><div class="jeg_meta_date"><a href="reviews/toyota/cruiser/index.html"><i class="fa fa-clock-o"></i>17 July 2024</a></div><!--
+<div class="jeg_post_meta"><div class="jeg_meta_author"><span class="by">by</span> <a href="biographies/samkeliso_maseko/index.html">Samkeliso Maseko</a></div><div class="jeg_meta_date"><a href="reviews/toyota/cruiser/index.html"><i class="fa fa-clock-o"></i>30 July 2024</a></div><!--
 
 <div class="jeg_meta_comment"><a href="who-is-top-secret/index.html#comments"><i class="fa fa-comment-o"></i> 1 </a></div>
 --></div>
@@ -796,73 +550,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
 
     <section class="might   pv-medium-large js-section-light">
-    	<!--
-    	<section class = "banner">
-            <div class = "banner-main-content">
-                
-                <div class = "current-news-head">
-                    <h3>Apple Glasses: What we expect, what we think we are <span>by scott stein</span></h3>
-
-                    <h3>What's it's like to have Elon Musk's old phone number <span>by abrar al-heeti</span></h3>
-
-                    <h3>Watch the exact moment Chris Pratt accidentally deletes 51, 000 emials <span>by goel fashingbauer</span></h3>
-
-                    <h3>Richard Branson's Virgin Orbit will launch a rocket from midair Sunday <span>by eric mack</span></h3>
-                </div>
-            </div>
-
-            <div class = "banner-sub-content">
-                <div class = "hot-topic">
-                    <img src = "images/banner-news-1.jpg" alt = "">
-
-                    <div class = "hot-topic-content">
-                        <h2>Twitter's New Retweet With Comment Counter Is Now Available On Andriod & Web</h2>
-
-                        <h3>New Topic 1</h3>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore consequatur nostrum minus iusto fugit unde.</p>
-                        <a href = "#">Read More</a>
-                    </div>
-                </div>
-
-                <div class = "hot-topic">
-                    <img src = "images/banner-news-2.jpg" alt = "">
-
-                    <div class = "hot-topic-content">
-                        <h2>Twitter's New Retweet With Comment Counter Is Now Available On Andriod & Web</h2>
-
-                        <h3>New Topic 1</h3>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore consequatur nostrum minus iusto fugit unde.</p>
-                        <a href = "#">Read More</a>
-                    </div>
-                </div>
-
-                <div class = "hot-topic">
-                    <img src = "images/banner-news-3.jpg" alt = "">
-
-                    <div class = "hot-topic-content">
-                        <h2>Twitter's New Retweet With Comment Counter Is Now Available On Andriod & Web</h2>
-
-                        <h3>New Topic 1</h3>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore consequatur nostrum minus iusto fugit unde.</p>
-                        <a href = "#">Read More</a>
-                    </div>
-                </div>
-
-                <div class = "hot-topic">
-                    <img src = "images/banner-news-4.jpg" alt = "">
-
-                    <div class = "hot-topic-content">
-                        <h2>Twitter's New Retweet With Comment Counter Is Now Available On Andriod & Web</h2>
-
-                        <h3>New Topic 1</h3>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore consequatur nostrum minus iusto fugit unde.</p>
-                        <a href = "#">Read More</a>
-                    </div>
-                </div>
-            </div>
-        </section>
-        --->
-
+    	
         <main>
             <section class = "main-container-left">
                 <h2>You Might Like: Reviews </h2>
@@ -1328,8 +1016,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                                   <li><a href="privacy-policy.html">Privacy Notice</a></li>
                                   <li><a href="privacy-policy.html">Your CA Privacy Rights</a></li>
                                   <li><a href="privacy-policy.html">Terms of Use</a></li>
-                                  <li><a href="index.html">Site Map</a></li>
-                                  <li><a href="privacy-policy.html#en">Cookie site</a></li>
+                                  <li><a href="sitemap.html">Site Map</a></li>
+                                  <li><a href="privacy-policy.html">Cookie site</a></li>
                                 </ul>
                               </div>
                             </div>
