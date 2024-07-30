@@ -151,6 +151,12 @@ body{--wp--preset--color--black: #000000;--wp--preset--color--cyan-bluish-gray: 
             padding: 0 20px;
             position: relative;
             margin-bottom: 30px;
+            -webkit-tap-highlight-color: transparent;
+            -webkit-backface-visibility: hidden;
+              -webkit-transition: all .3s ease-out;
+              transition: all .3s ease-out;
+          
+          
           }
           
           #search-input {
@@ -161,15 +167,18 @@ body{--wp--preset--color--black: #000000;--wp--preset--color--cyan-bluish-gray: 
             font-size: 16px;
             transition: all 0.3s ease;
             outline: none;
+            background-color: transparent;
+            color: #fff;
+            
           }
           
           #search-input:focus {
             border-color: #4a90e2;
-            box-shadow: 0 0 0 3px rgba(74, 144, 226, 0.1);
+            box-shadow: 0 0 0 3px rgba(229, 234, 239, 0.1);
           }
           
           #search-input::placeholder {
-            color: #999;
+            color: #ffffff;
           }
           
           .search-button {
@@ -181,12 +190,15 @@ body{--wp--preset--color--black: #000000;--wp--preset--color--cyan-bluish-gray: 
             border: none;
             cursor: pointer;
             padding: 5px;
-            color: #666;
+            color: #066df4;
             transition: color 0.3s ease;
+          }
+          .search{
+            color:#fff;
           }
           
           .search-button:hover {
-            color: #4a90e2;
+            color: #10db13;
           }
           #search-overlay {
                       position: fixed;
@@ -311,14 +323,21 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
             <aside class="overlay-menu">
                 <div class="overlay-menu__inner">
                     <ul class="overlay-menu__items">
+                      <form role="search" method="get" class="d-flex" action="https://autotrendsz.com/" >
                       <div class="search-container">
-                        <input type="text" id="search-input" placeholder="Search AutoTrends...">
+                        <input type="search" class="ekit_search-field" aria-label="search-form" id="search-input" placeholder="Search AutoTrends..."  value="" name="s">
                         <button type="submit" class="search-button" id="search-button">
                           <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                             <circle cx="11" cy="11" r="8"></circle>
                             <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
                           </svg>
                         </button>
+                        </form>
+                        <div id="search-overlay">
+              <div id="search-results">
+                  <!-- Search results will be displayed here -->
+              </div>
+            </div>
                       </div>
                         <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-102"><a href="our-story/index.html">Our Story</a></li>
             <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-667"><a href="vehicles/index.html">Vehicles</a></li>
