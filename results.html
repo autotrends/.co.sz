@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Search Results</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #121212;
+            color: #e0e0e0;
+        }
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        h1 {
+            color: #f44336;
+            font-size: 20px;
+            margin-bottom: 20px;
+        }
+        .search-info {
+            font-size: 16px;
+            color: #b0b0b0;
+            margin-bottom: 20px;
+        }
+        .result-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+        }
+        .result-item {
+            background-color: #1e1e1e;
+            padding: 20px;
+            border-radius: 10px;
+            transition: transform 0.3s;
+        }
+        .result-item:hover {
+            transform: scale(1.05);
+        }
+        .result-image {
+            width: 100%;
+            border-radius: 10px;
+            margin-bottom: 15px;
+        }
+        .result-title {
+            color: #f44336;
+            font-size: 20px;
+            margin: 0 0 10px 0;
+            text-decoration: none;
+        }
+        .result-date {
+            font-size: 14px;
+            color: #b0b0b0;
+        }
+        .no-results {
+            font-size: 20px;
+            color: #b0b0b0;
+            text-align: center;
+        }
+        .search-box {
+            display: flex;
+            margin-bottom: 20px;
+        }
+        .search-box input[type="text"] {
+            flex: 1;
+            padding: 10px;
+            font-size: 16px;
+            border: 2px solid #f44336;
+            border-radius: 5px 0 0 5px;
+            outline: none;
+        }
+        .search-box button {
+            padding: 10px 20px;
+            font-size: 16px;
+            border: 2px solid #f44336;
+            border-left: none;
+            background-color: #f44336;
+            color: #fff;
+            border-radius: 0 5px 5px 0;
+            cursor: pointer;
+        }
+        .search-box button:hover {
+            background-color: #d32f2f;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="search-box">
+            <input type="text" id="searchInput" placeholder="Search...">
+            <button onclick="submitSearch()">Search</button>
+        </div>
+        <h1>SEARCH RESULTS</h1>
+        <p class="search-info" id="searchInfo">Showing results for ''</p>
+        <div class="result-grid" id="searchResults"></div>
+        <p class="no-results" id="noResults">No results found for ''</p>
+    </div>
+    <script>
+        const searchResults = [
+            {
+                title: "2024 Audi S3 Review - A Refined Hot Hatch with Everyday Appeal",
+                date: "August 1, 2024",
+                image: "https://autotrendsz.com/review/audi/s3/images/s3.jpg",
+                link: "https://autotrendsz.com/review/audi/s3/index.html"
+            },
+            {
+                title: "2024 BMW X2: A Bold Statement, But is it a Wise Choice?",
+                date: "August 1, 2024",
+                image: "https://autotrendsz.com/review/bmw/x2/images/x2.jpg",
+                link: "https://autotrendsz.com/review/bmw/x2/index.html"
+            },
+            {
+                title: "2024 BMW M3 G80: A Performance Beast Refined",
+                date: "August 1, 2024",
+                image: "https://autotrendsz.com/review/bmw/m3/images/m3.jpg",
+                link: "https://autotrendsz.com/review/bmw/m3/index.html"
+            },
+            {
+                title: "Chery Tiggo 7 Pro 2024: A Feature-Rich SUV with Room for Improvement",
+                date: "August 1, 2024",
+                image: "https://autotrendsz.com/review/chery/tiggo-7-pro/images/Chery-Tiggo-7-Pro-_124.jpg",
+                link: "https://autotrendsz.com/review/chery/tiggo-7-pro/index.html"
+            }
+            // Add more results as needed
+        ];
+
+        function getQueryParams() {
+            const params = {};
+            window.location.search.substring(1).split('&').forEach(pair => {
+                const [key, value] = pair.split('=');
+                params[decodeURIComponent(key)] = decodeURIComponent(value || '');
+            });
+            return params;
+        }
+
+        function displayResults(results, query) {
+            const resultsContainer = document.getElementById('searchResults');
+            resultsContainer.innerHTML = '';
+
+            results.forEach(result => {
+                const resultItem = document.createElement('div');
+                resultItem.className = 'result-item';
+
+                const resultImage = document.createElement('img');
+                resultImage.src = result.image;
+                resultImage.alt = result.title;
+                resultImage.className = 'result-image';
+
+                const resultTitle = document.createElement('a');
+                resultTitle.href = result.link;
+                resultTitle.className = 'result-title';
+                resultTitle.textContent = result.title;
+
+                const resultDate = document.createElement('p');
+                resultDate.className = 'result-date';
+                resultDate.textContent = result.date;
+
+                resultItem.appendChild(resultImage);
+                resultItem.appendChild(resultTitle);
+                resultItem.appendChild(resultDate);
+
+                resultsContainer.appendChild(resultItem);
+            });
+        }
+
+        function performSearch() {
+            const queryParams = getQueryParams();
+            const query = queryParams['query'] ? queryParams['query'].toLowerCase() : '';
+            const filteredResults = searchResults.filter(result => result.title.toLowerCase().includes(query));
+            const searchInfo = document.getElementById('searchInfo');
+            const resultsContainer = document.getElementById('searchResults');
+            const noResults = document.getElementById('noResults');
+
+            // Update search info
+            searchInfo.textContent = `Showing results for '${query}'`;
+            noResults.textContent = `No results found for '${query}'`;
+
+            // Display filtered results
+            if (filteredResults.length > 0) {
+                searchInfo.style.display = 'block';
+                resultsContainer.style.display = 'grid';
+                noResults.style.display = 'none';
+                displayResults(filteredResults, query);
+            } else {
+                searchInfo.style.display = 'none';
+                resultsContainer.style.display = 'none';
+                noResults.style.display = 'block';
+            }
+        }
+
+        function submitSearch() {
+            const searchInput = document.getElementById('searchInput').value;
+            if (searchInput) {
+                window.location.href = `?query=${encodeURIComponent(searchInput)}`;
+            }
+        }
+
+        // Perform search on page load
+        document.addEventListener('DOMContentLoaded', performSearch);
+    </script>
+</body>
+</html>

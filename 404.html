@@ -163,11 +163,12 @@ body{--wp--preset--color--black: #000000;--wp--preset--color--cyan-bluish-gray: 
   -webkit-backface-visibility: hidden;
     -webkit-transition: all .3s ease-out;
     transition: all .3s ease-out;
+    border-radius: 30px;
 
 
 }
 
-#search-input {
+.search-Input {
   width: 100%;
   padding: 12px 50px 12px 20px;
   border: 2px solid #e0e0e0;
@@ -180,12 +181,12 @@ body{--wp--preset--color--black: #000000;--wp--preset--color--cyan-bluish-gray: 
   
 }
 
-#search-input:focus {
+.search-Input:focus {
   border-color: #4a90e2;
   box-shadow: 0 0 0 3px rgba(229, 234, 239, 0.1);
 }
 
-#search-input::placeholder {
+.search-input::placeholder {
   color: #ffffff;
 }
 
@@ -207,60 +208,6 @@ body{--wp--preset--color--black: #000000;--wp--preset--color--cyan-bluish-gray: 
 
 .search-button:hover {
   color: #10db13;
-}
-#search-overlay {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background-color: rgba(0, 0, 0, 0.5);
-            display: none;
-            justify-content: center;
-            align-items: center;
-            z-index: 1000;
-        }
-        #search-results {
-            background-color: white;
-            border-radius: 10px;
-            padding: 20px;
-            max-width: 80%;
-            max-height: 80%;
-            overflow-y: auto;
-        }
-        .result-item {
-            margin-bottom: 20px;
-        }
-        .result-item h2 {
-            margin: 0;
-        }
-        .result-item p {
-            margin: 10px 0;
-        }
-        .result-item a {
-            color: blue;
-            text-decoration: underline;
-        }
-
-
-@media (max-width: 768px) {
-  .search-container {
-    max-width: 100%;
-  }
-
-  #search-input {
-    font-size: 14px;
-    padding: 10px 40px 10px 15px;
-  }
-
-  .search-button {
-    right: 20px;
-  }
-
-  .search-button svg {
-    width: 18px;
-    height: 18px;
-  }
 }
 
 
@@ -332,22 +279,10 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
             <aside class="overlay-menu">
               <div class="overlay-menu__inner">
                   <ul class="overlay-menu__items">
-                    <form role="search" method="get" class="d-flex" action="https://autotrendsz.com/" >
                     <div class="search-container">
-                      <input type="search" class="ekit_search-field" aria-label="search-form" id="search-input" placeholder="Search AutoTrends..."  value="" name="s">
-                      <button type="submit" class="search-button" id="search-button">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                          <circle cx="11" cy="11" r="8"></circle>
-                          <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
-                        </svg>
-                      </button>
-                      </form>
-                      <div id="search-overlay">
-            <div id="search-results">
-                <!-- Search results will be displayed here -->
-            </div>
-          </div>
-
+                      <input type="text" class="search-input" id="searchInput" placeholder="Search AutoTrends...">
+                      <button class="search-button" onclick="performSearch()">Search</button>
+          
                     </div>
                       <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-102"><a href="our-story/index.html">Our Story</a></li>
           <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-667"><a href="vehicles/index.html">Vehicles</a></li>
@@ -394,72 +329,13 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                        </div>
             </div>
 </aside>
-<script id="search-data" type="application/json">
-  [
-      {
-          "title": "First Article",
-          "content": "This is the content of the first article. It covers various topics and includes key terms relevant to your search.",
-          "url": "/first-article"
-      },
-      {
-          "title": "Second Article",
-          "content": "This is the content of the second article. It also covers various topics and includes key terms relevant to your search.",
-          "url": "/second-article"
-      }
-      // Add more objects as needed
-  ]
-  </script>
-
-  <script>
-    document.getElementById('search-button').addEventListener('click', function() {
-        const query = document.getElementById('search-input').value.toLowerCase();
-        if (query.trim() === "") {
-            alert("Please enter a search term");
-            return;
-        }
-
-        const dataScript = document.getElementById('search-data').textContent;
-        try {
-            const data = JSON.parse(dataScript);
-            console.log("Parsed JSON data:", data); // Debugging line
-            performSearch(data, query);
-        } catch (error) {
-            console.error('Error parsing JSON data:', error); // Debugging line
-        }
-    });
-
-    function performSearch(data, query) {
-        const resultsContainer = document.getElementById('search-results');
-        resultsContainer.innerHTML = ''; // Clear previous results
-
-        const results = data.filter(item => item.content.toLowerCase().includes(query) || item.title.toLowerCase().includes(query));
-        console.log("Search results:", results); // Debugging line
-        
-        if (results.length > 0) {
-            results.forEach(result => {
-                const resultItem = document.createElement('div');
-                resultItem.classList.add('result-item');
-                resultItem.innerHTML = `
-                    <h2>${result.title}</h2>
-                    <p>${result.content.substring(0, 200)}...</p>
-                    <a href="${result.url}">Read more</a>
-                `;
-                resultsContainer.appendChild(resultItem);
-            });
-        } else {
-            resultsContainer.innerHTML = '<p>No results found</p>';
-        }
-
-        document.getElementById('search-overlay').style.display = 'flex';
-    }
-
-    // Hide the overlay when clicking outside the results container
-    document.getElementById('search-overlay').addEventListener('click', function(e) {
-        if (e.target === this) {
-            this.style.display = 'none';
-        }
-    });
+<script>
+  function performSearch() {
+      const query = document.getElementById('searchInput').value.toLowerCase();
+      window.location.href = `results.html?query=${encodeURIComponent(query)}`;
+  }
 </script>
+
 </section>
 
 <div class="error-container">
