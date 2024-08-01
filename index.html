@@ -125,6 +125,7 @@ body{--wp--preset--color--black: #000000;--wp--preset--color--cyan-bluish-gray: 
           @media (max-width: 768px) {
               .social-links {
                   margin-top: 40px;
+                  margin-bottom: 40px;
               }
               
               .social-links a {
@@ -152,10 +153,10 @@ body{--wp--preset--color--black: #000000;--wp--preset--color--cyan-bluish-gray: 
             position: relative;
             margin-bottom: 30px;
             -webkit-tap-highlight-color: transparent;
-            -webkit-backface-visibility: hidden;
               -webkit-transition: all .3s ease-out;
               transition: all .3s ease-out;
               border-radius: 30px;
+              margin-top: 50px;
           
           
           }
@@ -202,6 +203,83 @@ body{--wp--preset--color--black: #000000;--wp--preset--color--cyan-bluish-gray: 
             color: #10db13;
           }
           
+
+          /*newslatters*/
+          .container {
+            width: 100%;
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 20px;
+            box-sizing: border-box;
+        }
+        .header {
+            font-size: 24px;
+            font-weight: bold;
+            margin-bottom: 10px;
+            color: #ffffff;
+        }
+        .subheader {
+            font-size: 18px;
+            margin-bottom: 20px;
+            color: #fff;
+        }
+        .email-input {
+            display: flex;
+            width: 100%;
+            box-sizing: border-box;
+            margin-bottom: 20px;
+        }
+        .email-input input[type="email"] {
+            flex: 1;
+            padding: 10px;
+            font-size: 16px;
+            border: 1px solid #ccc;
+            border-right: none;
+            border-top-left-radius: 4px;
+            border-bottom-left-radius: 4px;
+        }
+        .email-input button {
+            padding: 10px 20px;
+            font-size: 16px;
+            background-color: black;
+            color: white;
+            border: none;
+            cursor: pointer;
+            border-top-right-radius: 4px;
+            border-bottom-right-radius: 4px;
+        }
+        .email-input button:hover {
+            background-color: #333;
+        }
+        .terms {
+            font-size: 12px;
+            color: #fff;
+        }
+        .terms a {
+            color: #081ede;
+            text-decoration: none;
+        }
+        .terms a:hover {
+            text-decoration: underline;
+        }
+        @media (max-width: 600px) {
+            .header {
+                font-size: 20px;
+            }
+            .subheader {
+                font-size: 16px;
+            }
+            .email-input input[type="email"] {
+                font-size: 14px;
+            }
+            .email-input button {
+                font-size: 12px;
+                padding: 7px 14px;
+            }
+            .terms {
+                font-size: 10px;
+            }
+        }
           
           </style>
 
@@ -308,8 +386,25 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
               
               </a>
             </li>
-                    </ul>
+
             
+            <div class="container">
+                <div class="header">Ready to ride shotgun with us?</div>
+                <div class="subheader">Sign up for the smartest car news out there.</div>
+                <div class="email-input">
+                    <input type="email" placeholder="What's your email address?" required/>
+                    <button type="submit">LET'S GO.</button>
+                </div>
+                <div class="terms">
+                    By signing up, I agree to the <a href="privacy-policy.html">Terms of Use</a> (including the <a href="privacy-policy.html">dispute resolution procedures</a>) and have reviewed the <a href="privacy-policy.html">Privacy Notice</a>.
+                </div>
+            </div>
+           
+    
+                    </ul>
+
+
+
                                 <div class="overlay-menu__extra">
                                                 <a class="overlay-menu__extra-item" href="tel:+268 76930372">+268 76930372</a>
                             
