@@ -109,6 +109,7 @@ body{--wp--preset--color--black: #000000;--wp--preset--color--cyan-bluish-gray: 
     align-items: center;
     justify-content: center;
     margin-top: 30px;
+    gap: 3rem;
 }
 
 .social-links a {
@@ -133,6 +134,8 @@ body{--wp--preset--color--black: #000000;--wp--preset--color--cyan-bluish-gray: 
 @media (max-width: 768px) {
     .social-links {
         margin-top: 40px;
+        margin-bottom: 40px;
+        gap: 2rem;
     }
     
     .social-links a {
@@ -153,17 +156,17 @@ body{--wp--preset--color--black: #000000;--wp--preset--color--cyan-bluish-gray: 
 .search-container {
   display: flex;
   align-items: center;
-  max-width: 500px;
+  max-width: 900px;
   width: 100%;
   margin: 0 auto;
   padding: 0 20px;
   position: relative;
   margin-bottom: 30px;
   -webkit-tap-highlight-color: transparent;
-  -webkit-backface-visibility: hidden;
     -webkit-transition: all .3s ease-out;
     transition: all .3s ease-out;
     border-radius: 30px;
+    margin-top: 50px;
 
 
 }
@@ -210,6 +213,83 @@ body{--wp--preset--color--black: #000000;--wp--preset--color--cyan-bluish-gray: 
   color: #10db13;
 }
 
+
+/*newslatters*/
+.container {
+  width: 100%;
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 20px;
+  box-sizing: border-box;
+  margin-top: 40px;
+}
+.header {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 10px;
+  color: #ffffff;
+}
+.subheader {
+  font-size: 18px;
+  margin-bottom: 20px;
+  color: #fff;
+}
+.email-input {
+  display: flex;
+  width: 100%;
+  box-sizing: border-box;
+  margin-bottom: 20px;
+}
+.email-input input[type="email"] {
+  flex: 1;
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-right: none;
+ 
+}
+.email-input button {
+  padding: 10px 20px;
+  font-size: 16px;
+  background-color: black;
+  color: white;
+  border: none;
+  cursor: pointer;
+ 
+}
+.email-input button:hover {
+  background-color: #333;
+}
+.terms {
+  font-size: 12px;
+  color: #fff;
+}
+.terms a {
+  color: #4a90e2;
+  text-decoration: none;
+}
+.terms a:hover {
+  text-decoration: underline;
+}
+@media (max-width: 600px) {
+  
+  .header {
+      font-size: 20px;
+  }
+  .subheader {
+      font-size: 16px;
+  }
+  .email-input input[type="email"] {
+      font-size: 14px;
+  }
+  .email-input button {
+      font-size: 12px;
+      padding: 7px 14px;
+  }
+  .terms {
+      font-size: 10px;
+  }
+}
 
 </style>
 	<!--Ed--->
@@ -291,7 +371,24 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
           <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-103"><a href="news/index.html">News</a></li>
           <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-100"><a href="contact/index.html">Contact</a></li>
           
-          <li class="social-links">
+          <div class="container">
+            <div class="header">Ready to ride shotgun with us?</div>
+            <div class="subheader">Sign up for the smartest car news out there.</div>
+            <div>
+                <form action="https://api.web3forms.com/submit" method="POST" id="contactForms" class="email-input">
+                <input type="hidden" name="access_key" value="b5b2b646-a83c-4184-be7a-1b6210fdc995">
+                <input type="email" placeholder="What's your email address?" required/>
+                <button type="submit">LET'S GO.</button>
+            </form>
+            <div id="formResponse" style="display:none; margin-top: 20px;"></div>
+            </div>
+            <div class="terms">
+                By signing up, I agree to the <a href="privacy-policy.html">Terms of Use</a> (including the <a href="privacy-policy.html">dispute resolution procedures</a>) and have reviewed the <a href="privacy-policy.html">Privacy Notice</a>.
+            </div>
+        </div>
+
+
+        <li class="social-links">
             <a href="https://www.facebook.com/autotrends27" target="_blank" aria-label="Facebook">
                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M9 8h-3v4h3v12h5v-12h3.642l.358-4h-4v-1.667c0-.955.192-1.333 1.115-1.333h2.885v-5h-3.808c-3.596 0-5.192 1.583-5.192 4.615v3.385z"/></svg>
             </a>
@@ -305,28 +402,24 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
             
             <a href="https://www.youtube.com/@autotrends27?sub_confirmation=1
             " target="_blank" aria-label="YouTube">
-            <svg xmlns="http://www.w3.org/2000/svg" width="1024" height="721" viewBox="0 0 1024 721">
-              <g fill="none" fill-rule="evenodd">
-                <path fill="#FFFFFF" d="M1014.69 114.207c-11.74-44.16-46.38-78.54-90.51-90.31C857.3 8 513.2 8 513.2 8s-344.1 0-411.1 15.9c-44.12 11.77-78.75 46.15-90.49 90.31C0 182.18 0 360.5 0 360.5s0 178.33 11.6 246.3c11.74 44.17 46.37 78.55 90.49 90.32C169.1 712.97 513.2 712.97 513.2 712.97s344.1 0 411.1-15.9c44.12-11.77 78.75-46.15 90.51-90.32C1024 538.83 1024 360.5 1024 360.5s0-178.32-9.31-246.293z"/>
-                <path fill="#000000" d="M407.1 517.95L685.1 360.5 407.1 203.05v314.9z"/>
-              </g>
-            </svg>
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 14"><g data-name="Layer 2"><path d="M19.58 2.19A2.51 2.51 0 0017.81.42C16.25 0 10 0 10 0S3.75 0 2.19.42A2.51 2.51 0 00.42 2.19 25.87 25.87 0 000 7a25.87 25.87 0 00.42 4.81 2.51 2.51 0 001.77 1.77C3.75 14 10 14 10 14s6.25 0 7.81-.42a2.51 2.51 0 001.77-1.77A25.87 25.87 0 0020 7a25.87 25.87 0 00-.42-4.81zM8 10V4l5.2 3z" data-name="Layer 3"/></g></svg>
             
             
             
             
             </a>
           </li>
+       
+          <div class="copyright">
+            <p><a href="privacy-policy.html#cookie">Cookie</a></p>
+            <p><a href="privacy-policy.html">Privacy</a></p>
+            <p><a href="privacy-policy.html">Terms &amp; Policy</a></p>
+            <hr>
+            <p><a href="https://www.shamase.co/">&copy; 2024 Shamase • All Rights Reserved</a></p>
+          </div>
                   </ul>
           
-                              <div class="overlay-menu__extra">
-                                              <a class="overlay-menu__extra-item" href="tel:+268 76930372">+268 76930372</a>
-                          
-                                              <a class="overlay-menu__extra-item" href="contact/index.html" >Make an enquiry</a>
-                                              
-          
-                                              
-                       </div>
+                              
             </div>
 </aside>
 <script>
