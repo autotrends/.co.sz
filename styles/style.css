@@ -51,12 +51,18 @@ footer {
   margin-bottom: 1rem;
   font-weight: normal;
   color: #fff;
+  font-family: Gliko, Gliko-fallback, Gliko-roboto, Gliko-local, Georgia, Times, Serif;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: .25em;
+  line-height: 140%;
 }
 
 .newsletter p {
   margin-bottom: 1.5rem;
   max-width: 600px;
   font-size: 1.2rem;
+  font-family: Gliko, Gliko-fallback, Gliko-roboto, Gliko-local, Georgia, Times, Serif;
 }
 
 .newsletter form {
@@ -69,7 +75,6 @@ footer {
   flex-grow: 1;
   padding: 0.75rem 1rem;
   border: none;
-  border-radius: 30px;
   font-size: 1rem;
   background-color: #fff;
 }
@@ -78,9 +83,8 @@ footer {
   background-color: #4a6f51;
   color: #fff;
   border: none;
-  padding: 1rem 2rem;
+  padding: 0.75rem 1rem;
   cursor: pointer;
-  border-radius: 30px;
   font-size: 1rem;
   white-space: nowrap;
 }
@@ -100,6 +104,7 @@ footer {
 .company-info p {
   color: #ffffff;
   font-size: 1.3rem;
+  font-family: Gliko, Gliko-fallback, Gliko-roboto, Gliko-local, Georgia, Times, Serif;
 }
 
 .logos {
@@ -136,6 +141,7 @@ footer {
   margin-bottom: 1rem;
   font-size: 1.5rem;
   color: #ffffff;
+  font-family: Gliko, Gliko-fallback, Gliko-roboto, Gliko-local, Georgia, Times, Serif;
 }
 
 .link-column ul {
@@ -151,6 +157,7 @@ footer {
   color: #fff;
   text-decoration: none;
   font-size: 1.2rem;
+  font-family: Gliko, Gliko-fallback, Gliko-roboto, Gliko-local, Georgia, Times, Serif;
 }
 
 .copyright {
@@ -161,8 +168,14 @@ footer {
 }
 
 .copyright p a {
-  font-size: 1.2rem;
+  font-size: 1rem;
   color: #fff;
+  font-family: "ff-good-web-pro", "Arial", sans-serif;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: .25em;
+  line-height: 140%;
+
 }
 
 @media (max-width: 768px) {
@@ -173,7 +186,15 @@ footer {
   .newsletter {
     margin-bottom: 2rem;
   }
-
+  .newsletter h2{
+    font-size: 1.5rem;
+    text-align: center !important;
+    
+   
+  }
+  .newsletter p{
+    font-size: 1.1rem;
+  }
   .newsletter form {
     flex-direction: column;
   }
@@ -181,12 +202,10 @@ footer {
   .newsletter input {
     width: 100%;
     margin-bottom: 1rem;
-    border-radius: 4px;
   }
 
   .newsletter button {
     width: 100%;
-    border-radius: 4px;
   }
 
   .footer-info {
@@ -197,7 +216,9 @@ footer {
     flex-basis: 100%;
     margin-bottom: 2rem;
   }
-  
+  .company-info p{
+    font-size: 1.1rem;
+  }
   .footer-links {
     flex-direction: column;
   }
@@ -205,7 +226,12 @@ footer {
   .link-column {
     margin-bottom: 1.5rem;
   }
-
+  .link-column h3{
+    font-size: 1.2rem;
+  }
+  .link-column h3 a{
+    font-size: .7rem;
+  }
   .social-icons {
     display: flex;
     justify-content: center;
