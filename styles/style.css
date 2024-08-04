@@ -241,7 +241,10 @@ footer {
   .social-icons a {
     margin: 0.5rem;
   }
+  .copyright p{
+    font-size: .7rem;
+  }
   .copyright p a {
-    font-size: .9rem;
+    font-size: .7rem;
   }
 }
