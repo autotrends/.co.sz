@@ -770,34 +770,44 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   }
 
   function displayResults(results, query) {
-      const resultsContainer = document.getElementById('searchResults');
-      resultsContainer.innerHTML = '';
+    const resultsContainer = document.getElementById('searchResults');
+    resultsContainer.innerHTML = '';
 
-      results.forEach(result => {
-          const resultItem = document.createElement('div');
-          resultItem.className = 'result-item';
+    results.forEach(result => {
+        const resultItem = document.createElement('div');
+        resultItem.className = 'result-item';
 
-          const resultImage = document.createElement('img');
-          resultImage.src = result.image;
-          resultImage.alt = result.title;
-          resultImage.className = 'result-image';
+        // Create an anchor tag for the link
+        const resultLink = document.createElement('a');
+        resultLink.href = result.link;
+        resultLink.className = 'result-link';
 
-          const resultTitle = document.createElement('a');
-          resultTitle.href = result.link;
-          resultTitle.className = 'result-title';
-          resultTitle.textContent = result.title;
+        const resultImage = document.createElement('img');
+        resultImage.src = result.image;
+        resultImage.alt = result.title;
+        resultImage.className = 'result-image';
 
-          const resultDate = document.createElement('p');
-          resultDate.className = 'result-date';
-          resultDate.textContent = result.date;
+        const resultTitle = document.createElement('span');
+        resultTitle.className = 'result-title';
+        resultTitle.textContent = result.title;
 
-          resultItem.appendChild(resultImage);
-          resultItem.appendChild(resultTitle);
-          resultItem.appendChild(resultDate);
+        // Append image and title to the link
+        resultLink.appendChild(resultImage);
+        resultLink.appendChild(resultTitle);
 
-          resultsContainer.appendChild(resultItem);
-      });
-  }
+        const resultDate = document.createElement('p');
+        resultDate.className = 'result-date';
+        resultDate.textContent = result.date;
+
+        // Append the link and date to the result item
+        resultItem.appendChild(resultLink);
+        resultItem.appendChild(resultDate);
+
+        resultsContainer.appendChild(resultItem);
+    });
+}
+
+
 
   function performSearch() {
       const queryParams = getQueryParams();
