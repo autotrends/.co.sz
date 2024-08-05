@@ -257,8 +257,9 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
       .email-input button {
         padding: 10px 20px;
         font-size: 16px;
-        background-color: black;
+        background-color: #004d40;
         color: white;
+        border: 2px solid #004d40;
         border: none;
         cursor: pointer;
        
@@ -384,7 +385,55 @@ data-styled.g190[id="DoubleClamped-sc-lw9dgz-1"]{content:"iPqvsM,"}/*!sc*/
 <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8488513824183850"
      crossorigin="anonymous"></script>
 
-
+     <style>
+     .fade-out {
+        position: relative;
+        height: 150px;
+        overflow: hidden;
+    }
+    .fade-out::after {
+        content: '';
+        position: absolute;
+        top: 100px;
+        left: 0;
+        width: 100%;
+        height: 50px;
+        background: linear-gradient(to bottom, rgba(255, 255, 255, 0), rgba(255, 255, 255, 1));
+    }
+    .continue-button {
+        display: block;
+        width: 220px;
+        margin: 20px auto;
+        padding: 10px;
+        text-align: center;
+        background-color: #004d40;
+        color: white;
+        border: 2px solid #004d40;
+        font-size: 16px;
+        font-weight: bold;
+        cursor: pointer;
+        transition: background-color 0.3s, color 0.3s;
+    }
+    .continue-button:hover {
+        background-color: #002f27;
+        color: #fff;
+    }
+    .hidden {
+        display: none;
+    }
+    @media (max-width: 600px) {
+        .continue-button {
+            width: 90%;
+        }
+    }
+    </style>
+    <script>
+        function showMore() {
+            document.getElementById('more-content').classList.remove('hidden');
+            document.getElementById('continue-button').style.display = 'none';
+            document.querySelector('.fade-out').classList.remove('fade-out');
+        }
+    </script>
 
 <!--end here-->
 <style id='global-styles-inline-css' type='text/css'>
@@ -521,6 +570,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     }
   </script>
 <section class='site-banner site-banner--bg js-section-dark site-banner--standard' style='background-image:url(banner.jpg);'>
+    
+
 	 <div class="site-banner__inner">
 
 	<ul class="breadcrumb   js-section-light">
@@ -633,12 +684,13 @@ setInterval(updateTimeAgo, 1000);
     </div>
 
             </section>
+    
+
                                         <div id="progress">
       <span id="progress-value"><img src="icons/arrow (2).png"></span>
     </div>
 
     <center><p class="sharing"><br>Share This</p></center>
-
     <div class="social-buttons">
         <a href="#" class="facebook" target="_blank"><img src="icons/facebook.png" alt="Facebook"></a>
         <a href="#" class="twitter" target="_blank"><img src="icons/twitter.png" alt="Twitter"></a>
@@ -708,13 +760,14 @@ setInterval(updateTimeAgo, 1000);
     
 
     </section>
+    
     <section class="specs section section--medium section-light pv-large grid grid--spaced js-section-light">
                     <div class="specs__visual grid__col grid__col--6 grid__col--tb-12 grid__col--m-12">
                 
                                     
                             </div>
 
-
+                            
                                     
 	
         <div class="specs__content grid__col grid__col--align-right grid__col--6 grid__col--tb-12 grid__col--m-12">
@@ -807,6 +860,7 @@ setInterval(updateTimeAgo, 1000);
                             </div>
         </div>
     </section>
+    
     <section class="all">
 
 <ul  class="help">
@@ -861,6 +915,7 @@ Technology and luxury take center stage inside the S3's cabin. The interior is a
 
 </p>
                                 </div>
+                                <div class="fade-out">
 
                                 <div class="grid__col grid__col--1 grid__col--tb2-0 grid__col--m-0"></div>
                                                     </div>
@@ -952,6 +1007,7 @@ Fuel Economy: The 2024 S3 boasts an improvement in fuel efficiency compared to i
                                 <div class="grid__col grid__col--1 grid__col--tb2-0 grid__col--m-0"></div>
                                                     </div>
                                                             </section>
+                                                            
     <img class="img-full" src="images/audi-s3-6.jpeg" alt="Audi-s3-AutoTrends">
     <section class="txt-blocks section-dark pv-huge txt-light js-section-dark">
                     
@@ -989,9 +1045,10 @@ Fuel Economy: The 2024 S3 boasts an improvement in fuel efficiency compared to i
 
                                                                             </div>
                                 </div>
+                                
                                                     
 
-
+                               
 
 <!--Interiour And Comfort-->
 
@@ -1111,7 +1168,9 @@ The S3 also offers a functional cargo space. While it may be slightly more compa
 
 
 </p>
+
                                 </div>
+                                
                                 <a href="#" id="boot_space"></a>
                             
                                                             <div class="grid__col grid__col--align-right grid__col--5 grid__col--tb2-12 grid__col--m-12 mt-tb2-medium mt-m-medium">
@@ -1139,7 +1198,9 @@ The S3 also offers a functional cargo space. While it may be slightly more compa
 
 <!--Practicality And boot Space-->
 
-
+</div>
+<button id="continue-button" class="continue-button" onclick="showMore()">CONTINUE READING &#9662;</button>
+<div id="more-content" class="hidden">
 
                                             
                                     <div class="txt-blocks__item txt-blocks__item--quote quote quote--light quote--alt section section--medium-small animate-slide-left" id="practicality">
@@ -1413,58 +1474,11 @@ The Audi S3 doesn't compromise. It merges exhilarating performance with the assu
 
                                                       
                                                     </div>
+
+                                               
+                                                    
 <section>
-
-<div class="table_cont">
-<table>
-                                          
-                            <tr>
-                                <th class="topic">Trim</th>
-                                <th class="topic">Power</th>
-
-                            </tr>
-                            <tr>
-
-                                <th class="figures">LX</th>
-                                <th class="figures">150KW | 201HP<br>(2.0-liter)</th>
-                  
-                            </tr>
-                           
-                            <tr>
-                                <th class="figures">LUX</th>
-                                <th class="figures">150KW | 201HP<br>(2.0-liter)</th>
-              
-
-
-                            </tr>
-
-                            <tr>
-                                <th class="figures">GT</th>
-                                <th class="figures">155KW | 209HP<br>(2.0-liter)</th>
-              
-
-
-                            </tr>
-
-                            <tr>
-                                <th class="figures">_</th>
-                                <th class="figures">_</th>
-              
-
-
-                            </tr>
-                            
-                    
-                    </table>
-                </div>
-
-
-                
-
-                
-                                   
-
-<div id="disqus_thread"></div>
+    <div id="disqus_thread"></div>
 <script>
     /**
     *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
@@ -1485,6 +1499,10 @@ The Audi S3 doesn't compromise. It merges exhilarating performance with the assu
 <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
 
 
+</div>
+
+</div> 
+ 
                                 </section>
                             
 
@@ -1508,7 +1526,7 @@ The Audi S3 doesn't compromise. It merges exhilarating performance with the assu
                         </li>
                                             
                         <li class="vehicle-slide">
-                            <a class="vehicle-slide__link" href="../1997-defender-90/index.html">
+                            <a class="vehicle-slide__link" href="../../kia/seltos/index.html">
                                                                     <span class="vehicle-slide__subtitle">first drive</span>
                                 
                                 <img  width="696" height="560" src='../../kia/seltos/images/Seltos.jpg' srcset='../../kia/seltos/images/Seltos.jpg 1x, ../../kia/seltos/images/Seltos.jpg 2x' alt='2024 kia seltos'>                                <h5 class="vehicle-slide__title">2024 KIA SELTOS</h5>
