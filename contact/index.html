@@ -234,7 +234,24 @@
 	<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8488513824183850"
      crossorigin="anonymous"></script>
 
+     <script>
+      document.addEventListener('DOMContentLoaded', function () {
+          // Get all image tags
+          const images = document.querySelectorAll('img');
 
+          images.forEach(img => {
+              // Extract the image name from the src attribute
+              const src = img.getAttribute('src');
+              const imageName = src.substring(src.lastIndexOf('/') + 1, src.lastIndexOf('.'));
+
+              // Set the alt attribute to the image name
+              img.setAttribute('alt', imageName);
+
+              // Log the image name and alt text
+              console.log(`Image Name: ${imageName}, Alt Text: ${img.getAttribute('alt')}`);
+          });
+      });
+  </script>
      <link rel="stylesheet" href="../styles/style.css">
 <link rel='dns-prefetch' href='http://use.typekit.net/' />
 <link rel="alternate" type="application/rss+xml" title="Metal &amp; Gas &raquo; Feed" href="../feed/index.html" />

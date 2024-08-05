@@ -260,6 +260,24 @@ body{--wp--preset--color--black: #000000;--wp--preset--color--cyan-bluish-gray: 
   }
   
   </style>
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+        // Get all image tags
+        const images = document.querySelectorAll('img');
+
+        images.forEach(img => {
+            // Extract the image name from the src attribute
+            const src = img.getAttribute('src');
+            const imageName = src.substring(src.lastIndexOf('/') + 1, src.lastIndexOf('.'));
+
+            // Set the alt attribute to the image name
+            img.setAttribute('alt', imageName);
+
+            // Log the image name and alt text
+            console.log(`Image Name: ${imageName}, Alt Text: ${img.getAttribute('alt')}`);
+        });
+    });
+</script>
 <link rel='stylesheet' id='typekit-fonts-css' href='../../../use.typekit.net/gtx2lff.css' type='text/css' media='all' />
 <link rel='stylesheet' id='metal-and-gas-css' href='../../wp-content/themes/metal-and-gas/assets/css/app.min.css' type='text/css' media='all' />
 <script type="text/javascript" src="../../wp-content/themes/metal-and-gas/assets/js/jquery.minac31.js?ver=2.2.4" id="jquery-js"></script>

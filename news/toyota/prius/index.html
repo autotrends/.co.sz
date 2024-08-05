@@ -18,7 +18,24 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 })(window,document,'script','dataLayer','GTM-NWNVLQJM');</script>
 <!-- End Google Tag Manager -->
 
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+        // Get all image tags
+        const images = document.querySelectorAll('img');
 
+        images.forEach(img => {
+            // Extract the image name from the src attribute
+            const src = img.getAttribute('src');
+            const imageName = src.substring(src.lastIndexOf('/') + 1, src.lastIndexOf('.'));
+
+            // Set the alt attribute to the image name
+            img.setAttribute('alt', imageName);
+
+            // Log the image name and alt text
+            console.log(`Image Name: ${imageName}, Alt Text: ${img.getAttribute('alt')}`);
+        });
+    });
+</script>
 	<!-- This site is optimized with the Yoast SEO plugin v22.4 - https://yoast.com/wordpress/plugins/seo/ -->
 	<title>The King Stays on the Throne: Toyota Prius Reigns Supreme as World's Best-Selling Hybrid - AutoTrends - News </title>
 	<meta name="description" content="The Toyota Prius, a pioneer and icon in the hybrid car segment, continues to dominate the market.  Despite facing increasing competition from other automakers, the Prius remains the undisputed king of hybrids, holding the title of the world's best-selling hybrid car

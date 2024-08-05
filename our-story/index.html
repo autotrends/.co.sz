@@ -30,7 +30,24 @@
 	<meta property="article:modified_time" content="2024-07-20T10:19:01+00:00" />
 	<meta name="twitter:card" content="summary_large_image" />
 	<script type="application/ld+json" class="yoast-schema-graph">{"@context":"https://schema.org","@graph":[{"@type":"WebPage","@id":"https://www.autotrendsz.com/our-story/","url":"https://www.autotrendsz.com/our-story/","name":"Our Story - Eswatini's Automotive Authority - AutoTrends","isPartOf":{"@id":"https://www.autotrendsz.com/our-story/#website"},"about":{"@id":"https://www.autotrendsz.com/our-story/#organization"},"datePublished":"2024-07-19T08:46:53+00:00","dateModified":"2024-07-26T14:32:37+00:00","description":"AutoTrends | Eswatini's leading source for automotive news, reviews, comparisons, and car buying guides, empowers you to make informed decisions about your next vehicle.","breadcrumb":{"@id":"https://www.autotrendsz.com/our-story/#breadcrumb"},"inLanguage":"en-GB","potentialAction":[{"@type":"ReadAction","target":["https://www.autotrendsz.com/our-story/"]}]},{"@type":"BreadcrumbList","@id":"https://www.autotrendsz.com/our-story/#breadcrumb","itemListElement":[{"@type":"ListItem","position":1,"name":"Home"}]},{"@type":"WebSite","@id":"https://www.autotrendsz.com/our-story/#website","url":"https://www.autotrendsz.com/our-story/","name":"AutoTrends","description":"","publisher":{"@id":"https://www.autotrendsz.com/our-story/#organization"},"potentialAction":[{"@type":"SearchAction","target":{"@type":"EntryPoint","urlTemplate":"https://www.autotrendsz.com/our-story/?s={search_term_string}"},"query-input":"required name=search_term_string"}],"inLanguage":"en-GB"},{"@type":"Organization","@id":"https://www.autotrendsz.com/our-story/#organization","name":"AutoTrends","url":"https://www.autotrendsz.com/our-story/","logo":{"@type":"ImageObject","inLanguage":"en-GB","@id":"https://www.autotrendsz.com/our-story/#/schema/logo/image/","url":"https://www.autotrendsz.com/wp-content/uploads/2019/10/metal-and-gas-favicon.png","contentUrl":"https://www.autotrendsz.com/wp-content/uploads/2019/10/metal-and-gas-favicon.png","width":512,"height":512,"caption":"AutoTrends"},"image":{"@id":"https://www.autotrendsz.com/our-story/#/schema/logo/image/"}}]}</script>
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+        // Get all image tags
+        const images = document.querySelectorAll('img');
 
+        images.forEach(img => {
+            // Extract the image name from the src attribute
+            const src = img.getAttribute('src');
+            const imageName = src.substring(src.lastIndexOf('/') + 1, src.lastIndexOf('.'));
+
+            // Set the alt attribute to the image name
+            img.setAttribute('alt', imageName);
+
+            // Log the image name and alt text
+            console.log(`Image Name: ${imageName}, Alt Text: ${img.getAttribute('alt')}`);
+        });
+    });
+</script>
 	<!-- / Yoast SEO plugin. -->
 
     <link rel="stylesheet" href="../styles/style.css">

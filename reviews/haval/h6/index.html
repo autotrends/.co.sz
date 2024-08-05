@@ -18,7 +18,24 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 })(window,document,'script','dataLayer','GTM-NWNVLQJM');</script>
 <!-- End Google Tag Manager -->
 
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+        // Get all image tags
+        const images = document.querySelectorAll('img');
 
+        images.forEach(img => {
+            // Extract the image name from the src attribute
+            const src = img.getAttribute('src');
+            const imageName = src.substring(src.lastIndexOf('/') + 1, src.lastIndexOf('.'));
+
+            // Set the alt attribute to the image name
+            img.setAttribute('alt', imageName);
+
+            // Log the image name and alt text
+            console.log(`Image Name: ${imageName}, Alt Text: ${img.getAttribute('alt')}`);
+        });
+    });
+</script>
 	<!-- This site is optimized with the Yoast SEO plugin v22.4 - https://yoast.com/wordpress/plugins/seo/ -->
 	<title>Haval H6 Review: A Feature-Packed SUV With Room to Grow - AutoTrends - Reviews</title>
 	<meta name="description" content="In the crowded market of mid-size SUVs, the Haval H6 stands out for its attractive combination of affordability, features, and spaciousness. But with so many options available, is the Haval H6 the perfect fit for you?  This article will delve into the insights and evaluation provided by AutoTrends, a trusted source in the automotive industry." />

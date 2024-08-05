@@ -212,7 +212,24 @@
   
   </style>
 
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+      // Get all image tags
+      const images = document.querySelectorAll('img');
 
+      images.forEach(img => {
+          // Extract the image name from the src attribute
+          const src = img.getAttribute('src');
+          const imageName = src.substring(src.lastIndexOf('/') + 1, src.lastIndexOf('.'));
+
+          // Set the alt attribute to the image name
+          img.setAttribute('alt', imageName);
+
+          // Log the image name and alt text
+          console.log(`Image Name: ${imageName}, Alt Text: ${img.getAttribute('alt')}`);
+      });
+  });
+</script>
 	<meta property="og:locale" content="en_GB" />
 	<meta property="og:type" content="article" />
 	<meta property="og:title" content="Mazda RX-7 - AutoTrends" />

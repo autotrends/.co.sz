@@ -16,7 +16,24 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 })(window,document,'script','dataLayer','GTM-NWNVLQJM');</script>
 <!-- End Google Tag Manager -->
 
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+        // Get all image tags
+        const images = document.querySelectorAll('img');
 
+        images.forEach(img => {
+            // Extract the image name from the src attribute
+            const src = img.getAttribute('src');
+            const imageName = src.substring(src.lastIndexOf('/') + 1, src.lastIndexOf('.'));
+
+            // Set the alt attribute to the image name
+            img.setAttribute('alt', imageName);
+
+            // Log the image name and alt text
+            console.log(`Image Name: ${imageName}, Alt Text: ${img.getAttribute('alt')}`);
+        });
+    });
+</script>
 	<!-- This site is optimized with the Yoast SEO plugin v22.4 - https://yoast.com/wordpress/plugins/seo/ -->
 	<title>Chery Tiggo 8 Pro: A Chinese Contender Aims to Conquer Eswatini's Roads - AutoTrends - News </title>
 	<meta name="description" content="The Eswatini automotive landscape is witnessing a growing presence of Chinese car manufacturers. One such brand, Chery, is making waves with its ambitious global expansion plans. " />

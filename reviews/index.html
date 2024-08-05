@@ -40,7 +40,24 @@
 
 <script id="Cookiebot" src="https://consent.cookiebot.com/uc.js" data-cbid="ef808797-73e1-4948-9ac9-646ff147e8b0"  type="text/javascript"></script>
 
-    
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+        // Get all image tags
+        const images = document.querySelectorAll('img');
+
+        images.forEach(img => {
+            // Extract the image name from the src attribute
+            const src = img.getAttribute('src');
+            const imageName = src.substring(src.lastIndexOf('/') + 1, src.lastIndexOf('.'));
+
+            // Set the alt attribute to the image name
+            img.setAttribute('alt', imageName);
+
+            // Log the image name and alt text
+            console.log(`Image Name: ${imageName}, Alt Text: ${img.getAttribute('alt')}`);
+        });
+    });
+</script>
     <!--\cookie-->
 
     <style>

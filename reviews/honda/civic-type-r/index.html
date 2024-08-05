@@ -17,7 +17,24 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 })(window,document,'script','dataLayer','GTM-NWNVLQJM');</script>
 <!-- End Google Tag Manager -->
 
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+        // Get all image tags
+        const images = document.querySelectorAll('img');
 
+        images.forEach(img => {
+            // Extract the image name from the src attribute
+            const src = img.getAttribute('src');
+            const imageName = src.substring(src.lastIndexOf('/') + 1, src.lastIndexOf('.'));
+
+            // Set the alt attribute to the image name
+            img.setAttribute('alt', imageName);
+
+            // Log the image name and alt text
+            console.log(`Image Name: ${imageName}, Alt Text: ${img.getAttribute('alt')}`);
+        });
+    });
+</script>
 	<!-- This site is optimized with the Yoast SEO plugin v22.4 - https://yoast.com/wordpress/plugins/seo/ -->
 	<title>Honda Civic Type R 2024: Still a King of Hot Hatches? - AutoTrends - Reviews</title>
 	<meta name="description" content="The Honda Civic Type R needs no introduction. It's a legend in the hot hatch world, and the 2024 model continues that legacy. But is it the right choice for you? Let's dive in with our review.

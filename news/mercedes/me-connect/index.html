@@ -16,7 +16,24 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
 })(window,document,'script','dataLayer','GTM-NWNVLQJM');</script>
 <!-- End Google Tag Manager -->
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+        // Get all image tags
+        const images = document.querySelectorAll('img');
 
+        images.forEach(img => {
+            // Extract the image name from the src attribute
+            const src = img.getAttribute('src');
+            const imageName = src.substring(src.lastIndexOf('/') + 1, src.lastIndexOf('.'));
+
+            // Set the alt attribute to the image name
+            img.setAttribute('alt', imageName);
+
+            // Log the image name and alt text
+            console.log(`Image Name: ${imageName}, Alt Text: ${img.getAttribute('alt')}`);
+        });
+    });
+</script>
 	<!-- This site is optimized with the Yoast SEO plugin v22.4 - https://yoast.com/wordpress/plugins/seo/ -->
 	<title>Mercedes-Benz Levels Up Connectivity: New Features for Mercedes me connect - AutoTrends - News </title>
 	<meta name="description" content="Calling all tech-savvy drivers! Buckle up for exciting news about the Mercedes me connect system. Mercedes-Benz is amping up its connected car experience with a range of new features designed for enhanced remote vehicle monitoring and diagnostics. 
