@@ -1243,12 +1243,12 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                           <div class="newsletter">
                             <h2>Our Newsletters</h2>
                             <p>Get All The Latest News, Reviews And Exclusive, Direct To Your Inbox.</p>
-                            <form action="https://api.web3forms.com/submit" method="POST" id="contactForms">
+                            <form action="https://api.web3forms.com/submit" method="POST" id="contactForms2">
                               <input type="hidden" name="access_key" value="b5b2b646-a83c-4184-be7a-1b6210fdc995">
                               <input class="signup__field" type="email" name="email" placeholder="Enter your email for updates" required>
                               <button type="submit">Submit</button>
                             </form>
-                            <div id="formResponse" style="display:none; margin-top: 20px;"></div>
+                            <div id="formResponse2" style="display:none; margin-top: 20px;"></div>
                           </div>
                           
                           <div class="footer-info">
@@ -1338,7 +1338,39 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                               });
                           });
                       </script>
-                      
+                      <script>
+                        document.getElementById('contactForms2').addEventListener('submit', function(event) {
+                            event.preventDefault();
+                            
+                            const form = event.target;
+                            const formData = new FormData(form);
+                    
+                            fetch('https://api.web3forms.com/submit', {
+                                method: 'POST',
+                                body: formData
+                            })
+                            .then(response => response.json())
+                            .then(data => {
+                                const formResponse = document.getElementById('formResponse2');
+                                if(data.success) {
+                                    formResponse.innerText = "Successful, Second Gear Engaged";
+                                    formResponse.style.color = "green";
+                                    formResponse.style.display = "block";
+                                    form.reset();
+                                } else {
+                                    formResponse.innerText = "Submission failed. Please Crank it again.";
+                                    formResponse.style.color = "red";
+                                    formResponse.style.display = "block";
+                                }
+                            })
+                            .catch(error => {
+                                const formResponse = document.getElementById('formResponse2');
+                                formResponse.innerText = "An error occurred. Please Crank it again.";
+                                formResponse.style.color = "red";
+                                formResponse.style.display = "block";
+                            });
+                        });
+                    </script>
         </div><!--end .page-wrap-->
 
 		<script type="text/javascript" src="wp-content/themes/metal-and-gas/assets/js/app.min23c8.js?ver=1589810085" id="metal-and-gas-js"></script>
