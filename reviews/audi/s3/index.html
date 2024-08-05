@@ -570,27 +570,25 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     }
   </script>
 <section class='site-banner site-banner--bg js-section-dark site-banner--standard' style='background-image:url(banner.jpg);'>
-    
+    <div class="site-banner__inner">
 
-	 <div class="site-banner__inner">
-
-	<ul class="breadcrumb   js-section-light">
-		
-		<li class="breadcrumb-list"><a href="../../../index.html"> Home</li></a>
-	
-		<li class="breadcrumb-list"><a href="../../index.html">Reviews</li></a>
-	
-
-		<!---END HERE PLEASE-->
-		<li class="breadcrumb-list"><a class="active" href="index.html">Audi S3</li></a>
-	</ul>
-	
-
+   <ul class="breadcrumb   js-section-light">
        
+       <li class="breadcrumb-list"><a href="../../../index.html"> Home</li></a>
+   
+       <li class="breadcrumb-list"><a href="../../index.html">Reviews</li></a>
+   
 
-	
-        
-            <h2 class="site-banner__subtitle">First Drive</h2>            <h1 class="site-banner__title">2024 Audi S3 Review - A Refined Hot Hatch with Everyday Appeal
+       <!---END HERE PLEASE-->
+       <li class="breadcrumb-list"><a class="active" href="index.html">Audi S3</li></a>
+   </ul>
+   
+
+      
+
+   
+       
+           <h2 class="site-banner__subtitle">First Drive</h2>            <h1 class="site-banner__title">2024 Audi S3 Review - A Refined Hot Hatch with Everyday Appeal
 
 </h1> 
 
@@ -602,24 +600,24 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
 
 <div class="author">
-    <a href="../../../biographies/samkeliso_maseko/index.html">
-        <!----
-    <img src="samkeliso_maseko.jpg" alt="samkeliso_maseko">-->
-    <ul>
-        <li>by: samkeliso maseko</li>
-        <!----
-        <li class="job">Reviews Journalist</li>-->
-        <li><span id="time-ago">Loading...</span> ago</li>
-        <li id="publish-date"></li>
-    </ul>
+   <a href="../../../biographies/samkeliso_maseko/index.html">
+       <!----
+   <img src="samkeliso_maseko.jpg" alt="samkeliso_maseko">-->
+   <ul>
+       <li>by: samkeliso maseko</li>
+       <!----
+       <li class="job">Reviews Journalist</li>-->
+       <li><span id="time-ago">Loading...</span> ago</li>
+       <li id="publish-date"></li>
+   </ul>
 </a>
-    <ul>
-    <a href="#disqus_thread" class="comments">
-        <!---
-        <img src="icons/comments-16.png" alt="Comment Icon">-->  
-    <span class="convo">Comments<br>Join the Convo</span>
-    </a>
-   
+   <ul>
+   <a href="#disqus_thread" class="comments">
+       <!---
+       <img src="icons/comments-16.png" alt="Comment Icon">-->  
+   <span class="convo">Comments<br>Join the Convo</span>
+   </a>
+  
 </ul>
 </div>
 
@@ -675,234 +673,231 @@ document.getElementById('publish-date').innerText = formatPublishDate(publishDat
 // Update the time ago every second
 setInterval(updateTimeAgo, 1000);
 </script>
-     </div>
-     
-        <div class="box">
-    	<span></span>
-    	<span></span>
-    	<span></span>
     </div>
-
-            </section>
     
+       <div class="box">
+       <span></span>
+       <span></span>
+       <span></span>
+   </div>
 
-                                        <div id="progress">
-      <span id="progress-value"><img src="icons/arrow (2).png"></span>
-    </div>
+           </section>
+                                       <div id="progress">
+     <span id="progress-value"><img src="icons/arrow (2).png"></span>
+   </div>
 
-    <center><p class="sharing"><br>Share This</p></center>
-    <div class="social-buttons">
-        <a href="#" class="facebook" target="_blank"><img src="icons/facebook.png" alt="Facebook"></a>
-        <a href="#" class="twitter" target="_blank"><img src="icons/twitter.png" alt="Twitter"></a>
-        <a href="#" class="whatsapp" target="_blank"><img src="icons/whatsapp.png" alt="Whatsapp"></a>
-        <a href="#" class="copy-link"><img src="icons/link.png" alt="copyLink"></a>
-    </div>
+   <center><p class="sharing"><br>Share This</p></center>
 
-    <script>
-        function share(platform) {
-            const link = encodeURIComponent(window.location.href);
-            const msg = encodeURIComponent('Hey, I found this article');
-            const title = encodeURIComponent(document.title);
+   <div class="social-buttons">
+       <a href="#" class="facebook" target="_blank"><img src="icons/facebook.png" alt="Facebook"></a>
+       <a href="#" class="twitter" target="_blank"><img src="icons/twitter.png" alt="Twitter"></a>
+       <a href="#" class="whatsapp" target="_blank"><img src="icons/whatsapp.png" alt="Whatsapp"></a>
+       <a href="#" class="copy-link"><img src="icons/link.png" alt="copyLink"></a>
+   </div>
 
-            let url = '';
-            switch (platform) {
-                case 'facebook':
-                    url = `https://www.facebook.com/sharer.php?u=${link}`;
-                    break;
-                case 'twitter':
-                    url = `http://twitter.com/share?&url=${link}&text=${msg}&hashtags=javascript,programming`;
-                    break;
-                case 'whatsapp':
-                    url = `https://wa.me/?text=${msg}%20${link}`;
-                    break;
-                case 'copy-link':
-                    navigator.clipboard.writeText(window.location.href)
-                        .then(() => {
-                            alert('URL copied to clipboard');
-                        })
-                        .catch(err => {
-                            console.error('Failed to copy URL: ', err);
-                        });
-                    return;
-                default:
-                    return;
-            }
-            window.open(url, '_blank');
-        }
+   <script>
+       function share(platform) {
+           const link = encodeURIComponent(window.location.href);
+           const msg = encodeURIComponent('Hey, I found this article');
+           const title = encodeURIComponent(document.title);
 
-        document.querySelector('.facebook').onclick = () => share('facebook');
-        document.querySelector('.twitter').onclick = () => share('twitter');
-        document.querySelector('.whatsapp').onclick = () => share('whatsapp');
-        document.querySelector('.copy-link').onclick = () => share('copy-link');
-    </script>
+           let url = '';
+           switch (platform) {
+               case 'facebook':
+                   url = `https://www.facebook.com/sharer.php?u=${link}`;
+                   break;
+               case 'twitter':
+                   url = `http://twitter.com/share?&url=${link}&text=${msg}&hashtags=javascript,programming`;
+                   break;
+               case 'whatsapp':
+                   url = `https://wa.me/?text=${msg}%20${link}`;
+                   break;
+               case 'copy-link':
+                   navigator.clipboard.writeText(window.location.href)
+                       .then(() => {
+                           alert('URL copied to clipboard');
+                       })
+                       .catch(err => {
+                           console.error('Failed to copy URL: ', err);
+                       });
+                   return;
+               default:
+                   return;
+           }
+           window.open(url, '_blank');
+       }
 
-
-
-
-            <div class="specs__img-outer animate-img js-section-light">
-
-                                                    <img class="specs__img img-full" src="images/audi-s3-1.jpg" srcset="images/audi-s3-1.jpg 1x, images/audi-s3-1.jpg 2x" alt="X2-AutoTrends">
+       document.querySelector('.facebook').onclick = () => share('facebook');
+       document.querySelector('.twitter').onclick = () => share('twitter');
+       document.querySelector('.whatsapp').onclick = () => share('whatsapp');
+       document.querySelector('.copy-link').onclick = () => share('copy-link');
+   </script>
 
 
-                                                    
-                                            </div>
+
+
+           <div class="specs__img-outer animate-img js-section-light">
+
+                                                   <img class="specs__img img-full" src="images/audi-s3-1.jpg" srcset="images/audi-s3-1.jpg 1x, images/audi-s3-1.jpg 2x" alt="X2-AutoTrends">
+
+
+                                                   
+                                           </div>
 
 
 <div class="scroll">
-  <div class="scrolls">
-    <a href="#verdict" class="active">Verdict</a>
-     <a href="#running_cost">Running Cost</a>
- <a href="#interior_com">Interior</a>
-     <a href="#practicality">Practicality</a>
-    <a href="#reliability">Reliability</a>
-  </div>
+ <div class="scrolls">
+   <a href="#verdict" class="active">Verdict</a>
+    <a href="#running_cost">Running Cost</a>
+<a href="#interior_com">Interior</a>
+    <a href="#practicality">Practicality</a>
+   <a href="#reliability">Reliability</a>
+ </div>
 </div>
-    
+   
 
-    </section>
-    
-    <section class="specs section section--medium section-light pv-large grid grid--spaced js-section-light">
-                    <div class="specs__visual grid__col grid__col--6 grid__col--tb-12 grid__col--m-12">
-                
-                                    
-                            </div>
-
-                            
-                                    
-	
-        <div class="specs__content grid__col grid__col--align-right grid__col--6 grid__col--tb-12 grid__col--m-12">
-            <div>
-
-            	<p class="specs_title">2024 Audi S3 Specs</p>
-
-                
-                <ul class="specs__items animate-list">
-
-  
+   </section>
+   <section class="specs section section--medium section-light pv-large grid grid--spaced js-section-light">
+                   <div class="specs__visual grid__col grid__col--6 grid__col--tb-12 grid__col--m-12">
+               
+                                   
+                           </div>
 
 
-                	                             <li class="specs__item">
-                                <h6 class="specs__item-title">Base Price</h6>
-                                <p class="specs__item-value">$$46,945 USD (SZL 430,000 )</p>
-                            </li>
-                        
-                                                                    
-                                                    <li class="specs__item">
-                                <h6 class="specs__item-title">PowerTrain</h6>
-                                <p class="specs__item-value">2.0-liter turbocharged I4 engine
-    | 7-speed dual-clutch automatic transmission
-    | All-wheel drive (quattro)
+                                   
+   
+       <div class="specs__content grid__col grid__col--align-right grid__col--6 grid__col--tb-12 grid__col--m-12">
+           <div>
+
+               <p class="specs_title">2024 Audi S3 Specs</p>
+
+               
+               <ul class="specs__items animate-list">
+
+ 
+
+
+                                                <li class="specs__item">
+                               <h6 class="specs__item-title">Base Price</h6>
+                               <p class="specs__item-value">$$46,945 USD (SZL 430,000 )</p>
+                           </li>
+                       
+                                                                   
+                                                   <li class="specs__item">
+                               <h6 class="specs__item-title">PowerTrain</h6>
+                               <p class="specs__item-value">2.0-liter turbocharged I4 engine
+   | 7-speed dual-clutch automatic transmission
+   | All-wheel drive (quattro)
 
 </p>
-                            </li>
-                    
-                                            
-                                                    <li class="specs__item">
-                                <h6 class="specs__item-title">Horsepower | Kilowatts</h6>
-                                <p class="specs__item-value">328 hp | 245 kW
+                           </li>
+                   
+                                           
+                                                   <li class="specs__item">
+                               <h6 class="specs__item-title">Horsepower | Kilowatts</h6>
+                               <p class="specs__item-value">328 hp | 245 kW
 </p>
-                            </li>
-                        
-                                                                    
-                                                    <li class="specs__item">
-                                <h6 class="specs__item-title">Torque</h6>
-                                <p class="specs__item-value">310 lb-ft | 420 Nm</p>
-                            </li>
-                        
-                                                                    
-                                                    <li class="specs__item">
-                                <h6 class="specs__item-title">Seating Capacity</h6>
-                                <p class="specs__item-value">5 </p>
-                            </li>
-                        
-                                                                    
-                                                    <li class="specs__item">
-                                <h6 class="specs__item-title">Curb Weight</h6>
-                                <p class="specs__item-value">3,515 pounds | 1,594 kg</p>
-                            </li>
-                        
-                                                                    
-                                                    <li class="specs__item">
-                                <h6 class="specs__item-title">Cargo Volume</h6>
-                                <p class="specs__item-value">15 cu ft | 425 liters</p>
-                            </li>
-                        
-                                                                    
-                                                    <li class="specs__item">
-                                <h6 class="specs__item-title">Top Speed</h6>
-                                <p class="specs__item-value">155 mph (limited) | 250 km/h (limited)</p>
-                            </li>
-                        
-                                                                    
-                                                    <li class="specs__item">
-                                <h6 class="specs__item-title">Fuel Economy</h6>
-                                <p class="specs__item-value">Up to 34 mpg highway | Up to 14.7 km/L highway</p>
-                            </li>
-                        
-                                                                    
-                                                    <li class="specs__item">
-                                <h6 class="specs__item-title">Quick Take</h6>
-                                <p class="specs__item-value">Impressive handling and a more powerful engine make the new S3 a joy to drive.</p>
-                            </li>
+                           </li>
+                       
+                                                                   
+                                                   <li class="specs__item">
+                               <h6 class="specs__item-title">Torque</h6>
+                               <p class="specs__item-value">310 lb-ft | 420 Nm</p>
+                           </li>
+                       
+                                                                   
+                                                   <li class="specs__item">
+                               <h6 class="specs__item-title">Seating Capacity</h6>
+                               <p class="specs__item-value">5 </p>
+                           </li>
+                       
+                                                                   
+                                                   <li class="specs__item">
+                               <h6 class="specs__item-title">Curb Weight</h6>
+                               <p class="specs__item-value">3,515 pounds | 1,594 kg</p>
+                           </li>
+                       
+                                                                   
+                                                   <li class="specs__item">
+                               <h6 class="specs__item-title">Cargo Volume</h6>
+                               <p class="specs__item-value">15 cu ft | 425 liters</p>
+                           </li>
+                       
+                                                                   
+                                                   <li class="specs__item">
+                               <h6 class="specs__item-title">Top Speed</h6>
+                               <p class="specs__item-value">155 mph (limited) | 250 km/h (limited)</p>
+                           </li>
+                       
+                                                                   
+                                                   <li class="specs__item">
+                               <h6 class="specs__item-title">Fuel Economy</h6>
+                               <p class="specs__item-value">Up to 34 mpg highway | Up to 14.7 km/L highway</p>
+                           </li>
+                       
+                                                                   
+                                                   <li class="specs__item">
+                               <h6 class="specs__item-title">Quick Take</h6>
+                               <p class="specs__item-value">Impressive handling and a more powerful engine make the new S3 a joy to drive.</p>
+                           </li>
 
-                                               <li class="specs__item">
-                                <h6 class="specs__item-title">Design Score</h6>
-                                <p class="specs__item-value">8/10</p>
-                            </li>
+                                              <li class="specs__item">
+                               <h6 class="specs__item-title">Design Score</h6>
+                               <p class="specs__item-value">8/10</p>
+                           </li>
 
-                                               <li class="specs__item">
-                                <h6 class="specs__item-title">Handling Score</h6>
-                                <p class="specs__item-value">7/10</p>
-                            </li>
-                        
-                                                            </ul>
+                                              <li class="specs__item">
+                               <h6 class="specs__item-title">Handling Score</h6>
+                               <p class="specs__item-value">7/10</p>
+                           </li>
+                       
+                                                           </ul>
 
-                            </div>
-        </div>
-    </section>
-    
-    <section class="all">
+                           </div>
+       </div>
+   </section>
+   <section class="all">
 
 <ul  class="help">
-	<h2 class="pros_title">Helpful Insights</h2>
-	<h2 class="adv_dis">Pros</h2>
-	
-	<li class="cons">Spacious and comfortable interior</li>
-	<li class="cons">Packed with features for the price</li>
-	<li class="cons">Strong safety scores</li>
+   <h2 class="pros_title">Helpful Insights</h2>
+   <h2 class="adv_dis">Pros</h2>
+   
+   <li class="cons">Spacious and comfortable interior</li>
+   <li class="cons">Packed with features for the price</li>
+   <li class="cons">Strong safety scores</li>
 
-	<h2 class="adv_dis">Cons</h2>
-	<li class="cons">Average fuel economy</li>
-	<li class="cons">Some driver assistance systems need refinement</li>
-	<li class="cons">Limited long-term reliability data</li>
+   <h2 class="adv_dis">Cons</h2>
+   <li class="cons">Average fuel economy</li>
+   <li class="cons">Some driver assistance systems need refinement</li>
+   <li class="cons">Limited long-term reliability data</li>
 </ul>
-    </section>
-    
-    <!--Eddd-->
-    <a href="#" id="verdict"></a>
-    <section class="txt-blocks section-dark pv-huge txt-light js-section-dark">
+   </section>
+   
+   <!--Eddd-->
+   <a href="#" id="verdict"></a>
+   <section class="txt-blocks section-dark pv-huge txt-light js-section-dark">
 
-    	<!--Verdict-->
-                    
-                                            
-                                    <div class="txt-blocks__item txt-blocks__item--quote quote quote--light quote--alt section section--medium-small animate-slide-left">
-                        <blockquote class="quote__txt">
-                            <cite class="quote__txt-cite"><span class="quote__txt-cite-icon"><svg xmlns="http://www.w3.org/2000/svg" width="30" height="26.72" viewBox="0 0 30 26.72"><g data-name="Layer 2"><path d="M30 12.69l-5.79 2.4A23.81 23.81 0 0026.57 25l-4.46 1.75A26.51 26.51 0 0117 10.89V0h13zm-16.9 0l-5.93 2.4A23.81 23.81 0 009.54 25l-4.47 1.72A26.5 26.5 0 010 10.89V0h13.1z" data-name="Layer 1"/></g></svg></span></cite>
-                            <p>Verdict - Is Audi S3 A Good Car?</p>
-                        </blockquote>
-                    </div>
-                                                
-                            
-                                                            <div class="txt-blocks__item txt-blocks__item--img-txt txt-blocks__item--alt section section--large section--tb2-medium-small grid grid--spaced grid--v-align-center">
-                                                            <div class="grid__col grid__col--5 grid__col--tb2-12 grid__col--m-12">
-                                    <div class="animate-img">
-                                        <img class="img-full" src="images/audi-s3-5.jpg" srcset="images/audi-s3-5.jpg 1x, images/audi-s3-5.jpg 2x" alt="Audi-s3-AutoTrends">                                    
+       <!--Verdict-->
+                   
+                                           
+                                   <div class="txt-blocks__item txt-blocks__item--quote quote quote--light quote--alt section section--medium-small animate-slide-left">
+                       <blockquote class="quote__txt">
+                           <cite class="quote__txt-cite"><span class="quote__txt-cite-icon"><svg xmlns="http://www.w3.org/2000/svg" width="30" height="26.72" viewBox="0 0 30 26.72"><g data-name="Layer 2"><path d="M30 12.69l-5.79 2.4A23.81 23.81 0 0026.57 25l-4.46 1.75A26.51 26.51 0 0117 10.89V0h13zm-16.9 0l-5.93 2.4A23.81 23.81 0 009.54 25l-4.47 1.72A26.5 26.5 0 010 10.89V0h13.1z" data-name="Layer 1"/></g></svg></span></cite>
+                           <p>Verdict - Is Audi S3 A Good Car?</p>
+                       </blockquote>
+                   </div>
+                                               
+                           
+                                                           <div class="txt-blocks__item txt-blocks__item--img-txt txt-blocks__item--alt section section--large section--tb2-medium-small grid grid--spaced grid--v-align-center">
+                                                           <div class="grid__col grid__col--5 grid__col--tb2-12 grid__col--m-12">
+                                   <div class="animate-img">
+                                       <img class="img-full" src="images/audi-s3-5.jpg" srcset="images/audi-s3-5.jpg 1x, images/audi-s3-5.jpg 2x" alt="Audi-s3-AutoTrends">                                    
 
-                                    </div>
-                                </div>
-                            
-                                                            <div class="grid__col grid__col--align-right grid__col--5 grid__col--tb2-12 grid__col--m-12 mt-tb2-medium mt-m-medium txt-styles animate-fade-up">
-                                    <h3>What AutoTrends Thinks</h3>
+                                   </div>
+                               </div>
+                           
+                                                           <div class="grid__col grid__col--align-right grid__col--5 grid__col--tb2-12 grid__col--m-12 mt-tb2-medium mt-m-medium txt-styles animate-fade-up">
+                                   <h3>What AutoTrends Thinks</h3>
 <p>A Well-Rounded Performer: The 2024 Audi S3 Verdict<br><br>
 
 The 2024 Audi S3 strikes a perfect balance between thrilling performance and everyday practicality.  This latest iteration boasts significant upgrades that elevate the driving experience across the board. Let's delve deeper into what makes the S3 such a compelling choice.<br><br>
@@ -914,22 +909,21 @@ Technology and luxury take center stage inside the S3's cabin. The interior is a
 
 
 </p>
-                                </div>
-                                <div class="fade-out">
+                               </div>
 
-                                <div class="grid__col grid__col--1 grid__col--tb2-0 grid__col--m-0"></div>
-                                                    </div>
-                                                            </section>
-                                                            </a>
-    <img class="img-full" src="images/audi-s3-15.jpg" alt="Audi-s3-AutoTrends">
-    <section class="txt-blocks section-dark pv-huge txt-light js-section-dark">
-                    
-                            
-                                                            <div class="txt-blocks__item txt-blocks__item--img-txt section section--large section--tb2-medium-small grid grid--spaced grid--v-align-center">
-                                                            <div class="grid__col grid__col--1 grid__col--tb2-0 grid__col--m-0"></div>
+                               <div class="grid__col grid__col--1 grid__col--tb2-0 grid__col--m-0"></div>
+                                                   </div>
+                                                           </section>
+                                                           </a>
+   <img class="img-full" src="images/audi-s3-15.jpg" alt="Audi-s3-AutoTrends">
+   <section class="txt-blocks section-dark pv-huge txt-light js-section-dark">
+                   
+                           
+                                                           <div class="txt-blocks__item txt-blocks__item--img-txt section section--large section--tb2-medium-small grid grid--spaced grid--v-align-center">
+                                                           <div class="grid__col grid__col--1 grid__col--tb2-0 grid__col--m-0"></div>
 
-                                <div class="grid__col grid__col--5 grid__col--tb2-12 grid__col--m-12 txt-styles animate-fade-up">
-                                    <h3>How Does  It Hold Itself Against The Competition</h3>
+                               <div class="grid__col grid__col--5 grid__col--tb2-12 grid__col--m-12 txt-styles animate-fade-up">
+                                   <h3>How Does  It Hold Itself Against The Competition</h3>
 <p>Standing Out in a Crowded Field: The S3's Competitive Edge<br><br>
 
 The Audi S3 carves out a distinct niche in the high-performance hatchback segment. It goes head-to-head with established titans like the Mercedes-AMG A35 and the Volkswagen Golf R, both known for their impressive power and handling. While the S3 might not be the absolute pinnacle of raw performance, it offers a strategic advantage: a well-balanced blend of everyday practicality and thrilling driving dynamics.<br><br>
@@ -942,23 +936,23 @@ The S3, however, bridges this gap. It delivers a satisfying amount of power and 
 
 
 </p>
-                                </div>
-                            
-                                                            <div class="grid__col grid__col--align-right grid__col--5 grid__col--tb2-12 grid__col--m-12 mt-tb2-medium mt-m-medium">
-                                                            	 <a href="#" id="running_cost"></a>
-                                    <div class="animate-img">
+                               </div>
+                           
+                                                           <div class="grid__col grid__col--align-right grid__col--5 grid__col--tb2-12 grid__col--m-12 mt-tb2-medium mt-m-medium">
+                                                                <a href="#" id="running_cost"></a>
+                                   <div class="animate-img">
 
 
-                                    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8488513824183850"
-     crossorigin="anonymous"></script>
+                                   <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8488513824183850"
+    crossorigin="anonymous"></script>
 <ins class="adsbygoogle"
-     style="display:block; text-align:center;"
-     data-ad-layout="in-article"
-     data-ad-format="fluid"
-     data-ad-client="ca-pub-8488513824183850"
-     data-ad-slot="6873432788"></ins>
+    style="display:block; text-align:center;"
+    data-ad-layout="in-article"
+    data-ad-format="fluid"
+    data-ad-client="ca-pub-8488513824183850"
+    data-ad-slot="6873432788"></ins>
 <script>
-     (adsbygoogle = window.adsbygoogle || []).push({});
+    (adsbygoogle = window.adsbygoogle || []).push({});
 </script>
 
 </div><div class="ads-text">ADVERTISEMENT - PAGE CONTINUES BELOW</div></div>                                    
@@ -966,33 +960,33 @@ The S3, however, bridges this gap. It delivers a satisfying amount of power and 
 
 
 
-                                    </div>
-                                
-                                                    
+                                   </div>
+                               
+                                                   
 
 
 
 
 <!--Running Cost-->
-         
-                                            
-                  <div class="txt-blocks__item txt-blocks__item--quote quote quote--light quote--alt section section--medium-small animate-slide-left" >
-                        <blockquote class="quote__txt">
-                            <cite class="quote__txt-cite"><span class="quote__txt-cite-icon"><svg xmlns="http://www.w3.org/2000/svg" width="30" height="26.72" viewBox="0 0 30 26.72"><g data-name="Layer 2"><path d="M30 12.69l-5.79 2.4A23.81 23.81 0 0026.57 25l-4.46 1.75A26.51 26.51 0 0117 10.89V0h13zm-16.9 0l-5.93 2.4A23.81 23.81 0 009.54 25l-4.47 1.72A26.5 26.5 0 010 10.89V0h13.1z" data-name="Layer 1"/></g></svg></span></cite>
-                            <p>Running Cost - What are The running cost of the S3 ? </p>
-                        </blockquote>
-                    </div>
-                                                
-                            
-                                                            <div class="txt-blocks__item txt-blocks__item--img-txt txt-blocks__item--alt section section--large section--tb2-medium-small grid grid--spaced grid--v-align-center">
-                                                            <div class="grid__col grid__col--5 grid__col--tb2-12 grid__col--m-12">
-                                    <div class="animate-img">
-                                        <img class="img-full" src="images/audi-s3-14.jpg" srcset="images/audi-s3-14.jpg 1x, images/audi-s3-14.jpg 2x" alt="Audi-s3-AutoTrends">                                    </div>
-                                </div>
-                            </a>
-                            
-                                                            <div class="grid__col grid__col--align-right grid__col--5 grid__col--tb2-12 grid__col--m-12 mt-tb2-medium mt-m-medium txt-styles animate-fade-up">
-                                    <h3>How Is Like Living With It?</h3>
+        
+                                           
+                 <div class="txt-blocks__item txt-blocks__item--quote quote quote--light quote--alt section section--medium-small animate-slide-left" >
+                       <blockquote class="quote__txt">
+                           <cite class="quote__txt-cite"><span class="quote__txt-cite-icon"><svg xmlns="http://www.w3.org/2000/svg" width="30" height="26.72" viewBox="0 0 30 26.72"><g data-name="Layer 2"><path d="M30 12.69l-5.79 2.4A23.81 23.81 0 0026.57 25l-4.46 1.75A26.51 26.51 0 0117 10.89V0h13zm-16.9 0l-5.93 2.4A23.81 23.81 0 009.54 25l-4.47 1.72A26.5 26.5 0 010 10.89V0h13.1z" data-name="Layer 1"/></g></svg></span></cite>
+                           <p>Running Cost - What are The running cost of the S3 ? </p>
+                       </blockquote>
+                   </div>
+                                               
+                           
+                                                           <div class="txt-blocks__item txt-blocks__item--img-txt txt-blocks__item--alt section section--large section--tb2-medium-small grid grid--spaced grid--v-align-center">
+                                                           <div class="grid__col grid__col--5 grid__col--tb2-12 grid__col--m-12">
+                                   <div class="animate-img">
+                                       <img class="img-full" src="images/audi-s3-14.jpg" srcset="images/audi-s3-14.jpg 1x, images/audi-s3-14.jpg 2x" alt="Audi-s3-AutoTrends">                                    </div>
+                               </div>
+                           </a>
+                           
+                                                           <div class="grid__col grid__col--align-right grid__col--5 grid__col--tb2-12 grid__col--m-12 mt-tb2-medium mt-m-medium txt-styles animate-fade-up">
+                                   <h3>How Is Like Living With It?</h3>
 <p> Running Costs
 
 One important factor to consider when choosing a car is how much it will cost to own and operate in the long run. Here's a breakdown of the running costs associated with the 2024 Audi S3:<br><br>
@@ -1002,142 +996,140 @@ Fuel Economy: The 2024 S3 boasts an improvement in fuel efficiency compared to i
 
 
 </p>
-                                </div>
+                               </div>
 
-                                <div class="grid__col grid__col--1 grid__col--tb2-0 grid__col--m-0"></div>
-                                                    </div>
-                                                            </section>
-                                                            
-    <img class="img-full" src="images/audi-s3-6.jpeg" alt="Audi-s3-AutoTrends">
-    <section class="txt-blocks section-dark pv-huge txt-light js-section-dark">
-                    
-                            
-                                                            <div class="txt-blocks__item txt-blocks__item--img-txt section section--large section--tb2-medium-small grid grid--spaced grid--v-align-center">
-                                                            <div class="grid__col grid__col--1 grid__col--tb2-0 grid__col--m-0"></div>
+                               <div class="grid__col grid__col--1 grid__col--tb2-0 grid__col--m-0"></div>
+                                                   </div>
+                                                           </section>
+   <img class="img-full" src="images/audi-s3-6.jpeg" alt="Audi-s3-AutoTrends">
+   <section class="txt-blocks section-dark pv-huge txt-light js-section-dark">
+                   
+                           
+                                                           <div class="txt-blocks__item txt-blocks__item--img-txt section section--large section--tb2-medium-small grid grid--spaced grid--v-align-center">
+                                                           <div class="grid__col grid__col--1 grid__col--tb2-0 grid__col--m-0"></div>
 
-                                <div class="grid__col grid__col--5 grid__col--tb2-12 grid__col--m-12 txt-styles animate-fade-up">
-                                    <h3>Maintanace Cost</h3>
+                               <div class="grid__col grid__col--5 grid__col--tb2-12 grid__col--m-12 txt-styles animate-fade-up">
+                                   <h3>Maintanace Cost</h3>
 <p>Maintenance Cost: Owning a German luxury car like the Audi S3 typically comes with slightly higher maintenance costs compared to some mainstream brands. This is due to factors like the use of premium materials and more complex engineering. However, there's a way to mitigate these costs. Audi offers prepaid maintenance plans that can ease the burden of scheduled maintenance over a set period. These plans can provide peace of mind and potentially help you budget more effectively for your car's upkeep. 
 
 
 </p>
-                                </div>
-                            
-                                                            <div class="grid__col grid__col--align-right grid__col--5 grid__col--tb2-12 grid__col--m-12 mt-tb2-medium mt-m-medium">
-                                                            	<a href="#" id="interior_com"></a>
-                                    <div class="animate-img">
-                                                                            
-                                   <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8488513824183850"
-     crossorigin="anonymous"></script>
+                               </div>
+                           
+                                                           <div class="grid__col grid__col--align-right grid__col--5 grid__col--tb2-12 grid__col--m-12 mt-tb2-medium mt-m-medium">
+                                                               <a href="#" id="interior_com"></a>
+                                   <div class="animate-img">
+                                                                           
+                                  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8488513824183850"
+    crossorigin="anonymous"></script>
 <ins class="adsbygoogle"
-     style="display:block; text-align:center;"
-     data-ad-layout="in-article"
-     data-ad-format="fluid"
-     data-ad-client="ca-pub-8488513824183850"
-     data-ad-slot="6873432788"></ins>
+    style="display:block; text-align:center;"
+    data-ad-layout="in-article"
+    data-ad-format="fluid"
+    data-ad-client="ca-pub-8488513824183850"
+    data-ad-slot="6873432788"></ins>
 <script>
-     (adsbygoogle = window.adsbygoogle || []).push({});
+    (adsbygoogle = window.adsbygoogle || []).push({});
 </script>
 
 </div><div class="ads-text">ADVERTISEMENT - PAGE CONTINUES BELOW</div>                                   
 
 
 
-                                                                            </div>
-                                </div>
-                                
-                                                    
+                                                                           </div>
+                               </div>
+                                                   
 
-                               
+
 
 <!--Interiour And Comfort-->
 
 
-                                            
-                                    <div class="txt-blocks__item txt-blocks__item--quote quote quote--light quote--alt section section--medium-small animate-slide-left" id="interior_com">
-                        <blockquote class="quote__txt">
-                            <cite class="quote__txt-cite"><span class="quote__txt-cite-icon"><svg xmlns="http://www.w3.org/2000/svg" width="30" height="26.72" viewBox="0 0 30 26.72"><g data-name="Layer 2"><path d="M30 12.69l-5.79 2.4A23.81 23.81 0 0026.57 25l-4.46 1.75A26.51 26.51 0 0117 10.89V0h13zm-16.9 0l-5.93 2.4A23.81 23.81 0 009.54 25l-4.47 1.72A26.5 26.5 0 010 10.89V0h13.1z" data-name="Layer 1"/></g></svg></span></cite>
-                            <p>interior and comfort - Is The Audi S3 comfortable?</p>
-                        </blockquote>
-                    </div>
-                </a>
-                
-                                                
-                            
-                                                            <div class="txt-blocks__item txt-blocks__item--img-txt txt-blocks__item--alt section section--large section--tb2-medium-small grid grid--spaced grid--v-align-center">
-                                                            <div class="grid__col grid__col--5 grid__col--tb2-12 grid__col--m-12">
-                                    <div class="animate-img">
-        
-        <div class="gallery-thumb">
+                                           
+                                   <div class="txt-blocks__item txt-blocks__item--quote quote quote--light quote--alt section section--medium-small animate-slide-left" id="interior_com">
+                       <blockquote class="quote__txt">
+                           <cite class="quote__txt-cite"><span class="quote__txt-cite-icon"><svg xmlns="http://www.w3.org/2000/svg" width="30" height="26.72" viewBox="0 0 30 26.72"><g data-name="Layer 2"><path d="M30 12.69l-5.79 2.4A23.81 23.81 0 0026.57 25l-4.46 1.75A26.51 26.51 0 0117 10.89V0h13zm-16.9 0l-5.93 2.4A23.81 23.81 0 009.54 25l-4.47 1.72A26.5 26.5 0 010 10.89V0h13.1z" data-name="Layer 1"/></g></svg></span></cite>
+                           <p>interior and comfort - Is The Audi S3 comfortable?</p>
+                       </blockquote>
+                   </div>
+               </a>
+               
+                                               
+                           
+                                                           <div class="txt-blocks__item txt-blocks__item--img-txt txt-blocks__item--alt section section--large section--tb2-medium-small grid grid--spaced grid--v-align-center">
+                                                           <div class="grid__col grid__col--5 grid__col--tb2-12 grid__col--m-12">
+                                   <div class="animate-img">
+       
+       <div class="gallery-thumb">
 
 
-                            
-                <a class="photos" href="#gallery-6620645672394-item-0" data-gallery-modal-target="6620645672394">
-                    <img class="photos_item-img" src="images/i.png" srcset="images/i.png 1x, images/i.png 2x" alt="Audi-s3-AutoTrends">
-                </a>
-              
-                            
-                
-                    </div>
-                </a>
+                           
+               <a class="photos" href="#gallery-6620645672394-item-0" data-gallery-modal-target="6620645672394">
+                   <img class="photos_item-img" src="images/i.png" srcset="images/i.png 1x, images/i.png 2x" alt="Audi-s3-AutoTrends">
+               </a>
+             
+                           
+               
+                   </div>
+               </a>
 
-            <div class="gallery-modal-outer" data-gallery-modal="6620645672394">
-        <div class="gallery-modal">
-            <div class="gallery-modal__nav">
-                <a class="gallery-modal__direction gallery-modal__direction--prev gallery-modal__prev" href="#">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="8.12" height="13.41" viewBox="0 0 8.12 13.41"><g data-name="Layer 2"><polygon points="0 6.71 6.71 0 8.12 1.41 2.83 6.71 8.12 12 6.71 13.41 0 6.71" data-name="Layer 1"/></g></svg>                </a>
+           <div class="gallery-modal-outer" data-gallery-modal="6620645672394">
+       <div class="gallery-modal">
+           <div class="gallery-modal__nav">
+               <a class="gallery-modal__direction gallery-modal__direction--prev gallery-modal__prev" href="#">
+                   <svg xmlns="http://www.w3.org/2000/svg" width="8.12" height="13.41" viewBox="0 0 8.12 13.41"><g data-name="Layer 2"><polygon points="0 6.71 6.71 0 8.12 1.41 2.83 6.71 8.12 12 6.71 13.41 0 6.71" data-name="Layer 1"/></g></svg>                </a>
 
-                <a class="gallery-modal__direction gallery-modal__direction--next gallery-modal__next" href="#">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="8.12" height="13.41" viewBox="0 0 8.12 13.41"><g data-name="Layer 2"><polygon points="8.12 6.71 1.41 13.41 0 12 5.29 6.71 0 1.41 1.41 0 8.12 6.71" data-name="Layer 1"/></g></svg>                </a>
+               <a class="gallery-modal__direction gallery-modal__direction--next gallery-modal__next" href="#">
+                   <svg xmlns="http://www.w3.org/2000/svg" width="8.12" height="13.41" viewBox="0 0 8.12 13.41"><g data-name="Layer 2"><polygon points="8.12 6.71 1.41 13.41 0 12 5.29 6.71 0 1.41 1.41 0 8.12 6.71" data-name="Layer 1"/></g></svg>                </a>
 
-                <a class="gallery-modal__close js-close-gallery-modal" href="#">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="13.41" height="13.41" viewBox="0 0 13.41 13.41"><defs><style>.abed9cbb-4a08-4a42-8c9a-61b663bc6f10 { fill: #fff; }</style></defs><g id="b9572a26-c1a5-4c38-a533-d07e45d67e83" data-name="Layer 2"><polygon id="a5841150-65df-4c11-8f87-28537b6cf3b5" points="13.41 1.41 12 0 6.71 5.29 1.41 0 0 1.41 5.29 6.71 0 12 1.41 13.41 6.71 8.12 12 13.41 13.41 12 8.12 6.71 13.41 1.41" class="abed9cbb-4a08-4a42-8c9a-61b663bc6f10" data-name="Layer 1"/></g></svg>                </a>
-            </div>
+               <a class="gallery-modal__close js-close-gallery-modal" href="#">
+                   <svg xmlns="http://www.w3.org/2000/svg" width="13.41" height="13.41" viewBox="0 0 13.41 13.41"><defs><style>.abed9cbb-4a08-4a42-8c9a-61b663bc6f10 { fill: #fff; }</style></defs><g id="b9572a26-c1a5-4c38-a533-d07e45d67e83" data-name="Layer 2"><polygon id="a5841150-65df-4c11-8f87-28537b6cf3b5" points="13.41 1.41 12 0 6.71 5.29 1.41 0 0 1.41 5.29 6.71 0 12 1.41 13.41 6.71 8.12 12 13.41 13.41 12 8.12 6.71 13.41 1.41" class="abed9cbb-4a08-4a42-8c9a-61b663bc6f10" data-name="Layer 1"/></g></svg>                </a>
+           </div>
 
-            <span class="gallery-modal__scroll"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="30" viewBox="0 0 20 30"><defs><style>.ba6e80eb-8488-4921-bc82-acee3e6220ec { fill: #fff; }</style></defs><g id="f7b9dada-3731-4a83-8c03-b1c93709f527" data-name="Layer 2"><g id="b1f26efa-0042-4665-975a-6fb1037a2284" data-name="Layer 1"><path d="M10 30A10 10 0 010 20V10a10 10 0 0120 0v10a10 10 0 01-10 10zm0-28a8 8 0 00-8 8v10a8 8 0 0016 0V10a8 8 0 00-8-8z" class="ba6e80eb-8488-4921-bc82-acee3e6220ec"/><path d="M10 13a1 1 0 01-1-1V8a1 1 0 012 0v4a1 1 0 01-1 1z" class="ba6e80eb-8488-4921-bc82-acee3e6220ec"/></g></g></svg></span>
-            <div class="gallery-modal__inner">
-                
-                                    
-                    <figure class="gallery-modal__item" id="gallery-6620645672394-item-0">
-                        <div class="gallery-modal__item-inner">
-                            <img class="gallery-modal__item-img" src="images/Audi-S3_interior-4.jpeg" alt="Audi-s3-AutoTrends">
+           <span class="gallery-modal__scroll"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="30" viewBox="0 0 20 30"><defs><style>.ba6e80eb-8488-4921-bc82-acee3e6220ec { fill: #fff; }</style></defs><g id="f7b9dada-3731-4a83-8c03-b1c93709f527" data-name="Layer 2"><g id="b1f26efa-0042-4665-975a-6fb1037a2284" data-name="Layer 1"><path d="M10 30A10 10 0 010 20V10a10 10 0 0120 0v10a10 10 0 01-10 10zm0-28a8 8 0 00-8 8v10a8 8 0 0016 0V10a8 8 0 00-8-8z" class="ba6e80eb-8488-4921-bc82-acee3e6220ec"/><path d="M10 13a1 1 0 01-1-1V8a1 1 0 012 0v4a1 1 0 01-1 1z" class="ba6e80eb-8488-4921-bc82-acee3e6220ec"/></g></g></svg></span>
+           <div class="gallery-modal__inner">
+               
+                                   
+                   <figure class="gallery-modal__item" id="gallery-6620645672394-item-0">
+                       <div class="gallery-modal__item-inner">
+                           <img class="gallery-modal__item-img" src="images/Audi-S3_interior-4.jpeg" alt="Audi-s3-AutoTrends">
 
-                                                    </div>
-                    </figure>
-                                    
-                    <figure class="gallery-modal__item" id="gallery-6620645672394-item-1">
-                        <div class="gallery-modal__item-inner">
-                            <img class="gallery-modal__item-img" src="images/Audi S3 Interior Dashboard.jpg" alt="Audi-s3-AutoTrends">
+                                                   </div>
+                   </figure>
+                                   
+                   <figure class="gallery-modal__item" id="gallery-6620645672394-item-1">
+                       <div class="gallery-modal__item-inner">
+                           <img class="gallery-modal__item-img" src="images/Audi S3 Interior Dashboard.jpg" alt="Audi-s3-AutoTrends">
 
-                                                    </div>
-                    </figure>
-                                    
-                    <figure class="gallery-modal__item" id="gallery-6620645672394-item-2">
-                        <div class="gallery-modal__item-inner">
-                            <img class="gallery-modal__item-img" src="images/Audi-S3_interior-3.jpg" alt="Audi-s3-AutoTrends">
+                                                   </div>
+                   </figure>
+                                   
+                   <figure class="gallery-modal__item" id="gallery-6620645672394-item-2">
+                       <div class="gallery-modal__item-inner">
+                           <img class="gallery-modal__item-img" src="images/Audi-S3_interior-3.jpg" alt="Audi-s3-AutoTrends">
 
-                                                    </div>
-                    </figure>
-                                    
-                    <figure class="gallery-modal__item" id="gallery-6620645672394-item-3">
-                        <div class="gallery-modal__item-inner">
-                            <img class="gallery-modal__item-img" src="images/Audi-S3_interior-2.jpg" alt="Audi-s3-AutoTrends">
+                                                   </div>
+                   </figure>
+                                   
+                   <figure class="gallery-modal__item" id="gallery-6620645672394-item-3">
+                       <div class="gallery-modal__item-inner">
+                           <img class="gallery-modal__item-img" src="images/Audi-S3_interior-2.jpg" alt="Audi-s3-AutoTrends">
 
-                                                    </div>
-                    </figure>
-                                    
-                    
-                                    
-                    
-                            </div>
-        </div>
-    </div>
-                                    </div>
-                                </div>
-                            
-                                    
-                                                            <div class="grid__col grid__col--align-right grid__col--5 grid__col--tb2-12 grid__col--m-12 mt-tb2-medium mt-m-medium txt-styles animate-fade-up">
-                                    <h3>Interior</h3>
+                                                   </div>
+                   </figure>
+                                   
+                   
+                                   
+                   
+                           </div>
+       </div>
+   </div>
+                                   </div>
+                               </div>
+                           
+                                   
+                                                           <div class="grid__col grid__col--align-right grid__col--5 grid__col--tb2-12 grid__col--m-12 mt-tb2-medium mt-m-medium txt-styles animate-fade-up">
+                                   <h3>Interior</h3>
 <p>S3: Spacious Enough for Your Needs?<br><br>
 
 The S3 boasts a cabin that comfortably seats four adults.  While headroom in the back might be a little restricted for passengers on the taller side, there's ample legroom for everyone to stretch out and enjoy the ride. This makes the S3 a great choice for families with younger children or groups of friends heading out for a night on the town.  If you're concerned about headroom in the rear seats, it's always a good idea to take the car for a test drive with everyone involved to ensure a comfortable fit.
@@ -1147,20 +1139,20 @@ The S3 boasts a cabin that comfortably seats four adults.  While headroom in the
 
 
 </p>
-                                </div>
+                               </div>
 
-                                <div class="grid__col grid__col--1 grid__col--tb2-0 grid__col--m-0"></div>
-                                                    </div>
-                                                            </section>
-    <img class="img-full" src="images/Audi-S3_interior-2.jpg" alt="Audi-s3-AutoTrends">
-    <section class="txt-blocks section-dark pv-huge txt-light js-section-dark">
-                    
-                            
-                                                            <div class="txt-blocks__item txt-blocks__item--img-txt section section--large section--tb2-medium-small grid grid--spaced grid--v-align-center">
-                                                            <div class="grid__col grid__col--1 grid__col--tb2-0 grid__col--m-0"></div>
+                               <div class="grid__col grid__col--1 grid__col--tb2-0 grid__col--m-0"></div>
+                                                   </div>
+                                                           </section>
+   <img class="img-full" src="images/Audi-S3_interior-2.jpg" alt="Audi-s3-AutoTrends">
+   <section class="txt-blocks section-dark pv-huge txt-light js-section-dark">
+                   
+                           
+                                                           <div class="txt-blocks__item txt-blocks__item--img-txt section section--large section--tb2-medium-small grid grid--spaced grid--v-align-center">
+                                                           <div class="grid__col grid__col--1 grid__col--tb2-0 grid__col--m-0"></div>
 
-                                <div class="grid__col grid__col--5 grid__col--tb2-12 grid__col--m-12 txt-styles animate-fade-up">
-                                    <h3>How Much Interior Space?</h3>
+                               <div class="grid__col grid__col--5 grid__col--tb2-12 grid__col--m-12 txt-styles animate-fade-up">
+                                   <h3>How Much Interior Space?</h3>
 <p>Spacious and Comfortable Passenger Cabin<br><br>
 
 The S3 also offers a functional cargo space. While it may be slightly more compact compared to the previous generation, it still provides ample room for all your essentials. Whether you're packing for a weekend getaway with friends or stocking up on groceries for the week, the S3 has the cargo capacity to handle it.  If you have a larger family or frequently haul bulky items, you might want to consider exploring roof rack options or opting for a car with a bigger cargo area. However, for most everyday needs, the S3's cargo space should be perfectly adequate.
@@ -1168,118 +1160,114 @@ The S3 also offers a functional cargo space. While it may be slightly more compa
 
 
 </p>
-
-                                </div>
-                                
-                                <a href="#" id="boot_space"></a>
-                            
-                                                            <div class="grid__col grid__col--align-right grid__col--5 grid__col--tb2-12 grid__col--m-12 mt-tb2-medium mt-m-medium">
-                                    <div class="animate-img">
-                                   <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8488513824183850"
-     crossorigin="anonymous"></script>
+                               </div>
+                               <a href="#" id="boot_space"></a>
+                           
+                                                           <div class="grid__col grid__col--align-right grid__col--5 grid__col--tb2-12 grid__col--m-12 mt-tb2-medium mt-m-medium">
+                                   <div class="animate-img">
+                                  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8488513824183850"
+    crossorigin="anonymous"></script>
 <ins class="adsbygoogle"
-     style="display:block; text-align:center;"
-     data-ad-layout="in-article"
-     data-ad-format="fluid"
-     data-ad-client="ca-pub-8488513824183850"
-     data-ad-slot="6873432788"></ins>
+    style="display:block; text-align:center;"
+    data-ad-layout="in-article"
+    data-ad-format="fluid"
+    data-ad-client="ca-pub-8488513824183850"
+    data-ad-slot="6873432788"></ins>
 <script>
-     (adsbygoogle = window.adsbygoogle || []).push({});
+    (adsbygoogle = window.adsbygoogle || []).push({});
 </script>
 
 </div><div class="ads-text">ADVERTISEMENT - PAGE CONTINUES BELOW</div></div>                                    
 
 
 
-                                   </div>
-                                
-                                                    
+                                  </div>
+                               
+                                                   
 
 
 <!--Practicality And boot Space-->
 
-</div>
-<button id="continue-button" class="continue-button" onclick="showMore()">CONTINUE READING &#9662;</button>
-<div id="more-content" class="hidden">
-
-                                            
-                                    <div class="txt-blocks__item txt-blocks__item--quote quote quote--light quote--alt section section--medium-small animate-slide-left" id="practicality">
-                        <blockquote class="quote__txt">
-                            <cite class="quote__txt-cite"><span class="quote__txt-cite-icon"><svg xmlns="http://www.w3.org/2000/svg" width="30" height="26.72" viewBox="0 0 30 26.72"><g data-name="Layer 2"><path d="M30 12.69l-5.79 2.4A23.81 23.81 0 0026.57 25l-4.46 1.75A26.51 26.51 0 0117 10.89V0h13zm-16.9 0l-5.93 2.4A23.81 23.81 0 009.54 25l-4.47 1.72A26.5 26.5 0 010 10.89V0h13.1z" data-name="Layer 1"/></g></svg></span></cite>
-                            <p>Practicality And Booot Space- Is The Audi S3 Practical?</p>
-                        </blockquote>
-                    </div>
-                                                
-                            
-                                                            <div class="txt-blocks__item txt-blocks__item--img-txt txt-blocks__item--alt section section--large section--tb2-medium-small grid grid--spaced grid--v-align-center">
-                                                            <div class="grid__col grid__col--5 grid__col--tb2-12 grid__col--m-12">
-                                    <div class="animate-img">
-
-        <div class="gallery-thumb">
 
 
-                            
-                <a class="photos" href="#gallery-6620645672391-item-0" data-gallery-modal-target="6620645672391">
-                    <img class="photos_item-img" src="images/boot.png" srcset="images/boot.png 1x, images/boot.png 2x" alt="Audi-s3-AutoTrends">
-                </a>
-              
-                            
-                
-                    </div>
-                </a>
+                                           
+                                   <div class="txt-blocks__item txt-blocks__item--quote quote quote--light quote--alt section section--medium-small animate-slide-left" id="practicality">
+                       <blockquote class="quote__txt">
+                           <cite class="quote__txt-cite"><span class="quote__txt-cite-icon"><svg xmlns="http://www.w3.org/2000/svg" width="30" height="26.72" viewBox="0 0 30 26.72"><g data-name="Layer 2"><path d="M30 12.69l-5.79 2.4A23.81 23.81 0 0026.57 25l-4.46 1.75A26.51 26.51 0 0117 10.89V0h13zm-16.9 0l-5.93 2.4A23.81 23.81 0 009.54 25l-4.47 1.72A26.5 26.5 0 010 10.89V0h13.1z" data-name="Layer 1"/></g></svg></span></cite>
+                           <p>Practicality And Booot Space- Is The Audi S3 Practical?</p>
+                       </blockquote>
+                   </div>
+                                               
+                           
+                                                           <div class="txt-blocks__item txt-blocks__item--img-txt txt-blocks__item--alt section section--large section--tb2-medium-small grid grid--spaced grid--v-align-center">
+                                                           <div class="grid__col grid__col--5 grid__col--tb2-12 grid__col--m-12">
+                                   <div class="animate-img">
 
-            <div class="gallery-modal-outer" data-gallery-modal="6620645672391">
-        <div class="gallery-modal">
-            <div class="gallery-modal__nav">
-                <a class="gallery-modal__direction gallery-modal__direction--prev gallery-modal__prev" href="#">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="8.12" height="13.41" viewBox="0 0 8.12 13.41"><g data-name="Layer 2"><polygon points="0 6.71 6.71 0 8.12 1.41 2.83 6.71 8.12 12 6.71 13.41 0 6.71" data-name="Layer 1"/></g></svg>                </a>
-
-                <a class="gallery-modal__direction gallery-modal__direction--next gallery-modal__next" href="#">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="8.12" height="13.41" viewBox="0 0 8.12 13.41"><g data-name="Layer 2"><polygon points="8.12 6.71 1.41 13.41 0 12 5.29 6.71 0 1.41 1.41 0 8.12 6.71" data-name="Layer 1"/></g></svg>                </a>
-
-                <a class="gallery-modal__close js-close-gallery-modal" href="#">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="13.41" height="13.41" viewBox="0 0 13.41 13.41"><defs><style>.abed9cbb-4a08-4a42-8c9a-61b663bc6f10 { fill: #fff; }</style></defs><g id="b9572a26-c1a5-4c38-a533-d07e45d67e83" data-name="Layer 2"><polygon id="a5841150-65df-4c11-8f87-28537b6cf3b5" points="13.41 1.41 12 0 6.71 5.29 1.41 0 0 1.41 5.29 6.71 0 12 1.41 13.41 6.71 8.12 12 13.41 13.41 12 8.12 6.71 13.41 1.41" class="abed9cbb-4a08-4a42-8c9a-61b663bc6f10" data-name="Layer 1"/></g></svg>                </a>
-            </div>
-
-            <span class="gallery-modal__scroll"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="30" viewBox="0 0 20 30"><defs><style>.ba6e80eb-8488-4921-bc82-acee3e6220ec { fill: #fff; }</style></defs><g id="f7b9dada-3731-4a83-8c03-b1c93709f527" data-name="Layer 2"><g id="b1f26efa-0042-4665-975a-6fb1037a2284" data-name="Layer 1"><path d="M10 30A10 10 0 010 20V10a10 10 0 0120 0v10a10 10 0 01-10 10zm0-28a8 8 0 00-8 8v10a8 8 0 0016 0V10a8 8 0 00-8-8z" class="ba6e80eb-8488-4921-bc82-acee3e6220ec"/><path d="M10 13a1 1 0 01-1-1V8a1 1 0 012 0v4a1 1 0 01-1 1z" class="ba6e80eb-8488-4921-bc82-acee3e6220ec"/></g></g></svg></span>
-            <div class="gallery-modal__inner">
-                
-                                    
-                    <figure class="gallery-modal__item" id="gallery-6620645672391-item-0">
-                        <div class="gallery-modal__item-inner">
-                            <img class="gallery-modal__item-img" src="images/audi-s3-boot-2.jpg" alt="Audi-s3-AutoTrends">
-
-                                                    </div>
-                    </figure>
-                                    
-                    <figure class="gallery-modal__item" id="gallery-6620645672391-item-1">
-                        <div class="gallery-modal__item-inner">
-                            <img class="gallery-modal__item-img" src="images/audi-s3-bootspace-4.jpg" alt="Audi-s3-AutoTrends">
-
-                                                    </div>
-                    </figure>
-                                    
-                    <figure class="gallery-modal__item" id="gallery-6620645672391-item-2">
-                        <div class="gallery-modal__item-inner">
-                            <img class="gallery-modal__item-img" src="images/audi-s3-boot.jpg" alt="Audi-s3-AutoTrends">
-
-                                                    </div>
-                    </figure>
-                                    
-                    
-                                    
-                    
-                            </div>
-        </div>
-    </div>
-                                    </div>
-                                </div>
-
-                            
-                                                            <div class="grid__col grid__col--align-right grid__col--5 grid__col--tb2-12 grid__col--m-12 mt-tb2-medium mt-m-medium txt-styles animate-fade-up">
+       <div class="gallery-thumb">
 
 
-                                    <h3>Practicality</h3>
+                           
+               <a class="photos" href="#gallery-6620645672391-item-0" data-gallery-modal-target="6620645672391">
+                   <img class="photos_item-img" src="images/boot.png" srcset="images/boot.png 1x, images/boot.png 2x" alt="Audi-s3-AutoTrends">
+               </a>
+             
+                           
+               
+                   </div>
+               </a>
+
+           <div class="gallery-modal-outer" data-gallery-modal="6620645672391">
+       <div class="gallery-modal">
+           <div class="gallery-modal__nav">
+               <a class="gallery-modal__direction gallery-modal__direction--prev gallery-modal__prev" href="#">
+                   <svg xmlns="http://www.w3.org/2000/svg" width="8.12" height="13.41" viewBox="0 0 8.12 13.41"><g data-name="Layer 2"><polygon points="0 6.71 6.71 0 8.12 1.41 2.83 6.71 8.12 12 6.71 13.41 0 6.71" data-name="Layer 1"/></g></svg>                </a>
+
+               <a class="gallery-modal__direction gallery-modal__direction--next gallery-modal__next" href="#">
+                   <svg xmlns="http://www.w3.org/2000/svg" width="8.12" height="13.41" viewBox="0 0 8.12 13.41"><g data-name="Layer 2"><polygon points="8.12 6.71 1.41 13.41 0 12 5.29 6.71 0 1.41 1.41 0 8.12 6.71" data-name="Layer 1"/></g></svg>                </a>
+
+               <a class="gallery-modal__close js-close-gallery-modal" href="#">
+                   <svg xmlns="http://www.w3.org/2000/svg" width="13.41" height="13.41" viewBox="0 0 13.41 13.41"><defs><style>.abed9cbb-4a08-4a42-8c9a-61b663bc6f10 { fill: #fff; }</style></defs><g id="b9572a26-c1a5-4c38-a533-d07e45d67e83" data-name="Layer 2"><polygon id="a5841150-65df-4c11-8f87-28537b6cf3b5" points="13.41 1.41 12 0 6.71 5.29 1.41 0 0 1.41 5.29 6.71 0 12 1.41 13.41 6.71 8.12 12 13.41 13.41 12 8.12 6.71 13.41 1.41" class="abed9cbb-4a08-4a42-8c9a-61b663bc6f10" data-name="Layer 1"/></g></svg>                </a>
+           </div>
+
+           <span class="gallery-modal__scroll"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="30" viewBox="0 0 20 30"><defs><style>.ba6e80eb-8488-4921-bc82-acee3e6220ec { fill: #fff; }</style></defs><g id="f7b9dada-3731-4a83-8c03-b1c93709f527" data-name="Layer 2"><g id="b1f26efa-0042-4665-975a-6fb1037a2284" data-name="Layer 1"><path d="M10 30A10 10 0 010 20V10a10 10 0 0120 0v10a10 10 0 01-10 10zm0-28a8 8 0 00-8 8v10a8 8 0 0016 0V10a8 8 0 00-8-8z" class="ba6e80eb-8488-4921-bc82-acee3e6220ec"/><path d="M10 13a1 1 0 01-1-1V8a1 1 0 012 0v4a1 1 0 01-1 1z" class="ba6e80eb-8488-4921-bc82-acee3e6220ec"/></g></g></svg></span>
+           <div class="gallery-modal__inner">
+               
+                                   
+                   <figure class="gallery-modal__item" id="gallery-6620645672391-item-0">
+                       <div class="gallery-modal__item-inner">
+                           <img class="gallery-modal__item-img" src="images/audi-s3-boot-2.jpg" alt="Audi-s3-AutoTrends">
+
+                                                   </div>
+                   </figure>
+                                   
+                   <figure class="gallery-modal__item" id="gallery-6620645672391-item-1">
+                       <div class="gallery-modal__item-inner">
+                           <img class="gallery-modal__item-img" src="images/audi-s3-bootspace-4.jpg" alt="Audi-s3-AutoTrends">
+
+                                                   </div>
+                   </figure>
+                                   
+                   <figure class="gallery-modal__item" id="gallery-6620645672391-item-2">
+                       <div class="gallery-modal__item-inner">
+                           <img class="gallery-modal__item-img" src="images/audi-s3-boot.jpg" alt="Audi-s3-AutoTrends">
+
+                                                   </div>
+                   </figure>
+                                   
+                   
+                                   
+                   
+                           </div>
+       </div>
+   </div>
+                                   </div>
+                               </div>
+
+                           
+                                                           <div class="grid__col grid__col--align-right grid__col--5 grid__col--tb2-12 grid__col--m-12 mt-tb2-medium mt-m-medium txt-styles animate-fade-up">
+
+
+                                   <h3>Practicality</h3>
 <p>Practical Powerhouse: The Audi S3 as Your Daily Driver<br><br>
 
 The Audi S3 strikes a perfect balance between thrilling performance and everyday practicality. You won't have to compromise on comfort or functionality to experience the joy of a sporty drive. Here's why the S3 makes an excellent choice for your daily commute:<br><br>
@@ -1295,27 +1283,27 @@ Confidence in all Conditions: No matter the weather, the S3's all-wheel-drive sy
 
 
 </p>
-                                </div>
+                               </div>
 
-                                <div class="grid__col grid__col--1 grid__col--tb2-0 grid__col--m-0"></div>
-                                                    </div>
-                                                            </section>
-    <img class="img-full" src="images/audi-s3-boot-2.jpg" alt="Audi-s3-AutoTrends">
-    <section class="txt-blocks section-dark pv-huge txt-light js-section-dark">
-                    
-                            
-                                                            <div class="txt-blocks__item txt-blocks__item--img-txt section section--large section--tb2-medium-small grid grid--spaced grid--v-align-center">
-                                                            <div class="grid__col grid__col--1 grid__col--tb2-0 grid__col--m-0"></div>
+                               <div class="grid__col grid__col--1 grid__col--tb2-0 grid__col--m-0"></div>
+                                                   </div>
+                                                           </section>
+   <img class="img-full" src="images/audi-s3-boot-2.jpg" alt="Audi-s3-AutoTrends">
+   <section class="txt-blocks section-dark pv-huge txt-light js-section-dark">
+                   
+                           
+                                                           <div class="txt-blocks__item txt-blocks__item--img-txt section section--large section--tb2-medium-small grid grid--spaced grid--v-align-center">
+                                                           <div class="grid__col grid__col--1 grid__col--tb2-0 grid__col--m-0"></div>
 
-                                <div class="grid__col grid__col--5 grid__col--tb2-12 grid__col--m-12 txt-styles animate-fade-up">
-                                    <h3>Boot Space</h3>
+                               <div class="grid__col grid__col--5 grid__col--tb2-12 grid__col--m-12 txt-styles animate-fade-up">
+                                   <h3>Boot Space</h3>
 <p>
 Maximizing Cargo Capacity: The S3's Functional Boot Space<br><br>
 
 While the 2024 S3 offers a slightly reduced cargo space compared to its predecessor, its 15 cubic feet (425 liters) capacity remains practical for most everyday needs. Here are some ways to make the most of the S3's versatile boot:<br><br>
 
 Smart Packing Solutions: Utilize the well-shaped boot to maximize space. Invest in collapsible storage bins or organizers to neatly compartmentalize groceries, luggage, or sports equipment.<br><br>
- 
+
 Foldable Flexibility: When you need to haul larger items, the S3's rear seats conveniently fold down, creating a significantly extended cargo area. This allows you to transport luggage for weekend getaways, bulky sports equipment, or even furniture with ease.<br><br>
 
 Hidden Compartments: Look beyond the main cargo area. The S3 might have additional hidden compartments under the boot floor, perfect for storing emergency tools, a first-aid kit, or car cleaning supplies, keeping them readily accessible without sacrificing valuable cargo space.<br><br>
@@ -1326,116 +1314,116 @@ While some competitors might offer a larger boot on paper, the S3's well-designe
 
 
 </p>
-                                </div>
-                                <a href="#" id="reliability"></a>
-                            
-                                                            <div class="grid__col grid__col--align-right grid__col--5 grid__col--tb2-12 grid__col--m-12 mt-tb2-medium mt-m-medium">
-                                    <div class="animate-img">
-                                   <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8488513824183850"
-     crossorigin="anonymous"></script>
+                               </div>
+                               <a href="#" id="reliability"></a>
+                           
+                                                           <div class="grid__col grid__col--align-right grid__col--5 grid__col--tb2-12 grid__col--m-12 mt-tb2-medium mt-m-medium">
+                                   <div class="animate-img">
+                                  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8488513824183850"
+    crossorigin="anonymous"></script>
 <ins class="adsbygoogle"
-     style="display:block; text-align:center;"
-     data-ad-layout="in-article"
-     data-ad-format="fluid"
-     data-ad-client="ca-pub-8488513824183850"
-     data-ad-slot="6873432788"></ins>
+    style="display:block; text-align:center;"
+    data-ad-layout="in-article"
+    data-ad-format="fluid"
+    data-ad-client="ca-pub-8488513824183850"
+    data-ad-slot="6873432788"></ins>
 <script>
-     (adsbygoogle = window.adsbygoogle || []).push({});
+    (adsbygoogle = window.adsbygoogle || []).push({});
 </script>
 
 </div><div class="ads-text">ADVERTISEMENT - PAGE CONTINUES BELOW</div></div>                                    
 
 
-                                  </div>
-                                
-                                                    
+                                 </div>
+                               
+                                                   
 
 
 <!---Reliability And Safety-->
 
-                                            
-                                    <div class="txt-blocks__item txt-blocks__item--quote quote quote--light quote--alt section section--medium-small animate-slide-left" id="reliability">
-                        <blockquote class="quote__txt">
-                            <cite class="quote__txt-cite"><span class="quote__txt-cite-icon"><svg xmlns="http://www.w3.org/2000/svg" width="30" height="26.72" viewBox="0 0 30 26.72"><g data-name="Layer 2"><path d="M30 12.69l-5.79 2.4A23.81 23.81 0 0026.57 25l-4.46 1.75A26.51 26.51 0 0117 10.89V0h13zm-16.9 0l-5.93 2.4A23.81 23.81 0 009.54 25l-4.47 1.72A26.5 26.5 0 010 10.89V0h13.1z" data-name="Layer 1"/></g></svg></span></cite>
-                            <p>Reliabilty And  Safety - Is The Audi S3 Reliable?</p>
-                        </blockquote>
-                    </div>
-                                                
-                            
-                                                            <div class="txt-blocks__item txt-blocks__item--img-txt txt-blocks__item--alt section section--large section--tb2-medium-small grid grid--spaced grid--v-align-center">
-                                                            <div class="grid__col grid__col--5 grid__col--tb2-12 grid__col--m-12">
-                                    <div class="animate-img">
+                                           
+                                   <div class="txt-blocks__item txt-blocks__item--quote quote quote--light quote--alt section section--medium-small animate-slide-left" id="reliability">
+                       <blockquote class="quote__txt">
+                           <cite class="quote__txt-cite"><span class="quote__txt-cite-icon"><svg xmlns="http://www.w3.org/2000/svg" width="30" height="26.72" viewBox="0 0 30 26.72"><g data-name="Layer 2"><path d="M30 12.69l-5.79 2.4A23.81 23.81 0 0026.57 25l-4.46 1.75A26.51 26.51 0 0117 10.89V0h13zm-16.9 0l-5.93 2.4A23.81 23.81 0 009.54 25l-4.47 1.72A26.5 26.5 0 010 10.89V0h13.1z" data-name="Layer 1"/></g></svg></span></cite>
+                           <p>Reliabilty And  Safety - Is The Audi S3 Reliable?</p>
+                       </blockquote>
+                   </div>
+                                               
+                           
+                                                           <div class="txt-blocks__item txt-blocks__item--img-txt txt-blocks__item--alt section section--large section--tb2-medium-small grid grid--spaced grid--v-align-center">
+                                                           <div class="grid__col grid__col--5 grid__col--tb2-12 grid__col--m-12">
+                                   <div class="animate-img">
 
-        <div class="gallery-thumb">
+       <div class="gallery-thumb">
 
 
-                            
-                <a class="photos" href="#gallery-6620645672399-item-0" data-gallery-modal-target="6620645672399">
-                    <img class="photos_item-img" src="images/safety.png" srcset="images/safety.png 1x, images/safety.png 2x" alt="Audi-s3-AutoTrends">
-                </a>
-              
-                            
-                
-                    </div>
-                </a>
+                           
+               <a class="photos" href="#gallery-6620645672399-item-0" data-gallery-modal-target="6620645672399">
+                   <img class="photos_item-img" src="images/safety.png" srcset="images/safety.png 1x, images/safety.png 2x" alt="Audi-s3-AutoTrends">
+               </a>
+             
+                           
+               
+                   </div>
+               </a>
 
-            <div class="gallery-modal-outer" data-gallery-modal="6620645672399">
-        <div class="gallery-modal">
-            <div class="gallery-modal__nav">
-                <a class="gallery-modal__direction gallery-modal__direction--prev gallery-modal__prev" href="#">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="8.12" height="13.41" viewBox="0 0 8.12 13.41"><g data-name="Layer 2"><polygon points="0 6.71 6.71 0 8.12 1.41 2.83 6.71 8.12 12 6.71 13.41 0 6.71" data-name="Layer 1"/></g></svg>                </a>
+           <div class="gallery-modal-outer" data-gallery-modal="6620645672399">
+       <div class="gallery-modal">
+           <div class="gallery-modal__nav">
+               <a class="gallery-modal__direction gallery-modal__direction--prev gallery-modal__prev" href="#">
+                   <svg xmlns="http://www.w3.org/2000/svg" width="8.12" height="13.41" viewBox="0 0 8.12 13.41"><g data-name="Layer 2"><polygon points="0 6.71 6.71 0 8.12 1.41 2.83 6.71 8.12 12 6.71 13.41 0 6.71" data-name="Layer 1"/></g></svg>                </a>
 
-                <a class="gallery-modal__direction gallery-modal__direction--next gallery-modal__next" href="#">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="8.12" height="13.41" viewBox="0 0 8.12 13.41"><g data-name="Layer 2"><polygon points="8.12 6.71 1.41 13.41 0 12 5.29 6.71 0 1.41 1.41 0 8.12 6.71" data-name="Layer 1"/></g></svg>                </a>
+               <a class="gallery-modal__direction gallery-modal__direction--next gallery-modal__next" href="#">
+                   <svg xmlns="http://www.w3.org/2000/svg" width="8.12" height="13.41" viewBox="0 0 8.12 13.41"><g data-name="Layer 2"><polygon points="8.12 6.71 1.41 13.41 0 12 5.29 6.71 0 1.41 1.41 0 8.12 6.71" data-name="Layer 1"/></g></svg>                </a>
 
-                <a class="gallery-modal__close js-close-gallery-modal" href="#">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="13.41" height="13.41" viewBox="0 0 13.41 13.41"><defs><style>.abed9cbb-4a08-4a42-8c9a-61b663bc6f10 { fill: #fff; }</style></defs><g id="b9572a26-c1a5-4c38-a533-d07e45d67e83" data-name="Layer 2"><polygon id="a5841150-65df-4c11-8f87-28537b6cf3b5" points="13.41 1.41 12 0 6.71 5.29 1.41 0 0 1.41 5.29 6.71 0 12 1.41 13.41 6.71 8.12 12 13.41 13.41 12 8.12 6.71 13.41 1.41" class="abed9cbb-4a08-4a42-8c9a-61b663bc6f10" data-name="Layer 1"/></g></svg>                </a>
-            </div>
+               <a class="gallery-modal__close js-close-gallery-modal" href="#">
+                   <svg xmlns="http://www.w3.org/2000/svg" width="13.41" height="13.41" viewBox="0 0 13.41 13.41"><defs><style>.abed9cbb-4a08-4a42-8c9a-61b663bc6f10 { fill: #fff; }</style></defs><g id="b9572a26-c1a5-4c38-a533-d07e45d67e83" data-name="Layer 2"><polygon id="a5841150-65df-4c11-8f87-28537b6cf3b5" points="13.41 1.41 12 0 6.71 5.29 1.41 0 0 1.41 5.29 6.71 0 12 1.41 13.41 6.71 8.12 12 13.41 13.41 12 8.12 6.71 13.41 1.41" class="abed9cbb-4a08-4a42-8c9a-61b663bc6f10" data-name="Layer 1"/></g></svg>                </a>
+           </div>
 
-            <span class="gallery-modal__scroll"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="30" viewBox="0 0 20 30"><defs><style>.ba6e80eb-8488-4921-bc82-acee3e6220ec { fill: #fff; }</style></defs><g id="f7b9dada-3731-4a83-8c03-b1c93709f527" data-name="Layer 2"><g id="b1f26efa-0042-4665-975a-6fb1037a2284" data-name="Layer 1"><path d="M10 30A10 10 0 010 20V10a10 10 0 0120 0v10a10 10 0 01-10 10zm0-28a8 8 0 00-8 8v10a8 8 0 0016 0V10a8 8 0 00-8-8z" class="ba6e80eb-8488-4921-bc82-acee3e6220ec"/><path d="M10 13a1 1 0 01-1-1V8a1 1 0 012 0v4a1 1 0 01-1 1z" class="ba6e80eb-8488-4921-bc82-acee3e6220ec"/></g></g></svg></span>
-            <div class="gallery-modal__inner">
-                
-                                    
-                    <figure class="gallery-modal__item" id="gallery-6620645672399-item-0">
-                        <div class="gallery-modal__item-inner">
-                            <img class="gallery-modal__item-img" src="images/safety-crush1.jpg" alt="Audi-Safety">
+           <span class="gallery-modal__scroll"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="30" viewBox="0 0 20 30"><defs><style>.ba6e80eb-8488-4921-bc82-acee3e6220ec { fill: #fff; }</style></defs><g id="f7b9dada-3731-4a83-8c03-b1c93709f527" data-name="Layer 2"><g id="b1f26efa-0042-4665-975a-6fb1037a2284" data-name="Layer 1"><path d="M10 30A10 10 0 010 20V10a10 10 0 0120 0v10a10 10 0 01-10 10zm0-28a8 8 0 00-8 8v10a8 8 0 0016 0V10a8 8 0 00-8-8z" class="ba6e80eb-8488-4921-bc82-acee3e6220ec"/><path d="M10 13a1 1 0 01-1-1V8a1 1 0 012 0v4a1 1 0 01-1 1z" class="ba6e80eb-8488-4921-bc82-acee3e6220ec"/></g></g></svg></span>
+           <div class="gallery-modal__inner">
+               
+                                   
+                   <figure class="gallery-modal__item" id="gallery-6620645672399-item-0">
+                       <div class="gallery-modal__item-inner">
+                           <img class="gallery-modal__item-img" src="images/safety-crush1.jpg" alt="Audi-Safety">
 
-                                                    </div>
-                    </figure>
-                                    
-                    <figure class="gallery-modal__item" id="gallery-6620645672399-item-1">
-                        <div class="gallery-modal__item-inner">
-                            <img class="gallery-modal__item-img" src="images/safety-crush2.jpg" alt="Audi-Safety">
+                                                   </div>
+                   </figure>
+                                   
+                   <figure class="gallery-modal__item" id="gallery-6620645672399-item-1">
+                       <div class="gallery-modal__item-inner">
+                           <img class="gallery-modal__item-img" src="images/safety-crush2.jpg" alt="Audi-Safety">
 
-                                                    </div>
-                    </figure>
-                                    
-                    <figure class="gallery-modal__item" id="gallery-6620645672399-item-2">
-                        <div class="gallery-modal__item-inner">
-                            <img class="gallery-modal__item-img" src="images/safety-crush3.jpg" alt="Audi-Safety">
+                                                   </div>
+                   </figure>
+                                   
+                   <figure class="gallery-modal__item" id="gallery-6620645672399-item-2">
+                       <div class="gallery-modal__item-inner">
+                           <img class="gallery-modal__item-img" src="images/safety-crush3.jpg" alt="Audi-Safety">
 
-                                                    </div>
-                    </figure>
-                                    
-                    <figure class="gallery-modal__item" id="gallery-6620645672399-item-3">
-                        <div class="gallery-modal__item-inner">
-                            <img class="gallery-modal__item-img" src="images/safety-crush4.jpg" alt="Audi-Safety">
+                                                   </div>
+                   </figure>
+                                   
+                   <figure class="gallery-modal__item" id="gallery-6620645672399-item-3">
+                       <div class="gallery-modal__item-inner">
+                           <img class="gallery-modal__item-img" src="images/safety-crush4.jpg" alt="Audi-Safety">
 
-                                                    </div>
-                    </figure>
-                                    
-                    
-                                    
-                    
-                    
-                            </div>
-        </div>
-    </div>
-                                    </div>
-                                </div>
-                            
-                                                            <div class="grid__col grid__col--align-right grid__col--5 grid__col--tb2-12 grid__col--m-12 mt-tb2-medium mt-m-medium txt-styles animate-fade-up">
-                                    <h3>Reliabilty</h3>
+                                                   </div>
+                   </figure>
+                                   
+                   
+                                   
+                   
+                   
+                           </div>
+       </div>
+   </div>
+                                   </div>
+                               </div>
+                           
+                                                           <div class="grid__col grid__col--align-right grid__col--5 grid__col--tb2-12 grid__col--m-12 mt-tb2-medium mt-m-medium txt-styles animate-fade-up">
+                                   <h3>Reliabilty</h3>
 <p>Unveiling the Audi S3: A Blend of Performance and Peace of Mind<br><br>
 
 Reliable Powertrain, Lasting Performance:<br><br>
@@ -1447,20 +1435,20 @@ The Audi S3 is engineered to deliver exhilarating performance while offering pea
 
 
 </p>
-                                </div>
+                               </div>
 
-                                <div class="grid__col grid__col--1 grid__col--tb2-0 grid__col--m-0"></div>
-                                                    </div>
-                                                            </section>
-    <img class="img-full" src="images/audi-s3-12.jpg" alt="Audi-s3-AutoTrends">
-    <section class="txt-blocks section-dark pv-huge txt-light js-section-dark">
-                    
-                            
-                                                            <div class="txt-blocks__item txt-blocks__item--img-txt section section--large section--tb2-medium-small grid grid--spaced grid--v-align-center">
-                                                            <div class="grid__col grid__col--1 grid__col--tb2-0 grid__col--m-0"></div>
+                               <div class="grid__col grid__col--1 grid__col--tb2-0 grid__col--m-0"></div>
+                                                   </div>
+                                                           </section>
+   <img class="img-full" src="images/audi-s3-12.jpg" alt="Audi-s3-AutoTrends">
+   <section class="txt-blocks section-dark pv-huge txt-light js-section-dark">
+                   
+                           
+                                                           <div class="txt-blocks__item txt-blocks__item--img-txt section section--large section--tb2-medium-small grid grid--spaced grid--v-align-center">
+                                                           <div class="grid__col grid__col--1 grid__col--tb2-0 grid__col--m-0"></div>
 
-                                <div class="grid__col grid__col--5 grid__col--tb2-12 grid__col--m-12 txt-styles animate-fade-up">
-                                    <h3>Safety</h3>
+                               <div class="grid__col grid__col--5 grid__col--tb2-12 grid__col--m-12 txt-styles animate-fade-up">
+                                   <h3>Safety</h3>
 <p>Safety First: Confidence on Every Drive<br><br>
 
 The Audi S3 prioritizes your safety with a comprehensive suite of advanced driver-assistance features. Automatic emergency braking (AEB) acts as a vigilant guardian, automatically applying the brakes if a potential collision is detected. Lane departure warning keeps you centered in your lane, gently nudging you back if you begin to drift unintentionally. Adaptive cruise control helps you maintain a safe distance from the car ahead, especially during highway commutes or in stop-and-go traffic.  These are just a few of the many features that contribute to the S3's exceptional safety rating. With a car this capable looking out for you, you can navigate the road with confidence and focus on the thrill of the drive.<br><br>
@@ -1472,42 +1460,84 @@ The Audi S3 doesn't compromise. It merges exhilarating performance with the assu
 
 </p>
 
-                                                      
-                                                    </div>
-
-                                               
-                                                    
+                                                     
+                                                   </div>
 <section>
-    <div id="disqus_thread"></div>
+
+<div class="table_cont">
+<table>
+                                         
+                           <tr>
+                               <th class="topic">Trim</th>
+                               <th class="topic">Power</th>
+
+                           </tr>
+                           <tr>
+
+                               <th class="figures">LX</th>
+                               <th class="figures">150KW | 201HP<br>(2.0-liter)</th>
+                 
+                           </tr>
+                          
+                           <tr>
+                               <th class="figures">LUX</th>
+                               <th class="figures">150KW | 201HP<br>(2.0-liter)</th>
+             
+
+
+                           </tr>
+
+                           <tr>
+                               <th class="figures">GT</th>
+                               <th class="figures">155KW | 209HP<br>(2.0-liter)</th>
+             
+
+
+                           </tr>
+
+                           <tr>
+                               <th class="figures">_</th>
+                               <th class="figures">_</th>
+             
+
+
+                           </tr>
+                           
+                   
+                   </table>
+               </div>
+
+
+               
+
+               
+                                  
+
+<div id="disqus_thread"></div>
 <script>
-    /**
-    *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
-    *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables    */
-    /*
-    var disqus_config = function () {
-    this.page.url = PAGE_URL;  // Replace PAGE_URL with your page's canonical URL variable
-    this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
-    };
-    */
-    (function() { // DON'T EDIT BELOW THIS LINE
-    var d = document, s = d.createElement('script');
-    s.src = 'https://https-autotrendsz-com.disqus.com/embed.js';
-    s.setAttribute('data-timestamp', +new Date());
-    (d.head || d.body).appendChild(s);
-    })();
+   /**
+   *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+   *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables    */
+   /*
+   var disqus_config = function () {
+   this.page.url = PAGE_URL;  // Replace PAGE_URL with your page's canonical URL variable
+   this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+   };
+   */
+   (function() { // DON'T EDIT BELOW THIS LINE
+   var d = document, s = d.createElement('script');
+   s.src = 'https://https-autotrendsz-com.disqus.com/embed.js';
+   s.setAttribute('data-timestamp', +new Date());
+   (d.head || d.body).appendChild(s);
+   })();
 </script>
 <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
 
 
-</div>
+                               </section>
+                            </section>
+                           
 
-</div> 
- 
-                                </section>
-                            
-
-
-                                                            </section>
     <section class="overflow-slider pv-large  overflow-slider--pattern-gray js-section-dark">
                     <div class="section section--medium-small mb-medium animate-emerge">
                 <h3 class="txt-upper txt-mid-small txt-center">Recommended</h3>
