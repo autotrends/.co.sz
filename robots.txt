@@ -3,7 +3,7 @@ Disallow: /css/
 Disallow: /js/
 Disallow: /ajax/
 Disallow: /api/
-Sitemap: https://www.autotrendsz.com/sitemap.html
+Sitemap: https://www.autotrendsz.com/sitemap.xml
 
 
 
