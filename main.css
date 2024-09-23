@@ -202,6 +202,7 @@ hr{
     font-size: 18px;
     text-shadow: 0 0 2px #000;
     color: #fff;
+    
 }
 
 .hot-topic h3{
@@ -281,6 +282,7 @@ main a:hover{
 
 .main-container-left > h2{
     padding: 15px 0 15px 30px;
+    font-weight: 700;
 }
 
 .main-container-left h3{
