@@ -289,14 +289,12 @@ main a:hover{
     /* font-family: var(--heading); */
     font-family: Gliko, Gliko-fallback, Gliko-roboto, Gliko-local, Georgia, Times, Serif;
     font-style: normal;
-    font-weight: 400;
+    font-weight: 600;
 
 }
 
 .main-container-left p{
     font-size: 15px;
-    font-weight: 300;
-    font-weight: 600;
     font-family: Gliko, Gliko-fallback, Gliko-roboto, Gliko-local, Georgia, Times, Serif;
 }
 
@@ -348,7 +346,7 @@ main a:hover{
 .main-container-right h4{
     text-align: center;
     text-transform: uppercase;
-    font-weight: 300;
+    font-weight: 600;
     font-size: 12px;
     align-self: center;
 }
@@ -362,12 +360,11 @@ main a:hover{
    /* font-family: var(--heading); */
     font-family: Gliko, Gliko-fallback, Gliko-roboto, Gliko-local, Georgia, Times, Serif;
     font-style: normal;
-    font-weight: 400;
+    font-weight: 600;
 }
 
 .main-container-right article p{
     font-size: 15px;
-    font-weight: 600;
    font-family: Gliko, Gliko-fallback, Gliko-roboto, Gliko-local, Georgia, Times, Serif;
 }
 
