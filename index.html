@@ -1381,389 +1381,186 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                     </script>
         </div><!--end .page-wrap-->
         <script>
-            (function() {
-              // Create a container for our widget
-              var container = document.createElement('div');
-              container.id = 'autotrends-widget';
-              document.body.appendChild(container);
-            
-              // Create a shadow DOM
-              var shadow = container.attachShadow({mode: 'open'});
-            
-              // Add the HTML content
-              shadow.innerHTML = `
-                <div id="notification-icon">
-                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-bell"><path d="M6 8a6 6 0 0 1 12 0c0 7 3 9 3 9H3s3-2 3-9"></path><path d="M10.3 21a1.94 1.94 0 0 0 3.4 0"></path></svg>
-                </div>
-            
-                <div id="signup-overlay">
-                  <div class="glass-card">
-                    <button id="close-button">
-                      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-x"><path d="M18 6 6 18"></path><path d="m6 6 12 12"></path></svg>
-                    </button>
-                    <h2>Stay Updated with AutoTrends</h2>
-                    <p class="subtitle">Get the latest automotive news and trends delivered to your inbox.</p>
-                        <form action="https://api.web3forms.com/submit" method="POST" id="newsletter-form">
-                      <label for="email">Enter your email address:</label>
-                      <input type="hidden" name="access_key" value="b5b2b646-a83c-4184-be7a-1b6210fdc995">
-                      <input type="email" id="email" name="email" required placeholder="your@email.com">
-                      <button type="submit">Sign Up</button>
-                    </form>
-                    <p class="privacy-declaration">
-                      By signing up, you agree to our <a href="https://www.autotrendsz.com/privacy-policy.html">Privacy Policy</a> and consent to receive updates from AutoTrends.
-                    </p>
-                    <div id="success-message">
-                      <svg class="checkmark" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 52 52">
-                        <circle class="checkmark__circle" cx="26" cy="26" r="25" fill="none"/>
-                        <path class="checkmark__check" fill="none" d="M14.1 27.2l7.1 7.2 16.7-16.8"/>
-                      </svg>
-                      <p>Thank you for signing up!</p>
-                      <p>You'll receive our latest updates soon.</p>
-                    </div>
-                  </div>
-                </div>
-            
-                <style>
-                  @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Rajdhani:wght@300;400;700&display=swap');
-            
-                  :host {
-                    all: initial;
-                  }
-            
-                  h2 {
-                    font-family: 'Orbitron', sans-serif;
-                    font-size: clamp(1.2rem, 3vw, 1.5rem);
-                    color: #fff;
-                    margin-bottom: 1rem;
-                  }
-                  .subtitle {
-                    font-size: clamp(1rem, 2.5vw, 1.2rem);
-                    color: #ddd;
-                    margin-bottom: 2rem;
-                    text-align: center;
-                  }
-                  .glass-card {
-                    background: rgba(255, 255, 255, 0.05);
-                    border-radius: 20px;
-                    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.37);
-                    backdrop-filter: blur(10px);
-                    -webkit-backdrop-filter: blur(10px);
-                    border: 1px solid rgba(255, 255, 255, 0.18);
-                    padding: 2rem;
-                    width: 100%;
-                    max-width: 400px;
-                    transition: transform 0.5s, box-shadow 0.5s;
-                    position: relative;
-                  }
-                  .glass-card:hover {
-                    transform: scale(1.05);
-                    box-shadow: 0 12px 50px rgba(0, 0, 0, 0.45);
-                  }
-                  form {
-                    display: flex;
-                    flex-direction: column;
-                  }
-                  label {
-                    margin-bottom: 0.5rem;
-                    font-size: clamp(0.9rem, 2vw, 1rem);
-                    color:#fff;
-                  }
-                  input[type="email"] {
-                    padding: 0.5rem;
-                    margin-bottom: 1rem;
-                    border: none;
-                    border-radius: 5px;
-                    background-color: rgba(255, 255, 255, 0.1);
-                    color: white;
-                    font-family: 'Rajdhani', sans-serif;
-                    font-size: clamp(0.9rem, 2vw, 1rem);
-                  }
-                  input[type="email"]::placeholder {
-                    color: rgba(255, 255, 255, 0.5);
-                    font-family: 'Rajdhani', sans-serif;
-                  }
-                  button {
-                    padding: 0.5rem 1rem;
-                    background-color: #004d40;
-                   color: #fff;
-                    border: none;
-                    border-radius: 5px;
-                    cursor: pointer;
-                    transition: background-color 0.3s ease;
-                    font-family: 'Rajdhani', sans-serif;
-                    font-size: clamp(0.9rem, 2vw, 1rem);
-                    font-weight: 700;
-                  }
-                  button:hover {
-                    background-color: #00aacc;
-                  }
-                  .privacy-declaration {
-                    margin-top: 1rem;
-                    font-size: clamp(0.7rem, 1.5vw, 0.8rem);
-                    color: #ddd;
-                  }
-                  #success-message {
-                    display: none;
-                    text-align: center;
-                  }
-                  #success-message p {
-                    font-size: clamp(1rem, 2.5vw, 1.2rem);
-                    margin-bottom: 1rem;
-                    color:#fff;
-                  }
-                  .checkmark {
-                    width: 56px;
-                    height: 56px;
-                    border-radius: 50%;
-                    display: block;
-                    stroke-width: 2;
-                    stroke: #00e5ff;
-                    stroke-miterlimit: 10;
-                    margin: 10% auto;
-                    box-shadow: inset 0px 0px 0px #00e5ff;
-                    animation: fill .4s ease-in-out .4s forwards, scale .3s ease-in-out .9s both;
-                  }
-                  @keyframes fill {
-                    100% { box-shadow: inset 0px 0px 0px 30px #00e5ff; }
-                  }
-                  @keyframes scale {
-                    0%, 100% { transform: none; }
-                    50% { transform: scale3d(1.1, 1.1, 1); }
-                  }
-                  #notification-icon {
-                    position: fixed;
-                    bottom: 20px;
-                    right: 20px;
-                    background-color: #004d40;
-                    color: #fff;
-                    width: 50px;
-                    height: 50px;
-                    border-radius: 50%;
-                    display: flex;
-                    align-items: center;
-                    justify-content: center;
-                    cursor: pointer;
-                    box-shadow: 0 2px 10px rgba(0, 229, 255, 0.3);
-                    transition: all 0.3s ease;
-                    z-index: 1000;
-                  }
-                  #notification-icon:hover {
-                    transform: scale(1.1);
-                    box-shadow: 0 4px 20px rgba(0, 229, 255, 0.5);
-                  }
-                  #close-button {
-                    position: absolute;
-                    top: 10px;
-                    right: 10px;
-                    background: none;
-                    border: none;
-                    color: #004d40;
-                    font-size: 1.5rem;
-                    cursor: pointer;
-                    padding: 5px;
-                  }
-                  #signup-overlay {
-                    position: fixed;
-                    top: 0;
-                    left: 0;
-                    width: 100%;
-                    height: 100%;
-                    background-color: rgba(0, 0, 0, 0.8);
-                    display: none;
-                    justify-content: center;
-                    align-items: center;
-                    z-index: 1001;
-                  }
-                  @media (max-width: 480px) {
-                    .glass-card {
-                      padding: 1.5rem;
-                    }
-                  }
-                </style>
-              `;
-            
-              // Get references to elements
-              var notificationIcon = shadow.getElementById('notification-icon');
-              var signupOverlay = shadow.getElementById('signup-overlay');
-              var closeButton = shadow.getElementById('close-button');
-              var form = shadow.getElementById('newsletter-form');
-              var successMessage = shadow.getElementById('success-message');
-            
-              // Add event listeners
-              notificationIcon.addEventListener('click', () => {
-                signupOverlay.style.display = 'flex';
-              });
-            
-              closeButton.addEventListener('click', () => {
-                signupOverlay.style.display = 'none';
-              });
-            
-              form.addEventListener('submit', function(e) {
-                e.preventDefault();
-                var email = shadow.getElementById('email').value;
-                
-                // Here you would typically send the email to your server
-                console.log('Signing up with email:', email);
-            
-                // Show success message
-                form.style.display = 'none';
-                successMessage.style.display = 'block';
-            
-                // Close the overlay after a delay
+          (function() {
+            // Create style element for spinner
+            var style = document.createElement('style');
+            style.textContent = `
+              .autotrends-spinner-container {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                height: 100vh;
+                background-color: rgba(15, 15, 26, 0.9);
+                position: fixed;
+                top: 0;
+                left: 0;
+                width: 100%;
+                z-index: 9999;
+                opacity: 0;
+                transition: opacity 0.3s ease-in-out;
+              }
+              .autotrends-spinner-container.show {
+                opacity: 1;
+              }
+              .autotrends-spinner {
+                position: relative;
+                width: 150px;
+                height: 150px;
+              }
+              .autotrends-ring {
+                position: absolute;
+                border-radius: 50%;
+                border: 4px solid transparent;
+              }
+              .autotrends-outer-ring {
+                width: 100%;
+                height: 100%;
+                border-top-color: #004d40;
+                border-left-color: #004d40;
+                animation: autotrends-spin 2s linear infinite;
+              }
+              .autotrends-inner-ring {
+                width: 80%;
+                height: 80%;
+                top: 10%;
+                left: 10%;
+                border-bottom-color: #e74c3c;
+                border-right-color: #e74c3c;
+                animation: autotrends-spin 1.5s linear reverse infinite;
+              }
+              .autotrends-pulse {
+                position: absolute;
+                width: 60%;
+                height: 60%;
+                top: 20%;
+                left: 20%;
+                background-color: rgba(52, 152, 219, 0.1);
+                border-radius: 50%;
+                animation: autotrends-pulse 1.5s ease-in-out infinite;
+              }
+              .autotrends-text {
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                font-family: 'Arial', sans-serif;
+                font-size: 16px;
+                font-weight: bold;
+                color: #ffffff;
+                text-transform: uppercase;
+                letter-spacing: 2px;
+              }
+              @keyframes autotrends-spin {
+                0% { transform: rotate(0deg); }
+                100% { transform: rotate(360deg); }
+              }
+              @keyframes autotrends-pulse {
+                0% { transform: scale(0.8); opacity: 0.5; }
+                50% { transform: scale(1); opacity: 1; }
+                100% { transform: scale(0.8); opacity: 0.5; }
+              }
+            `;
+            document.head.appendChild(style);
+          
+            // Create spinner element
+            var container = document.createElement('div');
+            container.className = 'autotrends-spinner-container';
+            container.innerHTML = `
+              <div class="autotrends-spinner">
+                <div class="autotrends-ring autotrends-outer-ring"></div>
+                <div class="autotrends-ring autotrends-inner-ring"></div>
+                <div class="autotrends-pulse"></div>
+                <div class="autotrends-text">AutoTrends</div>
+              </div>
+            `;
+          
+            // ... (previous style and spinner HTML creation code remains the same)
+          
+            var isSpinnerVisible = false;
+            var spinnerTimeout;
+          
+            function showAutoTrendsSpinner() {
+              if (!isSpinnerVisible) {
+                clearTimeout(spinnerTimeout);
+                document.body.appendChild(container);
                 setTimeout(() => {
-                  signupOverlay.style.display = 'none';
-                  // Reset the form for next time
-                  form.style.display = 'block';
-                  successMessage.style.display = 'none';
-                  form.reset();
-                }, 3000);
-              });
-            })();
-            </script>
-      <script>
-        (function() {
-          // Create style element for spinner
-          var style = document.createElement('style');
-          style.textContent = `
-            .autotrends-spinner-container {
-              display: flex;
-              justify-content: center;
-              align-items: center;
-              height: 100vh;
-              background-color: rgba(15, 15, 26, 0.9);
-              position: fixed;
-              top: 0;
-              left: 0;
-              width: 100%;
-              z-index: 9999;
-              opacity: 0;
-              transition: opacity 0.3s ease-in-out;
+                  container.classList.add('show');
+                }, 10);
+                isSpinnerVisible = true;
+              }
             }
-            .autotrends-spinner-container.show {
-              opacity: 1;
+          
+            function hideAutoTrendsSpinner() {
+              if (isSpinnerVisible) {
+                container.classList.remove('show');
+                spinnerTimeout = setTimeout(() => {
+                  if (container.parentNode) {
+                    container.parentNode.removeChild(container);
+                  }
+                  isSpinnerVisible = false;
+                }, 300);
+              }
             }
-            .autotrends-spinner {
-              position: relative;
-              width: 150px;
-              height: 150px;
-            }
-            .autotrends-ring {
-              position: absolute;
-              border-radius: 50%;
-              border: 4px solid transparent;
-            }
-            .autotrends-outer-ring {
-              width: 100%;
-              height: 100%;
-              border-top-color: #004d40;
-              border-left-color: #004d40;
-              animation: autotrends-spin 2s linear infinite;
-            }
-            .autotrends-inner-ring {
-              width: 80%;
-              height: 80%;
-              top: 10%;
-              left: 10%;
-              border-bottom-color: #e74c3c;
-              border-right-color: #e74c3c;
-              animation: autotrends-spin 1.5s linear reverse infinite;
-            }
-            .autotrends-pulse {
-              position: absolute;
-              width: 60%;
-              height: 60%;
-              top: 20%;
-              left: 20%;
-              background-color: rgba(52, 152, 219, 0.1);
-              border-radius: 50%;
-              animation: autotrends-pulse 1.5s ease-in-out infinite;
-            }
-            .autotrends-text {
-              position: absolute;
-              top: 50%;
-              left: 50%;
-              transform: translate(-50%, -50%);
-              font-family: 'Arial', sans-serif;
-              font-size: 16px;
-              font-weight: bold;
-              color: #ffffff;
-              text-transform: uppercase;
-              letter-spacing: 2px;
-            }
-            @keyframes autotrends-spin {
-              0% { transform: rotate(0deg); }
-              100% { transform: rotate(360deg); }
-            }
-            @keyframes autotrends-pulse {
-              0% { transform: scale(0.8); opacity: 0.5; }
-              50% { transform: scale(1); opacity: 1; }
-              100% { transform: scale(0.8); opacity: 0.5; }
-            }
-          `;
-          document.head.appendChild(style);
-        
-          // Create spinner element
-          var container = document.createElement('div');
-          container.className = 'autotrends-spinner-container';
-          container.innerHTML = `
-            <div class="autotrends-spinner">
-              <div class="autotrends-ring autotrends-outer-ring"></div>
-              <div class="autotrends-ring autotrends-inner-ring"></div>
-              <div class="autotrends-pulse"></div>
-              <div class="autotrends-text">AutoTrends</div>
-            </div>
-          `;
-        
-          // Variable to track if the spinner is currently visible
-          var isSpinnerVisible = false;
-        
-          // Function to show spinner
-          window.showAutoTrendsSpinner = function() {
-            if (!isSpinnerVisible) {
-              document.body.appendChild(container);
-              // Use setTimeout to ensure the transition is applied
-              setTimeout(() => {
-                container.classList.add('show');
-              }, 10);
-              isSpinnerVisible = true;
-            }
-          };
-        
-          // Function to hide spinner
-          window.hideAutoTrendsSpinner = function() {
-            if (isSpinnerVisible) {
-              container.classList.remove('show');
-              // Wait for the transition to complete before removing the element
-              setTimeout(() => {
-                if (container.parentNode) {
-                  container.parentNode.removeChild(container);
-                }
-                isSpinnerVisible = false;
-              }, 300); // Match this with the transition duration in CSS
-            }
-          };
-        
-          // Show spinner when navigation starts
-          window.addEventListener('beforeunload', showAutoTrendsSpinner);
-        
-          // Show spinner when the page starts loading
-          if (document.readyState === 'loading') {
-            showAutoTrendsSpinner();
-          }
-        
-          // Hide spinner when the page has fully loaded
-          window.addEventListener('load', hideAutoTrendsSpinner);
-        
-          // Expose a method to manually control the spinner
-          window.toggleAutoTrendsSpinner = function(show) {
-            if (show) {
+          
+            // Show spinner when navigation starts
+            window.addEventListener('beforeunload', showAutoTrendsSpinner);
+          
+            // Handle page show events (including back/forward navigation)
+            window.addEventListener('pageshow', function(event) {
+              if (event.persisted) {
+                // Page is loaded from cache (e.g., back button)
+                hideAutoTrendsSpinner();
+              }
+            });
+          
+            // Show spinner when the page starts loading
+            if (document.readyState === 'loading') {
               showAutoTrendsSpinner();
-            } else {
-              hideAutoTrendsSpinner();
             }
-          };
-        })();
-        </script>
+          
+            // Hide spinner when the page has fully loaded
+            window.addEventListener('load', hideAutoTrendsSpinner);
+          
+            // Handle navigation events
+            let navigationTimeout;
+            function handleNavigation() {
+              showAutoTrendsSpinner();
+              clearTimeout(navigationTimeout);
+              navigationTimeout = setTimeout(hideAutoTrendsSpinner, 5000); // Fallback to hide after 5 seconds
+            }
+          
+            // Listen for navigation events
+            window.addEventListener('popstate', handleNavigation);
+            
+            // Intercept and handle link clicks
+            document.addEventListener('click', function(e) {
+              const link = e.target.closest('a');
+              if (link && link.href && !link.target && link.hostname === window.location.hostname) {
+                handleNavigation();
+              }
+            });
+          
+            // Expose methods to manually control the spinner
+            window.AutoTrendsSpinner = {
+              show: showAutoTrendsSpinner,
+              hide: hideAutoTrendsSpinner,
+              toggle: function(show) {
+                if (show) {
+                  showAutoTrendsSpinner();
+                } else {
+                  hideAutoTrendsSpinner();
+                }
+              }
+            };
+          })();
+          
+          </script>
+          <script>
+          AutoTrendsSpinner.show();    // Show the spinner
+          AutoTrendsSpinner.hide();    // Hide the spinner
+          AutoTrendsSpinner.toggle(true/false);  // Show/hide based on boolean
+          </script>
+          
               
 		<script type="text/javascript" src="wp-content/themes/metal-and-gas/assets/js/app.min23c8.js?ver=1589810085" id="metal-and-gas-js"></script>
 
