@@ -1599,10 +1599,10 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
               </button>
               <h2>Stay Updated with AutoTrends</h2>
               <p class="subtitle">Get the latest automotive news and trends delivered to your inbox.</p>
-              <form id="c-form">
+              <form id="newsletter-form">
                 <label for="email">Enter your email address:</label>
                 <form action="https://api.web3forms.com/submit" method="POST" id="Newslatter-Form">
-          <input type="hidden" name="access_key" value="b5b2b646-a83c-4184-be7a-1b6210fdc995">
+                <input type="hidden" name="access_key" value="b5b2b646-a83c-4184-be7a-1b6210fdc995">
                 <input type="email" id="email" name="email" required placeholder="your@email.com">
                 <button type="submit">Sign Up</button>
               </form>
@@ -1616,6 +1616,9 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                 </svg>
                 <p>Thank you for signing up!</p>
                 <p>You'll receive our latest updates soon.</p>
+              </div>
+              <div id="error-message">
+                <p>Oops! Something went wrong. Please try again.</p>
               </div>
             </div>
           </div>
@@ -1699,14 +1702,17 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
               font-size: clamp(0.7rem, 1.5vw, 0.8rem);
               color: #ddd;
             }
-            #success-message {
+            #success-message, #error-message {
               display: none;
               text-align: center;
             }
-            #success-message p {
+            #success-message p, #error-message p {
               font-size: clamp(1rem, 2.5vw, 1.2rem);
               margin-bottom: 1rem;
               color:#fff;
+            }
+            #error-message p {
+              color: red;
             }
             .checkmark {
               width: 56px;
@@ -1785,6 +1791,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         var closeButton = shadow.getElementById('close-button');
         var form = shadow.getElementById('newsletter-form');
         var successMessage = shadow.getElementById('success-message');
+        var errorMessage = shadow.getElementById('error-message');
       
         // Add event listeners
         notificationIcon.addEventListener('click', () => {
@@ -1799,24 +1806,53 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
           e.preventDefault();
           var email = shadow.getElementById('email').value;
           
-          // Here you would typically send the email to your server
-          console.log('Signing up with email:', email);
-      
-          // Show success message
-          form.style.display = 'none';
-          successMessage.style.display = 'block';
-      
-          // Close the overlay after a delay
-          setTimeout(() => {
-            signupOverlay.style.display = 'none';
+          // Simulate a request to the server
+          fetch('https://api.web3forms.com/submit', {
+            method: 'POST',
+            headers: {
+              'Content-Type': 'application/json',
+            },
+            body: JSON.stringify({
+              access_key: 'b5b2b646-a83c-4184-be7a-1b6210fdc995',
+              email: email
+            })
+          })
+          .then(function(response) {
+            if (response.ok) {
+              // Show success message
+              form.style.display = 'none';
+              successMessage.style.display = 'block';
+            } else {
+              // Show error message
+              form.style.display = 'none';
+              errorMessage.style.display = 'block';
+            }
             // Reset the form for next time
-            form.style.display = 'block';
-            successMessage.style.display = 'none';
-            form.reset();
-          }, 3000);
+            setTimeout(() => {
+              signupOverlay.style.display = 'none';
+              form.style.display = 'block';
+              successMessage.style.display = 'none';
+              errorMessage.style.display = 'none';
+              form.reset();
+            }, 3000);
+          })
+          .catch(function(error) {
+            console.log('Error:', error);
+            // Show error message
+            form.style.display = 'none';
+            errorMessage.style.display = 'block';
+    
+            setTimeout(() => {
+              signupOverlay.style.display = 'none';
+              form.style.display = 'block';
+              errorMessage.style.display = 'none';
+              form.reset();
+            }, 3000);
+          });
         });
       })();
-      </script>
+    </script>
+    
       
 					</body>
 

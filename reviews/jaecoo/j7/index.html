@@ -1903,7 +1903,282 @@ Overall, the J7 GTS boasts a commendable array of safety features, both standard
     AutoTrendsSpinner.hide();    // Hide the spinner
     AutoTrendsSpinner.toggle(true/false);  // Show/hide based on boolean
     </script>
+    <script>
+      (function() {
+        // Create a container for our widget
+        var container = document.createElement('div');
+        container.id = 'autotrends-widget';
+        document.body.appendChild(container);
+      
+        // Create a shadow DOM
+        var shadow = container.attachShadow({mode: 'open'});
+      
+        // Add the HTML content
+        shadow.innerHTML = `
+          <div id="notification-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-bell"><path d="M6 8a6 6 0 0 1 12 0c0 7 3 9 3 9H3s3-2 3-9"></path><path d="M10.3 21a1.94 1.94 0 0 0 3.4 0"></path></svg>
+          </div>
+      
+          <div id="signup-overlay">
+            <div class="glass-card">
+              <button id="close-button">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-x"><path d="M18 6 6 18"></path><path d="m6 6 12 12"></path></svg>
+              </button>
+              <h2>Stay Updated with AutoTrends</h2>
+              <p class="subtitle">Get the latest automotive news and trends delivered to your inbox.</p>
+              <form id="newsletter-form">
+                <label for="email">Enter your email address:</label>
+                <form action="https://api.web3forms.com/submit" method="POST" id="Newslatter-Form">
+                <input type="hidden" name="access_key" value="b5b2b646-a83c-4184-be7a-1b6210fdc995">
+                <input type="email" id="email" name="email" required placeholder="your@email.com">
+                <button type="submit">Sign Up</button>
+              </form>
+              <p class="privacy-declaration">
+                By signing up, you agree to our <a href="https://www.autotrendsz.com/privacy-policy.html">Privacy Policy</a> and consent to receive updates from AutoTrends.
+              </p>
+              <div id="success-message">
+                <svg class="checkmark" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 52 52">
+                  <circle class="checkmark__circle" cx="26" cy="26" r="25" fill="none"/>
+                  <path class="checkmark__check" fill="none" d="M14.1 27.2l7.1 7.2 16.7-16.8"/>
+                </svg>
+                <p>Thank you for signing up!</p>
+                <p>You'll receive our latest updates soon.</p>
+              </div>
+              <div id="error-message">
+                <p>Oops! Something went wrong. Please try again.</p>
+              </div>
+            </div>
+          </div>
+      
+          <style>
+            @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Rajdhani:wght@300;400;700&display=swap');
+      
+            :host {
+              all: initial;
+            }
+      
+            h2 {
+              font-family: 'Orbitron', sans-serif;
+              font-size: clamp(1.2rem, 3vw, 1.5rem);
+              color: #fff;
+              margin-bottom: 1rem;
+            }
+            .subtitle {
+              font-size: clamp(1rem, 2.5vw, 1.2rem);
+              color: #fff;
+              margin-bottom: 2rem;
+              text-align: center;
+            }
+            .glass-card {
+              background: rgba(255, 255, 255, 0.05);
+              border-radius: 20px;
+              box-shadow: 0 8px 32px rgba(0, 0, 0, 0.37);
+              backdrop-filter: blur(10px);
+              -webkit-backdrop-filter: blur(10px);
+              border: 1px solid rgba(255, 255, 255, 0.18);
+              padding: 2rem;
+              width: 100%;
+              max-width: 400px;
+              transition: transform 0.5s, box-shadow 0.5s;
+              position: relative;
+            }
+            .glass-card:hover {
+              transform: scale(1.05);
+              box-shadow: 0 12px 50px rgba(0, 0, 0, 0.45);
+            }
+            form {
+              display: flex;
+              flex-direction: column;
+            }
+            label {
+              margin-bottom: 0.5rem;
+              font-size: clamp(0.9rem, 2vw, 1rem);
+              color:#fff;
+            }
+            input[type="email"] {
+              padding: 0.5rem;
+              margin-bottom: 1rem;
+              border: none;
+              border-radius: 5px;
+              background-color: rgba(255, 255, 255, 0.1);
+              color: white;
+              font-family: 'Rajdhani', sans-serif;
+              font-size: clamp(0.9rem, 2vw, 1rem);
+            }
+            input[type="email"]::placeholder {
+              color: rgba(255, 255, 255, 0.5);
+              font-family: 'Rajdhani', sans-serif;
+            }
+            button {
+              padding: 0.5rem 1rem;
+              background-color: #004d40;
+              color: #fff;
+              border: none;
+              border-radius: 5px;
+              cursor: pointer;
+              transition: background-color 0.3s ease;
+              font-family: 'Rajdhani', sans-serif;
+              font-size: clamp(0.9rem, 2vw, 1rem);
+              font-weight: 700;
+            }
+            button:hover {
+              background-color: #00aacc;
+            }
+            .privacy-declaration {
+              margin-top: 1rem;
+              font-size: clamp(0.7rem, 1.5vw, 0.8rem);
+              color: #ddd;
+            }
+            #success-message, #error-message {
+              display: none;
+              text-align: center;
+            }
+            #success-message p, #error-message p {
+              font-size: clamp(1rem, 2.5vw, 1.2rem);
+              margin-bottom: 1rem;
+              color:#fff;
+            }
+            #error-message p {
+              color: red;
+            }
+            .checkmark {
+              width: 56px;
+              height: 56px;
+              border-radius: 50%;
+              display: block;
+              stroke-width: 2;
+              stroke: #00e5ff;
+              stroke-miterlimit: 10;
+              margin: 10% auto;
+              box-shadow: inset 0px 0px 0px #00e5ff;
+              animation: fill .4s ease-in-out .4s forwards, scale .3s ease-in-out .9s both;
+            }
+            @keyframes fill {
+              100% { box-shadow: inset 0px 0px 0px 30px #00e5ff; }
+            }
+            @keyframes scale {
+              0%, 100% { transform: none; }
+              50% { transform: scale3d(1.1, 1.1, 1); }
+            }
+            #notification-icon {
+              position: fixed;
+              bottom: 20px;
+              right: 20px;
+              background-color: #004d40;
+              color: #fff;
+              width: 50px;
+              height: 50px;
+              border-radius: 50%;
+              display: flex;
+              align-items: center;
+              justify-content: center;
+              cursor: pointer;
+              box-shadow: 0 2px 10px rgba(0, 229, 255, 0.3);
+              transition: all 0.3s ease;
+              z-index: 1000;
+            }
+            #notification-icon:hover {
+              transform: scale(1.1);
+              box-shadow: 0 4px 20px rgba(0, 229, 255, 0.5);
+            }
+            #close-button {
+              position: absolute;
+              top: 10px;
+              right: 10px;
+              background: none;
+              border: none;
+              color: #fff;
+              font-size: 1.5rem;
+              cursor: pointer;
+              padding: 5px;
+            }
+            #signup-overlay {
+              position: fixed;
+              top: 0;
+              left: 0;
+              width: 100%;
+              height: 100%;
+              background-color: rgba(0, 0, 0, 0.8);
+              display: none;
+              justify-content: center;
+              align-items: center;
+              z-index: 1001;
+            }
+            @media (max-width: 480px) {
+              .glass-card {
+                padding: 1.5rem;
+              }
+            }
+          </style>
+        `;
+      
+        // Get references to elements
+        var notificationIcon = shadow.getElementById('notification-icon');
+        var signupOverlay = shadow.getElementById('signup-overlay');
+        var closeButton = shadow.getElementById('close-button');
+        var form = shadow.getElementById('newsletter-form');
+        var successMessage = shadow.getElementById('success-message');
+        var errorMessage = shadow.getElementById('error-message');
+      
+        // Add event listeners
+        notificationIcon.addEventListener('click', () => {
+          signupOverlay.style.display = 'flex';
+        });
+      
+        closeButton.addEventListener('click', () => {
+          signupOverlay.style.display = 'none';
+        });
+      
+        form.addEventListener('submit', function(e) {
+          e.preventDefault();
+          var email = shadow.getElementById('email').value;
+          
+          // Simulate a request to the server
+          fetch('https://api.web3forms.com/submit', {
+            method: 'POST',
+            headers: {
+              'Content-Type': 'application/json',
+            },
+            body: JSON.stringify({
+              access_key: 'b5b2b646-a83c-4184-be7a-1b6210fdc995',
+              email: email
+            })
+          })
+          .then(function(response) {
+            if (response.ok) {
+              // Show success message
+              form.style.display = 'none';
+              successMessage.style.display = 'block';
+            } else {
+              // Show error message
+              form.style.display = 'none';
+              errorMessage.style.display = 'block';
+            }
+            // Reset the form for next time
+            setTimeout(() => {
+              signupOverlay.style.display = 'none';
+              form.style.display = 'block';
+              successMessage.style.display = 'none';
+              errorMessage.style.display = 'none';
+              form.reset();
+            }, 3000);
+          })
+          .catch(function(error) {
+            console.log('Error:', error);
+            // Show error message
+            form.style.display = 'none';
+            errorMessage.style.display = 'block';
     
+            setTimeout(() => {
+              signupOverlay.style.display = 'none';
+              form.style.display = 'block';
+              errorMessage.style.display = 'none';
+              form.reset();
+            }, 3000);
+          });
+        });
+      })();
+    </script>
 					</body>
 
 
