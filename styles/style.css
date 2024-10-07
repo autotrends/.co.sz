@@ -123,15 +123,15 @@ margin-bottom: 1rem;
 .social-icons a {
   display: inline-block;
   margin-left: 10px;
-  padding: 5px;
+  padding: 12px;
   background-color: #004d40;
   border: 2px solid #004d40;
   border-radius:50% ;
 }
 
 .social-icons svg {
-  width: 24px;
-  height: 24px;
+  width: 30px;
+  height: 30px;
   fill: #fff;
   transition: fill 0.3s ease;
 }
@@ -154,8 +154,8 @@ margin-bottom: 1rem;
   }
   
   .social-icons svg {
-    width: 20px;
-    height: 20px;
+    width: 30px;
+    height: 30px;
     fill: #fff;
     transition: fill 0.3s ease;
   }
@@ -175,8 +175,8 @@ margin-bottom: 1rem;
   }
   
   .social-icons svg {
-    width: 16px;
-    height: 16px;
+    width: 20px;
+    height: 20px;
     fill: #fff;
     transition: fill 0.3s ease;
   }

@@ -1,22 +1,33 @@
-let calcScrollValue = () => {
-  let scrollProgress = document.getElementById("progress");
-  let progressValue = document.getElementById("progress-value");
+let lastScrollTop = 0;
+let scrollProgress = document.getElementById("progress");
+
+// Initially hide the progress bar
+scrollProgress.style.display = "none";
+
+let handleScroll = () => {
   let pos = document.documentElement.scrollTop;
   let calcHeight =
-    document.documentElement.scrollHeight -
-    document.documentElement.clientHeight;
+    document.documentElement.scrollHeight - document.documentElement.clientHeight;
   let scrollValue = Math.round((pos * 100) / calcHeight);
-  if (pos > 100) {
-    scrollProgress.style.display = "grid";
-  } else {
+
+  // Determine scroll direction
+  if (pos > lastScrollTop) {
+    // Scrolling down, hide the progress bar
     scrollProgress.style.display = "none";
+  } else {
+    // Scrolling up, show the progress bar
+    scrollProgress.style.display = "grid";
   }
-  scrollProgress.addEventListener("click", () => {
-    document.documentElement.scrollTop = 0;
-  });
-  scrollProgress.style.background = `conic-gradient(#03cc65 ${scrollValue}%, #d7d7d7 ${scrollValue}%)`;
+
+  lastScrollTop = pos <= 0 ? 0 : pos; // Ensure lastScrollTop is never negative
+
+  // Update the progress bar's background
+  scrollProgress.style.background = `conic-gradient(#004d40 ${scrollValue}%, #d7d7d7 ${scrollValue}%)`;
 };
 
-window.onscroll = calcScrollValue;
-window.onload = calcScrollValue;
+// Listen for scroll events
+window.addEventListener("scroll", handleScroll);
+
+// Set the initial state when the page loads
+window.addEventListener("load", handleScroll);
 
