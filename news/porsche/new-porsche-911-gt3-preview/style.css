@@ -1,0 +1,134 @@
+.sharing{
+  
+    font-family: "ff-good-web-pro", "Arial", sans-serif;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: .25em;
+    text-transform: uppercase;
+    margin-left: 0.225rem;
+    font-size: 0.80028rem;
+    line-height: 1;
+    color: #000;
+}
+.social-buttons {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+    gap: 1rem;
+}
+
+.social-buttons a {
+    display: block;
+    width: 50px;
+    height: 50px;
+    margin: 0 10px;
+    border-radius: 8px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.social-buttons a img {
+    width: 30px;
+    height: 30px;
+}
+
+.facebook {
+    background-color: transparent;
+}
+
+.twitter {
+    background-color: transparent;
+}
+
+.instagram {
+    background-color: transparent;
+}
+
+.whatsapp {
+    background-color: transparent;
+}
+
+.tiktok {
+    background-color: transparent;
+}
+.youtube {
+    background-color: transparent;
+}
+
+.copy-link {
+    background-color: transparent;
+}
+
+@media (max-width: 600px) {
+    .social-buttons {
+      display: flex;
+       gap: 0.3em;
+        align-items: center;
+    }
+
+    .social-buttons a {
+        margin: 10px 0;
+    }
+}
+.social-buttons {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+    gap: 1rem;
+}
+
+.social-buttons a {
+    display: block;
+    width: 50px;
+    height: 50px;
+    margin: 0 10px;
+    border-radius: 8px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.social-buttons a img {
+    width: 30px;
+    height: 30px;
+}
+
+.facebook {
+    background-color: transparent;
+}
+
+.twitter {
+    background-color: transparent;
+}
+
+.instagram {
+    background-color: transparent;
+}
+
+.whatsapp {
+    background-color: transparent;
+}
+
+.tiktok {
+    background-color: transparent;
+}
+.youtube {
+    background-color: transparent;
+}
+
+.copy-link {
+    background-color: transparent;
+}
+
+@media (max-width: 600px) {
+    .social-buttons {
+      display: flex;
+       gap: 0.3em;
+        align-items: center;
+    }
+
+    .social-buttons a {
+        margin: 10px 0;
+    }
+}
