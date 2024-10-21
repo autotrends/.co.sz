@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Futuristic Profile Card</title>
+
+    <!-- Font Awesome for social icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
+
+    <style>
+        /* Google Font for a futuristic feel */
+        @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap');
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Orbitron', sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background: linear-gradient(135deg, rgba(20, 30, 48, 0.8), rgba(36, 59, 85, 0.8)), url('bg.jpg'); /* Futuristic background */
+            background-size: cover;
+            background-position: center;
+            overflow: hidden;
+        }
+
+        .profile-card {
+            width: 320px;
+            height: 500px;
+            perspective: 1500px;
+            transition: transform 0.3s ease;
+        }
+
+        .card-inner {
+            width: 100%;
+            height: 100%;
+            position: relative;
+            transform-style: preserve-3d;
+            transition: transform 1.2s cubic-bezier(0.25, 0.1, 0.25, 1);
+        }
+
+        .card-front, .card-back {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            backdrop-filter: blur(10px);
+            background: rgba(255, 255, 255, 0.1);
+            box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+            border-radius: 20px;
+            border: 1px solid rgba(255, 255, 255, 0.18);
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            color: #fff;
+            backface-visibility: hidden;
+        }
+
+        .profile-card img {
+            width: 100%;
+            height: 100%;
+            border-radius: 20px;
+            object-fit: cover;
+        }
+
+        /* Front side styling */
+        .card-front {
+            background: linear-gradient(135deg, rgba(255, 255, 255, 0.1), rgba(0, 0, 0, 0.3));
+        }
+
+        .qr-code img {
+            width: 300px;
+            height: 300px;
+            margin-bottom: 15px;
+        }
+
+        .username {
+            font-size: 24px;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+
+        /* Back side styling */
+        .card-back {
+            transform: rotateY(180deg);
+        }
+
+        .social-links {
+            display: flex;
+            flex-direction: column;
+            width: 80%;
+        }
+
+        .social-links a {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #fff;
+            text-decoration: none;
+            margin-top: 6px;
+            padding: 8px 15px;
+            border-radius: 8px;
+            font-size: 14px;
+            transition: background 0.3s ease, color 0.3s ease;
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.3);
+        }
+
+        .social-links a i {
+            margin-right: 8px;
+        }
+
+        .social-links a:hover {
+            background-color: #fff;
+            color: #000;
+        }
+
+        /* Adding depth to card with hover effect */
+        .profile-card:hover .card-front,
+        .profile-card:hover .card-back {
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.5);
+        }
+
+        .card-inner.swiped {
+            transform: rotateY(180deg);
+        }
+
+        /* Animations for futuristic effects */
+        @keyframes pulse {
+            0%, 100% {
+                transform: scale(1);
+            }
+            50% {
+                transform: scale(1.05);
+            }
+        }
+
+        .profile-card {
+            animation: pulse 3s infinite ease-in-out;
+        }
+
+        /* Responsive adjustments */
+        @media screen and (max-width: 600px) {
+            .profile-card {
+                width: 90%;
+                height: 450px;
+            }
+
+            .qr-code img {
+                width: 200px;
+                height:200px;
+            }
+
+            .username {
+                font-size: 20px;
+            }
+
+            .social-links a {
+                padding: 6px 10px;
+                font-size: 13px;
+            }
+
+            .social-links a i {
+                margin-right: 5px;
+            }
+        }
+    
+    .slider-container {
+    width: 300px;
+    height: 300px;
+    position: relative;
+    overflow: hidden;
+}
+
+.slide {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+}
+
+.slider-container .slide.active {
+    opacity: 1;
+}
+
+img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+    </style>
+    
+</head>
+<body>
+    <div class="profile-card" id="profileCard">
+        <div class="card-inner" id="cardInner">
+            <!-- Front side -->
+            <div class="card-front">
+                <div class="qr-code slider-container">
+    <div class="slide">
+        <img src="youtube-qr.png" alt="QR Code 1">
+    </div>
+    <div class="slide">
+        <img src="facebook-qr.png" alt="QR Code 2">
+    </div>
+    <div class="slide">
+        <img src="instagram-qr.png" alt="QR Code 3">
+    </div>
+    <div class="slide">
+        <img src="twitter-qr.png" alt="QR Code 4">
+    </div>
+    <div class="slide">
+        <img src="autotrends-qr.png" alt="QR Code 5">
+    </div>
+    <div class="slide">
+        <img src="tiktok-qr.png" alt="QR Code 6">
+    </div>
+</div>
+                <div class="username">@AUTOTRENDS27</div>
+            </div>
+
+            <!-- Back side -->
+            <div class="card-back">
+                <img src="AutoTrends-logo.jpg" alt="AutoTrends Logo" style="width: 150px; height: 150px; margin-bottom: 10px;">
+                <div class="username">@AUTOTRENDS27</div>
+                <div class="description">
+                    Eswatini's leading source for automotive news, reviews, comparisons & car buying guides.
+                </div>
+                <div class="social-links">
+                    <a href="https://www.instagram.com/autotrends27"><i class="fab fa-instagram"></i>Instagram</a>
+                    <a href="https://www.tiktok.com/@autotrends27"><i class="fab fa-tiktok"></i>TikTok</a>
+                    <a href="https://www.autotrendsz.com"><i class="fas fa-globe"></i>Website</a>
+                    <a href="https://www.youtube.com/@autotrends27"><i class="fab fa-youtube"></i>YouTube</a>
+                    <a href="https://twitter.com/autotrends27"><i class="fab fa-twitter"></i>Twitter (X)</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        let cardInner = document.getElementById("cardInner");
+        let startX = 0;
+
+        // Detect swipe gesture for mobile
+        document.getElementById("profileCard").addEventListener("touchstart", function(e) {
+            startX = e.touches[0].clientX;
+        });
+
+        document.getElementById("profileCard").addEventListener("touchend", function(e) {
+            let endX = e.changedTouches[0].clientX;
+            if (startX > endX + 50) { // Swipe left
+                cardInner.classList.add("swiped");
+            } else if (startX < endX - 50) { // Swipe right
+                cardInner.classList.remove("swiped");
+            }
+        });
+
+        // Click to flip for desktop
+        cardInner.addEventListener("click", function() {
+            cardInner.classList.toggle("swiped");
+        });
+    
+    let currentIndex = 0;
+const slides = document.querySelectorAll('.slider-container .slide');
+
+function showSlide(index) {
+    slides.forEach((slide, i) => {
+        slide.classList.remove('active');
+        if (i === index) {
+            slide.classList.add('active');
+        }
+    });
+}
+
+function nextSlide() {
+    currentIndex = (currentIndex + 1) % slides.length;
+    showSlide(currentIndex);
+}
+
+// Initially show the first slide
+showSlide(currentIndex);
+
+// Automatically switch slides every 10 seconds
+setInterval(nextSlide, 10000);
+    
+    </script>
+</body>
+</html>
